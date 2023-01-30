@@ -7,8 +7,8 @@ export default function Home() {
     <Layout>
       <div className="container">
         <div className="row">
-        <div className="col-6">Hello world!</div>
-        <div className="col-6">Hello world!</div>
+          <div className="col-6">Hello UFS!</div>
+          <div className="col-6">Hello world!</div>
         </div>
       </div>
     </Layout>
