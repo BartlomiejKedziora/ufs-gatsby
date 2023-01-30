@@ -10,9 +10,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `./src/assets/images`,
+        path: `${__dirname}/src/assets/images`,
       },
-      __key: `images`,
     },
     // {
     //   resolve: `gatsby-plugin-manifest`,
