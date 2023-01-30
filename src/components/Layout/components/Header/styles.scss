@@ -1,4 +1,20 @@
 @import "styles/variables.scss";
 
 .header {
+  .current {
+    color: red;
+  }
+
+  .main-menu {
+    &__item {
+      &:hover {
+        .main-menu__submenu-list {
+          display: block;
+        }
+      }
+    }
+    &__submenu-list {
+      display: none;
+    }
+  }
 }

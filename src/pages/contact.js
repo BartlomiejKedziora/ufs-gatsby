@@ -1,16 +1,16 @@
-import "styles/pages/home.scss"
+// import "styles/pages/contact.scss"
 
 import React from "react"
 
 import Layout from "../components/Layout"
 
-const Home = () => {
+const Contact = () => {
   return (
     <Layout>
-      <div className="home">
+      <div className="contact">
         <div className="site-container">
           <div className="row">
-            <div className="col-6">Hello UFS!</div>
+            <div className="col-6">Contact UFS!</div>
             <div className="col-6">Hello world!</div>
           </div>
         </div>
@@ -19,4 +19,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Contact

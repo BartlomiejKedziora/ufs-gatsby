@@ -1,41 +1,41 @@
 // import czcionek
 
-@import "./modules/bootstrap/bootstrap.scss";
+// @import "./modules/bootstrap/bootstrap.scss";
 @import "./mixins.scss";
 @import "./variables.scss";
 @import "./modules/reset";
 @import "./modules/elements";
 
 .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 
-    @include xlScreen {
-        max-width: 990px;
-    }
+  @include xlScreen {
+    max-width: 990px;
+  }
 
-    @include lgScreen {
-        max-width: 100%;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
+  @include lgScreen {
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
-    @include smScreen {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+  @include smScreen {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
-  
+
 body {
-// font-family: $font-family-base;
-// font-style: normal;
-// background-color: #fff;
-// color: $text-color;
-// font-size: $font-size-base;
-font-weight: 400;
-// line-height: 1.6;
-// text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-// text-rendering: optimizeLegibility !important;
-// -webkit-font-smoothing: antialiased !important;
-} 
+  // font-family: $font-family-base;
+  // font-style: normal;
+  // background-color: #fff;
+  // color: $text-color;
+  // font-size: $font-size-base;
+  font-weight: 400;
+  // line-height: 1.6;
+  // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  // text-rendering: optimizeLegibility !important;
+  // -webkit-font-smoothing: antialiased !important;
+}
