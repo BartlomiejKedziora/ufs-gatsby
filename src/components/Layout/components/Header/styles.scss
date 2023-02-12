@@ -86,7 +86,7 @@
       }
       &:hover {
         .main-menu__submenu-list {
-          visibility: 1;
+          visibility: visible;
           opacity: 1;
         }
       }
@@ -108,7 +108,7 @@
       border: #dfe3f4;
       border-radius: 5px;
       padding: 16px 10px;
-      visibility: 0;
+      visibility: hidden;
       opacity: 0;
       transform: translateX(-50%);
       transition: 0.3s ease-out;

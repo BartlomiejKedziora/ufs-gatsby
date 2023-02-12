@@ -25,16 +25,16 @@ const Header = () => {
           </div>
           <div className="header__content">
             <div className="header__contact">
-              <Link className="header__contact-item" to="tel:3300272324">
+              <a className="header__contact-item" href="tel:3300272324">
                 <img src={require("assets/icons/phone.svg").default} alt="" />
                 <span className="header__contact-item--text">3300272324</span>
-              </Link>
-              <Link className="header__contact-item" to="mailto:3300272324">
+              </a>
+              <a className="header__contact-item" href="mailto:3300272324">
                 <img src={require("assets/icons/mail.svg").default} alt="" />
                 <span className="header__contact-item--text">
                   info@ultimatefloorsanding.co.uk
                 </span>
-              </Link>
+              </a>
             </div>
             <div className="header__navigation">
               <nav className="header__navigation-menu">

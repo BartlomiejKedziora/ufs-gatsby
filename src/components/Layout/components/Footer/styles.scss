@@ -1,4 +1,49 @@
 @import "styles/variables.scss";
 
 .footer {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+  }
+  &__column {
+    &-title {
+      font-size: 22px;
+      margin-bottom: 30px;
+      font-weight: 800;
+    }
+    &-address {
+      font-size: 22px;
+      line-height: 1.8;
+    }
+    &-contact {
+      display: block;
+      font-size: 22px;
+      margin-top: 40px;
+      transition: 0.3s ease-out;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+  &__list {
+    &-item {
+      font-size: 22px;
+      line-height: 1.8;
+      a {
+        transition: 0.3s ease-out;
+      }
+      a {
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+  }
+  &__copyrights {
+    color: $theme-color;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 120px;
+  }
 }
