@@ -20,18 +20,27 @@
       display: flex;
       align-items: center;
       margin-left: 60px;
-      img {
-        width: 24px;
-        margin-right: 12px;
+      &:hover {
+        svg {
+          path {
+            fill: $theme-color;
+          }
+        }
+        .header__contact-item--text {
+          color: $theme-color;
+        }
+      }
+      svg {
+        path {
+          transition: 0.3s ease-out;
+        }
       }
       &--text {
         font-size: 16px;
         color: $text-color;
         letter-spacing: 0.24px;
+        margin-left: 12px;
         transition: 0.3s ease-out;
-        &:hover {
-          color: $theme-color;
-        }
       }
     }
   }
@@ -48,15 +57,23 @@
     display: flex;
     align-items: center;
     transition: 0.3s ease-out;
+    svg {
+      width: 20px;
+      margin-right: 8px;
+      path {
+        transition: 0.3s ease-out;
+      }
+    }
     &:hover {
       transform: scale(1.15);
+      svg {
+        path {
+          fill: $theme-color;
+        }
+      }
       .header__find-expert--text {
         color: $theme-color;
       }
-    }
-    img {
-      width: 20px;
-      margin-right: 8px;
     }
     &--text {
       font-size: 18px;
