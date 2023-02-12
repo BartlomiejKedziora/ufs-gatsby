@@ -1,0 +1,13 @@
+@import "styles/variables.scss";
+
+.scroll-button {
+  position: fixed;
+  right: 70px;
+  bottom: 120px;
+  z-index: 100;
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
