@@ -1,4 +1,4 @@
-// import czcionek
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
 
 // @import "./modules/bootstrap/bootstrap.scss";
 @import "./mixins.scss";
@@ -6,10 +6,13 @@
 @import "./modules/reset";
 @import "./modules/elements";
 
-.container {
-  max-width: 1200px;
+.site-container {
+  width: 1660px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
 
   @include xlScreen {
     max-width: 990px;
@@ -17,8 +20,6 @@
 
   @include lgScreen {
     max-width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
   }
 
   @include smScreen {
@@ -28,14 +29,35 @@
 }
 
 body {
-  // font-family: $font-family-base;
-  // font-style: normal;
-  // background-color: #fff;
-  // color: $text-color;
-  // font-size: $font-size-base;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  background-color: #fff;
+  color: $text-color;
+  font-size: $font-size-base;
   font-weight: 400;
-  // line-height: 1.6;
-  // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-  // text-rendering: optimizeLegibility !important;
-  // -webkit-font-smoothing: antialiased !important;
+  line-height: 1.4;
+  background: #212121;
+}
+
+a,
+button {
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $text-color;
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
 }
