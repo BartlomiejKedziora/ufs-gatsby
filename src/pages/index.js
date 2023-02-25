@@ -42,9 +42,9 @@ const Home = () => {
         description: "",
       }}
     >
-      <div className="home">
+      <div className="home" style={{ height: "1000px" }}>
         <div className="site-container">
-          <div className="row" style={{ height: "1000px" }}>
+          <div className="row">
             <div className="col-6">Hello UFS!</div>
             <div className="col-6">Hello world!</div>
           </div>
