@@ -5,13 +5,17 @@ import "swiper/css/effect-fade"
 import "swiper/css/pagination"
 
 import React from "react"
+import { graphql } from "gatsby"
 import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Navigation, Autoplay, Pagination } from "swiper"
 
 import Layout from "components/Layout"
 
-const Home = () => {
+const Home = ({ data }) => {
   SwiperCore.use([Autoplay, Navigation, Pagination])
+
+  const home_data = data.allWpService.nodes[0]
+  console.log(home_data)
 
   const testimonialsSliderSettings = {
     loop: false,
@@ -44,6 +48,7 @@ const Home = () => {
     >
       <div className="home" style={{ height: "1000px" }}>
         <div className="site-container">
+          <h1>{home_data?.title}</h1>
           <div className="row">
             <div className="col-6">Hello UFS!</div>
             <div className="col-6">Hello world!</div>
@@ -53,5 +58,15 @@ const Home = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    allWpService {
+      nodes {
+        title
+      }
+    }
+  }
+`
 
 export default Home
