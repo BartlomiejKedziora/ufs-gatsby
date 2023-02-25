@@ -1,37 +1,35 @@
-@import "./variables.scss";
-
 @mixin smScreen {
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: map-get($grid-breakpoints, "sm")) {
     @content;
   }
 }
 
 @mixin mdScreen {
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: map-get($grid-breakpoints, "md")) {
     @content;
   }
 }
 
 @mixin lgScreen {
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: map-get($grid-breakpoints, "lg")) {
     @content;
   }
 }
 
 @mixin xlScreen {
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: map-get($grid-breakpoints, "xl")) {
     @content;
   }
 }
 
 @mixin xxlScreen {
-  @media only screen and (max-width: 1440px) {
+  @media only screen and (max-width: map-get($grid-breakpoints, "xxl")) {
     @content;
   }
-} 
+}
 
 @mixin xxxlScreen {
-  @media only screen and (max-width: 1680px) {
+  @media only screen and (max-width: map-get($grid-breakpoints, "xxxl")) {
     @content;
   }
-} 
+}

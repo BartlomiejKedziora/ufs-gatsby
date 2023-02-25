@@ -1,15 +1,40 @@
-// import czcionek
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap");
 
-// @import "./modules/bootstrap/bootstrap.scss";
-@import "./mixins.scss";
 @import "./variables.scss";
 @import "./modules/reset";
 @import "./modules/elements";
+@import "./modules/bootstrap/bootstrap-grid";
 
 .container {
-  max-width: 1200px;
+  max-width: 1140px;
+  @include xlScreen {
+    max-width: 100%;
+  }
+}
+
+.container-fluid {
+  max-width: 1920px;
+  padding-right: 50px;
+  padding-left: 50px;
+
+  @include xlScreen {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @include mdScreen {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.site-container {
+  width: 1660px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
 
   @include xlScreen {
     max-width: 990px;
@@ -17,8 +42,6 @@
 
   @include lgScreen {
     max-width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
   }
 
   @include smScreen {
@@ -28,14 +51,37 @@
 }
 
 body {
-  // font-family: $font-family-base;
-  // font-style: normal;
-  // background-color: #fff;
-  // color: $text-color;
-  // font-size: $font-size-base;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  background-color: #fff;
+  color: $text-color;
+  font-size: 16px;
   font-weight: 400;
-  // line-height: 1.6;
-  // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-  // text-rendering: optimizeLegibility !important;
-  // -webkit-font-smoothing: antialiased !important;
+  line-height: 1.4;
+  background: #212121;
+}
+
+a,
+button {
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: $text-color;
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
 }

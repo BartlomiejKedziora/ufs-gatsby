@@ -1,21 +1,21 @@
-// import "styles/pages/commercial.scss"
+// import "styles/pages/guarantee.scss"
 
 import React from "react"
 
 import Layout from "components/Layout"
 
-const Commercial = () => {
+const About = () => {
   return (
     <Layout
       seo={{
-        title: "Commercial",
+        title: "About",
         description: "",
       }}
     >
-      <div className="commercial">
+      <div className="about">
         <div className="site-container">
           <div className="row">
-            <div className="col-6">Commercial UFS!</div>
+            <div className="col-6">About UFS!</div>
             <div className="col-6">Hello world!</div>
           </div>
         </div>
@@ -24,4 +24,4 @@ const Commercial = () => {
   )
 }
 
-export default Commercial
+export default About

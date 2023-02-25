@@ -2,11 +2,16 @@
 
 import React from "react"
 
-import Layout from "../components/Layout"
+import Layout from "components/Layout"
 
 const Contact = () => {
   return (
-    <Layout>
+    <Layout
+      seo={{
+        title: "Contact",
+        description: "",
+      }}
+    >
       <div className="contact">
         <div className="site-container">
           <div className="row">
