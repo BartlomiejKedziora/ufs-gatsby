@@ -6,7 +6,12 @@ import Layout from "components/Layout"
 
 const About = () => {
   return (
-    <Layout>
+    <Layout
+      seo={{
+        title: "About",
+        description: "",
+      }}
+    >
       <div className="about">
         <div className="site-container">
           <div className="row">

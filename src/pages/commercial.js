@@ -6,7 +6,12 @@ import Layout from "components/Layout"
 
 const Commercial = () => {
   return (
-    <Layout>
+    <Layout
+      seo={{
+        title: "Commercial",
+        description: "",
+      }}
+    >
       <div className="commercial">
         <div className="site-container">
           <div className="row">

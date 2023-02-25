@@ -6,7 +6,12 @@ import Layout from "components/Layout"
 
 const Guarantee = () => {
   return (
-    <Layout>
+    <Layout
+      seo={{
+        title: "Guarantee",
+        description: "",
+      }}
+    >
       <div className="guarantee">
         <div className="site-container">
           <div className="row">
