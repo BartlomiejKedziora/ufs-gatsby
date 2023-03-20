@@ -13,7 +13,7 @@ const Guarantee = () => {
       }}
     >
       <div className="guarantee">
-        <div className="site-container">
+        <div className="container">
           <div className="row">
             <div className="col-6">Guarantee UFS!</div>
             <div className="col-6">Hello world!</div>

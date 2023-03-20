@@ -2,18 +2,26 @@ import "./styles.scss"
 
 import React from "react"
 import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Header = () => {
-  const serviceSubmenu = [
-    { label: "Lorem1 borem", href: "/privacy-policy" },
-    { label: "lorem2", href: "/services" },
-    { label: "lorem2", href: "/services" },
-    { label: "lorem2", href: "/services" },
-  ]
+  const data = useStaticQuery(
+    graphql`
+      query ServicesList {
+        allWpService {
+          nodes {
+            id
+            title
+            uri
+          }
+        }
+      }
+    `
+  )
 
   return (
     <header id="top" className="header">
-      <div className="site-container">
+      <div className="container">
         <div className="header-bar">
           <div className="header__logo">
             <Link to="/">
@@ -92,14 +100,13 @@ const Header = () => {
                       Services
                     </Link>
                     <ul className="main-menu__submenu-list">
-                      {serviceSubmenu?.map(({ label, href }, index) => (
-                        <li
-                          key={index}
-                          className="main-menu__submenu-list-item"
-                        >
-                          <Link to={href}>{label}</Link>
-                        </li>
-                      ))}
+                      {data?.allWpService?.nodes?.map(
+                        ({ id, uri, title }, index) => (
+                          <li key={id} className="main-menu__submenu-list-item">
+                            <Link to={uri}>{title}</Link>
+                          </li>
+                        )
+                      )}
                     </ul>
                   </li>
                   <li className="main-menu__item">

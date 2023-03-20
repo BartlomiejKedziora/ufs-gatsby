@@ -1,7 +1,9 @@
-import "styles/app.scss"
+import "./styles.scss"
 
 import React from "react"
 import { navigate } from "gatsby"
+
+import IconCircle from "../Icons/IconCircle"
 
 const Button = ({ className, type, onClick, disabled, to, children }) => {
   return (
@@ -11,7 +13,10 @@ const Button = ({ className, type, onClick, disabled, to, children }) => {
       onClick={to ? () => navigate(to) : onClick}
       disabled={disabled}
     >
-      {children}
+      <span>{children}</span>
+      <div className="button__icon">
+        <IconCircle />
+      </div>
     </button>
   )
 }

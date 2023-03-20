@@ -22,17 +22,29 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        edges {
+          previous {
+            slug
+            title
+          }
+          next {
+            slug
+            title
+          }
+        }
       }
     }
   `)
 
-  result.data.allWpService.nodes.forEach(page => {
-    createPage({
+  result.data.allWpService.nodes.forEach((page, index) => {
+    return createPage({
       path: page.uri,
       component: serviceTemplate,
       context: {
         title: page.title,
         data: page,
+        previous: result.data.allWpService.edges[index].previous,
+        next: result.data.allWpService.edges[index].next,
       },
     })
   })

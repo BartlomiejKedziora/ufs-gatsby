@@ -1,4 +1,55 @@
 @import "styles/variables.scss";
 
 .button {
+  display: flex;
+  align-items: center;
+  color: #2f2f2f;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: $theme-color;
+  border: 2px solid $theme-color;
+  border-radius: 60px;
+  padding: 11px 21px;
+  transition: 0.3s ease-out;
+  &:hover {
+    color: $theme-color;
+    background: transparent;
+    svg {
+      path {
+        fill: $theme-color;
+      }
+    }
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 25px;
+    svg {
+      path {
+        fill: #2f2f2f;
+        transition: 0.3s ease-out;
+      }
+    }
+  }
+  &.button-dark {
+    color: $theme-color;
+    background: transparent;
+    transition: 0.3s ease-out;
+    svg {
+      path {
+        fill: $theme-color;
+        transition: 0.3s ease-out;
+      }
+    }
+    &:hover {
+      color: #2f2f2f;
+      background: $theme-color;
+      svg {
+        path {
+          fill: #2f2f2f;
+        }
+      }
+    }
+  }
 }

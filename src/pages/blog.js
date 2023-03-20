@@ -20,7 +20,7 @@ const Blog = () => {
   return (
     <Layout>
       <div className="blog">
-        <div className="site-container">
+        <div className="container">
           <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
           <div className="row">
             <div className="col-6">Blog UFS!</div>

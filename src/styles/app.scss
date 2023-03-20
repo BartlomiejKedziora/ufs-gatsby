@@ -1,52 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap");
 
-@import "./variables.scss";
 @import "./modules/reset";
 @import "./modules/elements";
 @import "./modules/bootstrap/bootstrap-grid";
+@import "./variables.scss";
 
 .container {
-  max-width: 1140px;
+  max-width: 100%;
+  width: 1920px;
+  padding-right: 60px;
+  padding-left: 60px;
   @include xlScreen {
     max-width: 100%;
-  }
-}
-
-.container-fluid {
-  max-width: 1920px;
-  padding-right: 50px;
-  padding-left: 50px;
-
-  @include xlScreen {
+    width: 1140px;
     padding-right: 30px;
     padding-left: 30px;
   }
-
-  @include mdScreen {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-.site-container {
-  width: 1660px;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
-
-  @include xlScreen {
-    max-width: 990px;
-  }
-
-  @include lgScreen {
-    max-width: 100%;
-  }
-
   @include smScreen {
-    padding-left: 15px;
     padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
@@ -59,6 +31,9 @@ body {
   font-weight: 400;
   line-height: 1.4;
   background: #212121;
+  @include smScreen {
+    min-width: 320px;
+  }
 }
 
 a,
