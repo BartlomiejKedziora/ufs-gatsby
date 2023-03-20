@@ -7,7 +7,7 @@ import "swiper/css/pagination"
 import React from "react"
 
 import Layout from "components/Layout"
-import { HomeMission, HeroSlider } from "../page_components/home"
+import { HomeMission, HeroSlider, HomeServices } from "../page_components/home"
 
 const Home = () => {
   return (
@@ -19,6 +19,7 @@ const Home = () => {
     >
       <HeroSlider />
       <HomeMission />
+      <HomeServices />
     </Layout>
   )
 }

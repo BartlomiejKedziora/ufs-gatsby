@@ -20,6 +20,11 @@
     padding-right: 15px;
     padding-left: 15px;
   }
+  &--narrow {
+    max-width: 100%;
+    width: 1330px;
+    margin: 0 auto;
+  }
 }
 
 body {
