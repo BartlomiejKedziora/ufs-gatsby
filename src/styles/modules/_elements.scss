@@ -4,6 +4,8 @@
   color: #fff;
   font-size: 95px;
   font-weight: bold;
+  line-height: 1;
+  margin: 20px 0;
   @include xlScreen {
     font-size: 50px;
   }

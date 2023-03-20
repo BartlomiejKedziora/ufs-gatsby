@@ -1,7 +1,7 @@
 @import "styles/variables";
 
-.home-mission {
-  padding: 100px 0;
+.home-work {
+  padding: 0 0 100px;
   background: $grey-main;
   &__wrapper {
     background: $bckg-color;
@@ -35,16 +35,11 @@
       margin-bottom: 60px;
     }
   }
-  &__right {
-    .row:first-of-type {
-      margin-bottom: 25px;
-    }
-  }
   &__img {
-    height: 300px;
+    height: 660px;
     width: 100%;
     @include xlScreen {
-      height: 220px;
+      height: 460px;
     }
     img {
       width: 100%;
