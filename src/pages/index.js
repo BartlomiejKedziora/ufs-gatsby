@@ -14,6 +14,7 @@ import {
   HomeWork,
   HomeGuarant,
   HomeMap,
+  HomeContact,
 } from "../page_components/home"
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
       <HomeWork />
       <HomeGuarant />
       <HomeMap />
+      <HomeContact />
     </Layout>
   )
 }
