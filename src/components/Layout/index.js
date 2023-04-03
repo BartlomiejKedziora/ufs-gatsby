@@ -1,3 +1,5 @@
+import "styles/app.scss"
+
 import React from "react"
 import { CookiesProvider } from "react-cookie"
 

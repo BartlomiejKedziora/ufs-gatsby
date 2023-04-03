@@ -12,12 +12,12 @@ const HomeMission = () => {
           <div className="row">
             <div className="col-5">
               <div className="home-mission__left">
-                <p className="home-mission__title">COMPANY MISSION STATEMENT</p>
+                <p className="section__title">COMPANY MISSION STATEMENT</p>
                 <h2 className="section-heading">
                   Our <span>Mission</span>
                 </h2>
                 <p className="section__subtitle">The Ultimate Floor Sanding</p>
-                <p className="home-mission__text">
+                <p className="section__text">
                   Neque porro quisquam est, qui dolorem ipsum quia anumquam eius
                   modi tempora incidunt ut labore et dolore magnam aliquam
                   quaerat voluptatem. Excepteur sint occaecat cupidatat non

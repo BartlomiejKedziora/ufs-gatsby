@@ -12,12 +12,12 @@ const HomeWork = () => {
           <div className="row">
             <div className="col-6">
               <div className="home-work__left">
-                <p className="home-work__title">COMPANY INSTRUCTIONAL VIDEO</p>
+                <p className="hsection__title">COMPANY INSTRUCTIONAL VIDEO</p>
                 <h2 className="section-heading">
                   How <span>We Work</span>
                 </h2>
                 <p className="section__subtitle">The Ultimate Floor Sanding</p>
-                <p className="home-work__text">
+                <p className="section__text">
                   Neque porro quisquam est, qui dolorem ipsum quia anumquam eius
                   modi tempora incidunt ut labore et dolore magnam aliquam
                   quaerat voluptatem. Excepteur sint occaecat cupidatat non

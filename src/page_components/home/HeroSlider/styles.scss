@@ -1,2 +1,94 @@
+@import "styles/variables";
+
 .hero-slider {
+  &__background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__slide {
+    position: relative;
+    height: calc(100vh - 300px);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      background: transparent
+        linear-gradient(180deg, #7b5e30 0%, #3c311e71 54%, #2b1d07 100%) 0% 0%
+        no-repeat padding-box;
+      mix-blend-mode: multiply;
+    }
+    &-content {
+      width: 970px;
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      &--wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        & > .container {
+          height: 100%;
+        }
+      }
+    }
+    &__title {
+      font-size: 24px;
+      font-weight: 800;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 16px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    .button {
+      margin: 0 12px;
+    }
+  }
+
+  .swiper-pagination {
+    width: auto !important;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-slider__slider-bullets {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-right: 16px;
+    background: $text-color;
+    border-radius: 50px;
+    margin-bottom: 32px;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+    &.swiper-pagination-bullet-active {
+      background: $theme-color;
+    }
+  }
 }

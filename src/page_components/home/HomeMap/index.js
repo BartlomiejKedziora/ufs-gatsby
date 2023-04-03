@@ -12,12 +12,12 @@ const HomeMap = () => {
           <div className="row">
             <div className="col-6">
               <div className="home-map__left">
-                <p className="home-map__title">FIND LOCAL EXPERT</p>
+                <p className="section__title">FIND LOCAL EXPERT</p>
                 <h2 className="section-heading">
                   <span>Local Expert</span>
                 </h2>
                 <p className="section__subtitle">The Ultimate Floor Sanding</p>
-                <p className="home-map__text">
+                <p className="section__text">
                   Neque porro quisquam est, qui dolorem ipsum quia anumquam eius
                   modi tempora incidunt ut labore et dolore magnam aliquam
                   quaerat voluptatem. Excepteur sint occaecat cupidatat non

@@ -36,14 +36,14 @@
     align-items: center;
     margin-bottom: 20px;
     img {
-      width: 30px;
-      margin-right: 40px;
+      width: 24px;
+      margin-right: 32px;
     }
     span,
     a {
       color: #eeeeee;
       font-size: 16px;
-      font-weight: bold;
+      font-weight: 500;
       transition: 0.3s ease-out;
     }
     a:hover {
@@ -51,7 +51,7 @@
     }
   }
   &__form {
-    margin: 96px 0 0;
+    margin: 64px 0 0;
     &--row {
       display: flex;
       @include mdScreen {
@@ -67,7 +67,7 @@
       background: transparent;
       color: #eeeeee;
       font-size: 16px;
-      font-weight: bold;
+      font-weight: 500;
       outline: none;
       transition: 0.3s ease-out;
       &:focus {
@@ -94,15 +94,15 @@
       margin-bottom: 24px;
     }
     .button {
-      width: 70%;
-      margin: 64px auto 0;
+      width: 60%;
+      margin: 48px auto 0;
       justify-content: center;
       span {
-        font-size: 29px;
+        font-size: 19px;
         letter-spacing: 0.43px;
         text-transform: uppercase;
         @include xlScreen {
-          font-size: 20px;
+          font-size: 16px;
         }
       }
       &__icon {

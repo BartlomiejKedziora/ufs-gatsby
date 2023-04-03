@@ -14,16 +14,14 @@
     align-items: center;
   }
   &__text {
+    width: 970px;
+    max-width: 100%;
     font-size: 19px;
-    font-weight: 600;
-    margin-top: 44px;
-    margin-bottom: 85px;
+    font-weight: 400;
+    margin: 32px auto 64px;
     text-align: center;
     @include xlScreen {
       font-size: 16px;
-      font-weight: 500;
-      margin-top: 30px;
-      margin-bottom: 60px;
     }
   }
   &__img {
@@ -53,9 +51,9 @@
   &__buttons {
     display: flex;
     justify-content: center;
-    margin-top: 130px;
+    margin-top: 100px;
     @include xlScreen {
-      margin-top: 100px;
+      margin-top: 70px;
     }
     .button {
       margin: 0 12px;

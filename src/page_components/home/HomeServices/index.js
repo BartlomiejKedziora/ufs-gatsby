@@ -15,7 +15,7 @@ const HomeServices = () => {
                 Our <span>Services</span>
               </h2>
               <p className="section__subtitle">The Ultimate Floor Sanding</p>
-              <p className="home-services__text">
+              <p className="section__text">
                 The Ultimate Floor Sanding Company has a network of expert floor
                 sanding professionals across the UK. We are the largest network
                 of professional floor sanding contractors in the UK and Ireland.
