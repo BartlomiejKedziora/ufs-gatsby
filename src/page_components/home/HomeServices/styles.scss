@@ -12,16 +12,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  &__text {
-    width: 970px;
-    max-width: 100%;
-    font-size: 19px;
-    font-weight: 400;
-    margin: 32px auto 64px;
-    text-align: center;
-    @include xlScreen {
-      font-size: 16px;
+    .section__text {
+      width: 970px;
+      max-width: 100%;
+      text-align: center;
     }
   }
   &__img {

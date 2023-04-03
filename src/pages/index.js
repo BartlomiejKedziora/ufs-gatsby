@@ -9,6 +9,7 @@ import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
 import SectionTestimonials from "components/SectionTestimonials"
+import SectionContact from "components/SectionContact"
 import {
   HomeMission,
   HeroSlider,
@@ -29,6 +30,7 @@ const Home = ({ data }) => {
     >
       <HeroSlider data={data?.heroSlider?.nodes?.[0]?.pageHome} />
       <HomeMission />
+      <SectionContact />
       <HomeServices />
       <HomeWork />
       <HomeGuarant />

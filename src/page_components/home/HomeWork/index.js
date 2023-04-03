@@ -12,7 +12,7 @@ const HomeWork = () => {
           <div className="row">
             <div className="col-6">
               <div className="home-work__left">
-                <p className="hsection__title">COMPANY INSTRUCTIONAL VIDEO</p>
+                <p className="section__title">COMPANY INSTRUCTIONAL VIDEO</p>
                 <h2 className="section-heading">
                   How <span>We Work</span>
                 </h2>

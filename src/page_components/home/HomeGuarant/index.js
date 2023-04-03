@@ -30,14 +30,12 @@ const HomeGuarant = () => {
             <div className="col-6">
               <div className="home-guarant__right--wrapper">
                 <div className="home-guarant__right">
-                  <p className="home-guarant__title">
-                    OUR UNIQUE SELLING POINTS
-                  </p>
+                  <p className="section__title">OUR UNIQUE SELLING POINTS</p>
                   <h2 className="section-heading">Ultimate Guarantees</h2>
                   <p className="section__subtitle">
                     The Ultimate Floor Sanding
                   </p>
-                  <p className="home-guarant__text">
+                  <p className="section__text">
                     The Ultimate Floor Sanding Company™ is a highly professional
                     organisation, which focuses on giving our customers complete
                     peace of mind – every time! Providing “The Ultimate”
