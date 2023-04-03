@@ -38,7 +38,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/image2.jpg`,
+        icon: `src/assets/images/home/image2.jpg`,
       },
     },
     {
