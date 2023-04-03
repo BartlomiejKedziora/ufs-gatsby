@@ -13,12 +13,12 @@ import Button from "components/Button"
 
 const HeroSlider = ({ data }) => {
   SwiperCore.use([Autoplay, Navigation, Pagination, EffectFade])
-  console.log(data)
+
   const heroSliderSettings = {
     loop: false,
-    // autoplay: {
-    //   delay: 5000,
-    // },
+    autoplay: {
+      delay: 6000,
+    },
     slidesPerView: 1,
     centeredSlides: false,
     speed: 700,

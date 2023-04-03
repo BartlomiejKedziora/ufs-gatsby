@@ -8,6 +8,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
+import SectionTestimonials from "components/SectionTestimonials"
 import {
   HomeMission,
   HeroSlider,
@@ -32,6 +33,7 @@ const Home = ({ data }) => {
       <HomeWork />
       <HomeGuarant />
       <HomeMap />
+      <SectionTestimonials />
       <HomeContact />
     </Layout>
   )
