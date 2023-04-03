@@ -1,10 +1,26 @@
 import "./styles.scss"
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY
+      if (offset > 50) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+  }, [])
+
   const data = useStaticQuery(
     graphql`
       query ServicesList {
@@ -20,7 +36,7 @@ const Header = () => {
   )
 
   return (
-    <header id="top" className="header">
+    <header className={`header${isScrolled ? " shrink" : ""}`}>
       <div className="container-fluid">
         <div className="header-bar">
           <div className="header__logo">
