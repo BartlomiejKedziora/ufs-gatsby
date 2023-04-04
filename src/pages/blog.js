@@ -1,11 +1,10 @@
-// import "styles/pages/blog.scss"
-
 import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
-import Breadcrumbs from "../components/Breadcrumbs"
+import BlogPageContent from "page_components/blog/BlogPageContent"
 
-const Blog = () => {
+const Blog = ({ data }) => {
   const breadcrumbs_data = [
     {
       name: "Strona",
@@ -19,17 +18,29 @@ const Blog = () => {
 
   return (
     <Layout>
-      <div className="blog">
-        <div className="container">
-          <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
-          <div className="row">
-            <div className="col-6">Blog UFS!</div>
-            <div className="col-6">Hello world!</div>
-          </div>
-        </div>
-      </div>
+      <BlogPageContent data={data?.allWpPost?.nodes} />
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    allWpPost {
+      nodes {
+        acfpost {
+          excerpt
+          miniImg {
+            altText
+            sourceUrl
+          }
+        }
+        id
+        title
+        slug
+        date(locale: "en", formatString: "DD MMM YYYY")
+      }
+    }
+  }
+`
 
 export default Blog
