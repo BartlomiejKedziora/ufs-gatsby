@@ -1,0 +1,73 @@
+@import "styles/variables";
+
+.single-post {
+  &__inner {
+    width: 900px;
+    max-width: 100%;
+    margin: 100px auto 64px;
+  }
+  &__date {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  &__title {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 48px;
+    @include xlScreen {
+      font-size: 32px;
+    }
+  }
+  &__content {
+    padding-right: 160px;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    img {
+      margin: 0 0 24px 0;
+      @include xlScreen {
+        margin: 0 0 16px 0;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: $theme-color;
+    }
+
+    a,
+    p,
+    ul,
+    ol,
+    li {
+      font-size: 18px;
+      font-weight: 400;
+      @include xlScreen {
+        font-size: 16px;
+      }
+    }
+
+    ul,
+    ol {
+      padding-left: 30px;
+      @include xlScreen {
+        padding-left: 20px;
+      }
+    }
+  }
+}

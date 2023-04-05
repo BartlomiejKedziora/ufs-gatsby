@@ -11,8 +11,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allWpPost {
         nodes {
           acfpost {
-            excerpt
-            miniImg {
+            mainImg {
               altText
               sourceUrl
             }
