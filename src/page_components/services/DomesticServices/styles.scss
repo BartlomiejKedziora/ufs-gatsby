@@ -1,0 +1,82 @@
+@import "styles/variables";
+
+.domestic-services {
+  padding: 100px 0 0;
+  background: $grey-main;
+  .section-heading {
+    text-align: center;
+  }
+  .col-padding {
+    padding: 0 50px;
+    @include xlScreen {
+      padding: 0 40px;
+    }
+  }
+  &__wrapper {
+    background: $bckg-color;
+    padding: 60px 0;
+    margin-bottom: -60px;
+    @include xlScreen {
+      margin-bottom: -40px;
+    }
+  }
+  &__subtitle {
+    color: $theme-color;
+    font-size: 38px;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 60px;
+    text-align: center;
+    @include xlScreen {
+      font-size: 32px;
+      margin-bottom: 48px;
+    }
+  }
+  &__tail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    @include xlScreen {
+      margin-bottom: 60px;
+    }
+  }
+  &__img {
+    height: 120px;
+    display: flex;
+    align-items: end;
+    img {
+      width: 100px;
+      @include xlScreen {
+        width: 80px;
+      }
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0;
+    text-align: center;
+    @include xxlScreen {
+      height: 68px;
+      overflow: hidden;
+      margin: 20px 0 8px;
+    }
+    @include xlScreen {
+      height: 62px;
+      font-size: 22px;
+    }
+  }
+  &__desc {
+    height: 102px;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    text-align: center;
+    @include xlScreen {
+      height: 92px;
+      font-size: 16px;
+    }
+  }
+}

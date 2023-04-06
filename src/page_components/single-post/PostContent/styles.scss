@@ -12,6 +12,10 @@
     letter-spacing: 0.42px;
     text-transform: uppercase;
     margin-bottom: 16px;
+    @include xlScreen {
+      font-size: 20px;
+      font-weight: 500;
+    }
   }
   &__title {
     color: #fff;
@@ -20,7 +24,7 @@
     line-height: 1;
     margin: 0 0 48px;
     @include xlScreen {
-      font-size: 32px;
+      font-size: 40px;
     }
   }
   &__content {
@@ -57,9 +61,14 @@
     li {
       font-size: 18px;
       font-weight: 400;
+      list-style: unset;
       @include xlScreen {
         font-size: 16px;
       }
+    }
+
+    li {
+      margin-bottom: 8px;
     }
 
     ul,

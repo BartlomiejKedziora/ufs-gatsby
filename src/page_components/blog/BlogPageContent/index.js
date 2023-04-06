@@ -3,14 +3,9 @@ import "./styles.scss"
 import React from "react"
 import { Link } from "gatsby"
 
-import PageHeader from "components/PageHeader"
-
-import hero_image from "assets/images/hero4.jpg"
-
 const BlogPageContent = ({ data }) => {
   return (
     <section className="blog-page">
-      <PageHeader title="Blog" img={hero_image} />
       <div className="container">
         <div className="blog-page__wrapper">
           {data?.map(
