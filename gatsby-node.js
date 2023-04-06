@@ -3,7 +3,7 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const serviceTemplate = path.resolve(`src/templates/service.js`)
+  const serviceTemplate = path.resolve(`src/templates/single-service.js`)
   const postTemplate = path.resolve(`src/templates/single-post.js`)
 
   const result = await graphql(`
@@ -26,22 +26,6 @@ exports.createPages = async ({ graphql, actions }) => {
           content
           slug
         }
-      }
-      allWpService {
-        nodes {
-          slug
-          uri
-          title
-          id
-          acfServices {
-            desc
-            title
-            serviceIcon {
-              altText
-              sourceUrl
-            }
-          }
-        }
         edges {
           previous {
             slug
@@ -51,6 +35,36 @@ exports.createPages = async ({ graphql, actions }) => {
             slug
             title
           }
+        }
+      }
+      allWpService {
+        nodes {
+          acfServices {
+            title
+            heroImage {
+              altText
+              sourceUrl
+              seo {
+                metaDesc
+                title
+              }
+            }
+            row {
+              blockSubtitle
+              blockText
+              blockTitle
+              button
+              buttonLink
+              blockImage {
+                altText
+                sourceUrl
+              }
+            }
+          }
+          slug
+          uri
+          title
+          id
         }
       }
     }
