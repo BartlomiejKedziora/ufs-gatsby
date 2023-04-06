@@ -4,7 +4,7 @@ import React from "react"
 
 import Button from "components/Button"
 
-const HomeContact = () => {
+const SectionForm = () => {
   return (
     <section className="home-contact">
       <div className="home-contact__wrapper">
@@ -64,4 +64,4 @@ const HomeContact = () => {
   )
 }
 
-export default HomeContact
+export default SectionForm
