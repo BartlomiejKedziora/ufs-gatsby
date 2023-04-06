@@ -110,19 +110,25 @@ const Header = () => {
                     <Link to="/about" activeClassName="current">
                       About
                     </Link>
+                    <ul className="main-menu__submenu-list">
+                      <li className="main-menu__submenu-list-item">
+                        <Link to="/testimonials/">Testimonials</Link>
+                      </li>
+                      <li className="main-menu__submenu-list-item">
+                        <Link to="/guarantee/">Guarantee</Link>
+                      </li>
+                    </ul>
                   </li>
                   <li className="main-menu__item">
                     <Link to="/services" activeClassName="current">
                       Services
                     </Link>
                     <ul className="main-menu__submenu-list">
-                      {data?.allWpService?.nodes?.map(
-                        ({ id, uri, title }, index) => (
-                          <li key={id} className="main-menu__submenu-list-item">
-                            <Link to={uri}>{title}</Link>
-                          </li>
-                        )
-                      )}
+                      {data?.allWpService?.nodes?.map(({ id, uri, title }) => (
+                        <li key={id} className="main-menu__submenu-list-item">
+                          <Link to={uri}>{title}</Link>
+                        </li>
+                      ))}
                     </ul>
                   </li>
                   <li className="main-menu__item">
