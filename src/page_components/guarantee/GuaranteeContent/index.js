@@ -33,7 +33,7 @@ const GuaranteeContent = () => {
   return (
     <section className="guarantee-content">
       <div className="guarantee-content__wrapper">
-        <div className="container-fluid">
+        <div className="container">
           <div className="guarantee-content__five">
             <div className="guarantee-content__five-left">
               <div className="container">
@@ -76,86 +76,86 @@ const GuaranteeContent = () => {
             })}
           </div>
         </div>
-        <div className="container-fluid">
+        <div className="guarantee-content__row--wrapper">
           <div className="guarantee-content__row odd">
-            <div className="guarantee-content__row-img">
-              <img src={require("assets/images/photo2.jpg").default} alt="" />
-            </div>
-            <div className="guarantee-content__row-text">
-              <div className="container">
-                <div className="guarantee-content__row-content">
-                  <h2 className="section-heading">
-                    What makes our guarantee The Ultimate?
-                  </h2>
-                  <p className="section__subtitle">
-                    Lorem Ipsum Dolor Sit Amet
-                  </p>
-                  <p className="section__text">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                    nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat,
-                  </p>
-                  <Divider />
+            <div className="container">
+              <div className="guarantee-content__row-img">
+                <img src={require("assets/images/photo2.jpg").default} alt="" />
+              </div>
+              <div className="guarantee-content__row-text">
+                <div className="container">
+                  <div className="guarantee-content__row-content">
+                    <h2 className="section-heading">
+                      What makes our guarantee The Ultimate?
+                    </h2>
+                    <p className="section__subtitle">
+                      Lorem Ipsum Dolor Sit Amet
+                    </p>
+                    <p className="section__text">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                      magna aliquyam erat, sed diam voluptua. At vero eos et
+                      accusam et justo duo dolores et ea rebum. Stet clita kasd
+                      gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                      sit amet.
+                    </p>
+                    <Divider />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="container-fluid">
+        <div className="guarantee-content__row--wrapper">
           <div className="guarantee-content__row">
-            <div className="guarantee-content__row-text">
-              <div className="container">
-                <div className="guarantee-content__row-content">
-                  <h2 className="section-heading">
-                    What makes our guarantee The Ultimate?
-                  </h2>
-                  <p className="section__subtitle">
-                    Lorem Ipsum Dolor Sit Amet
-                  </p>
-                  <p className="section__text">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                    nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat,
-                  </p>
-                  <Divider />
+            <div className="container">
+              <div className="guarantee-content__row-text">
+                <div className="container">
+                  <div className="guarantee-content__row-content">
+                    <h2 className="section-heading">
+                      What makes our guarantee The Ultimate?
+                    </h2>
+                    <p className="section__subtitle">
+                      Lorem Ipsum Dolor Sit Amet
+                    </p>
+                    <p className="section__text">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                      magna aliquyam erat, sed diam voluptua. At vero eos et
+                      accusam et justo duo dolores et ea rebum. Stet clita kasd
+                      gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                      sit amet. Lorem ipsum dolor sit amet,
+                    </p>
+                    <Divider />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="guarantee-content__row-img">
-              <div className="guarantee-content__row-images">
-                <div className="guarantee-content__row-img-sm">
-                  <img
-                    src={require("assets/images/photo2.jpg").default}
-                    alt=""
-                  />
-                </div>
-                <div className="guarantee-content__row-img-sm">
-                  <img
-                    src={require("assets/images/photo2.jpg").default}
-                    alt=""
-                  />
-                </div>
-                <div className="guarantee-content__row-img-sm">
-                  <img
-                    src={require("assets/images/photo2.jpg").default}
-                    alt=""
-                  />
-                </div>
-                <div className="guarantee-content__row-img-sm">
-                  <img
-                    src={require("assets/images/photo2.jpg").default}
-                    alt=""
-                  />
+              <div className="guarantee-content__row-img">
+                <div className="guarantee-content__row-images">
+                  <div className="guarantee-content__row-img-sm">
+                    <img
+                      src={require("assets/images/photo2.jpg").default}
+                      alt=""
+                    />
+                  </div>
+                  <div className="guarantee-content__row-img-sm">
+                    <img
+                      src={require("assets/images/photo2.jpg").default}
+                      alt=""
+                    />
+                  </div>
+                  <div className="guarantee-content__row-img-sm">
+                    <img
+                      src={require("assets/images/photo2.jpg").default}
+                      alt=""
+                    />
+                  </div>
+                  <div className="guarantee-content__row-img-sm">
+                    <img
+                      src={require("assets/images/photo2.jpg").default}
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
