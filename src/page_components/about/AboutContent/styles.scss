@@ -1,0 +1,173 @@
+@import "styles/variables";
+
+.about-content {
+  padding: 100px 0 0;
+  background: $grey-main;
+  &__wrapper {
+    background: $bckg-color;
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    &.odd {
+      flex-direction: row-reverse;
+    }
+    &-img {
+      width: 50%;
+      height: 600px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-text {
+      width: 50%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  // &__five {
+  //   position: relative;
+  //   &-right {
+  //     width: 50%;
+  //     height: 600px;
+  //     margin-left: 50%;
+  //     img {
+  //       width: 100%;
+  //       height: 100%;
+  //       object-fit: cover;
+  //     }
+  //   }
+  //   &-left {
+  //     height: 600px;
+  //     width: 50%;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     bottom: 0;
+  //     z-index: 2;
+  //     & > .container {
+  //       height: 100%;
+  //     }
+  //   }
+  //   &-content {
+  //     height: 100%;
+  //     position: relative;
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     padding-right: 60px;
+  //   }
+  //   &-icon {
+  //     position: absolute;
+  //     top: 45%;
+  //     left: 0;
+  //     bottom: 0;
+  //     z-index: -1;
+  //     svg {
+  //       width: 350px;
+  //       transform: translateY(-50%);
+  //     }
+  //   }
+  // }
+  // &__numbers {
+  //   display: flex;
+  //   justify-content: center;
+  //   flex-wrap: wrap;
+  //   padding: 100px 0 70px;
+  // }
+  // &__number {
+  //   width: 180px;
+  //   height: 280px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   border: 2px solid $theme-color;
+  //   margin: 0 12px 30px;
+  //   padding: 24px 16px;
+  //   &-item {
+  //     -webkit-text-stroke: 2px $theme-color;
+  //     color: transparent;
+  //     font-size: 120px;
+  //     font-weight: bold;
+  //     line-height: 1;
+  //     margin-bottom: 40px;
+  //   }
+  //   &-text {
+  //     color: $theme-color;
+  //     font-size: 14px;
+  //     font-weight: bold;
+  //     text-align: center;
+  //   }
+  // }
+  // &__row {
+  //   position: relative;
+  //   background: $bckg-color;
+  //   & > .container {
+  //     position: relative;
+  //   }
+  //   &.odd {
+  //     .guarantee-content__row-img {
+  //       margin-left: 0;
+  //     }
+  //     .guarantee-content__row-text {
+  //       left: 50%;
+  //     }
+  //   }
+  //   &--wrapper {
+  //     padding: 100px 0 0;
+  //     background: $grey-main;
+  //   }
+  //   &-img {
+  //     width: 50%;
+  //     height: 600px;
+  //     margin-left: 50%;
+  //     background: $bckg-color;
+  //     &-sm {
+  //       width: 50%;
+  //       height: 50%;
+  //       padding: 0 8px;
+  //       &:nth-child(1),
+  //       &:nth-child(2) {
+  //         padding-bottom: 16px;
+  //       }
+  //     }
+  //     img {
+  //       width: 100%;
+  //       height: 100%;
+  //       object-fit: cover;
+  //     }
+  //   }
+  //   &-images {
+  //     width: 100%;
+  //     height: 100%;
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     margin: 0 -8px;
+  //   }
+  //   &-text {
+  //     height: 600px;
+  //     width: 50%;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     bottom: 0;
+  //     z-index: 2;
+  //     background: $bckg-color;
+  //     & > .container {
+  //       height: 100%;
+  //     }
+  //   }
+  //   &-content {
+  //     height: 100%;
+  //     position: relative;
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     padding-right: 60px;
+  //   }
+  // }
+}
