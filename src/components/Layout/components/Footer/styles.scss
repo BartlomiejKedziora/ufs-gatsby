@@ -116,5 +116,21 @@
     @include xlScreen {
       font-size: 14px;
     }
+    &-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p,
+      a {
+        margin: 0 32px;
+      }
+    }
+  }
+  &__privacy-policy {
+    color: $theme-color;
+    &:hover {
+      color: $theme-color;
+      text-decoration: underline;
+    }
   }
 }

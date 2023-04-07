@@ -2,8 +2,10 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
+import Divider from "components/Divider"
 import PageHeader from "components/PageHeader"
 import SectionContact from "components/SectionContact"
+import SectionForm from "components/SectionForm"
 import { DomesticServices } from "page_components/services"
 
 import hero_image from "assets/images/hero4.jpg"
@@ -23,6 +25,8 @@ const Services = ({ data }) => {
         services_data={data?.allWpService?.nodes}
       />
       <SectionContact />
+      <Divider height={100} background="#363636" />
+      <SectionForm />
     </Layout>
   )
 }

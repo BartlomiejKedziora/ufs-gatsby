@@ -1,6 +1,7 @@
 import React from "react"
 
 import Layout from "components/Layout"
+import PrivacyContent from "page_components/privacy_policy/PrivacyContent"
 
 const PrivacyPolicy = () => {
   return (
@@ -10,11 +11,7 @@ const PrivacyPolicy = () => {
         description: "",
       }}
     >
-      <div className="privacy-policy">
-        <div className="site-container">
-          <h1>Polityka prywatnosci</h1>
-        </div>
-      </div>
+      <PrivacyContent />
     </Layout>
   )
 }

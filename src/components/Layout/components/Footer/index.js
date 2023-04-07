@@ -72,8 +72,13 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="footer__copyrights">
-          © Ultimate Floor Sanding {current_year}. All rights reserved.
+        <div className="footer__copyrights-row">
+          <p className="footer__copyrights">
+            © Ultimate Floor Sanding {current_year}. All rights reserved.
+          </p>
+          <Link to="/privacy-policy" className="footer__privacy-policy">
+            Privacy policy
+          </Link>
         </div>
       </div>
     </footer>

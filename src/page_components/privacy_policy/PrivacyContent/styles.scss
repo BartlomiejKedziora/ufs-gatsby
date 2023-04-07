@@ -1,0 +1,42 @@
+@import "styles/variables";
+
+.privacy-policy {
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
+  h1 {
+    padding: 100px 0 40px;
+  }
+  h2 {
+    padding-bottom: 30px;
+  }
+  h3 {
+    font-size: 22px;
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+  p {
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  a {
+    color: $theme-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul,
+  ol {
+    list-style: unset;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    @include xlScreen {
+      padding-left: 20px;
+    }
+  }
+  li {
+    list-style: unset;
+    margin-bottom: 8px;
+  }
+}
