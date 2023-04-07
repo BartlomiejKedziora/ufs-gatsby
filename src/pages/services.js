@@ -17,7 +17,11 @@ const Services = ({ data }) => {
       }}
     >
       <PageHeader title="What We Offer" img={hero_image} />
-      <DomesticServices services_data={data?.allWpService?.nodes} />
+      <DomesticServices
+        heading="Domestic Services"
+        subtitle="Glance At"
+        services_data={data?.allWpService?.nodes}
+      />
       <SectionContact />
     </Layout>
   )

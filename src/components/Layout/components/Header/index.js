@@ -31,6 +31,13 @@ const Header = () => {
             uri
           }
         }
+        allWpCommercial {
+          nodes {
+            id
+            title
+            uri
+          }
+        }
       }
     `
   )
@@ -135,6 +142,15 @@ const Header = () => {
                     <Link to="/commercial" activeClassName="current">
                       Commercial
                     </Link>
+                    <ul className="main-menu__submenu-list">
+                      {data?.allWpCommercial?.nodes?.map(
+                        ({ id, uri, title }) => (
+                          <li key={id} className="main-menu__submenu-list-item">
+                            <Link to={uri}>{title}</Link>
+                          </li>
+                        )
+                      )}
+                    </ul>
                   </li>
                   <li className="main-menu__item">
                     <Link to="/blog" activeClassName="current">

@@ -44,10 +44,6 @@ exports.createPages = async ({ graphql, actions }) => {
             heroImage {
               altText
               sourceUrl
-              seo {
-                metaDesc
-                title
-              }
             }
             row {
               blockSubtitle
@@ -65,6 +61,40 @@ exports.createPages = async ({ graphql, actions }) => {
           uri
           title
           id
+          seo {
+            title
+            metaDesc
+          }
+        }
+      }
+      allWpCommercial {
+        nodes {
+          acfCommercial {
+            title
+            heroImage {
+              altText
+              sourceUrl
+            }
+            row {
+              blockSubtitle
+              blockText
+              blockTitle
+              button
+              buttonLink
+              blockImage {
+                altText
+                sourceUrl
+              }
+            }
+          }
+          id
+          slug
+          uri
+          title
+          seo {
+            title
+            metaDesc
+          }
         }
       }
     }
@@ -79,6 +109,17 @@ exports.createPages = async ({ graphql, actions }) => {
         data: page,
         // previous: result.data.allWpService.edges[index].previous,
         // next: result.data.allWpService.edges[index].next,
+      },
+    })
+  })
+
+  result.data.allWpCommercial.nodes.forEach((page, index) => {
+    return createPage({
+      path: page.uri,
+      component: serviceTemplate,
+      context: {
+        title: page.title,
+        data: page,
       },
     })
   })

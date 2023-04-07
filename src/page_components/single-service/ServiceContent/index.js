@@ -5,9 +5,12 @@ import Button from "components/Button"
 import Divider from "components/Divider"
 
 const ServiceContent = ({ data }) => {
+  const rows_list = data?.acfServices
+    ? data?.acfServices?.row
+    : data?.acfCommercial?.row
   return (
     <section className="single-service">
-      {data?.acfServices?.row?.map(
+      {rows_list?.map(
         (
           {
             blockImage,

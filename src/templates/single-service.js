@@ -6,6 +6,9 @@ import ServiceContent from "page_components/single-service/ServiceContent"
 
 const SingleService = ({ pageContext }) => {
   const service_data = pageContext?.data
+  const img = service_data?.acfServices
+    ? service_data?.acfServices?.heroImage?.sourceUrl
+    : service_data?.acfCommercial?.heroImage?.sourceUrl
   return (
     <Layout
       seo={{
@@ -13,10 +16,7 @@ const SingleService = ({ pageContext }) => {
         description: "",
       }}
     >
-      <PageHeader
-        title={pageContext?.data?.title}
-        img={service_data?.acfServices?.heroImage?.sourceUrl}
-      />
+      <PageHeader title={pageContext?.data?.title} img={img} />
       <ServiceContent data={service_data} />
     </Layout>
   )

@@ -1,10 +1,14 @@
-// import "styles/pages/commercial.scss"
-
 import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
+import PageHeader from "components/PageHeader"
+import SectionContact from "components/SectionContact"
+import { DomesticServices } from "page_components/services"
 
-const Commercial = () => {
+import hero_image from "assets/images/hero4.jpg"
+
+const Commercial = ({ data }) => {
   return (
     <Layout
       seo={{
@@ -12,16 +16,34 @@ const Commercial = () => {
         description: "",
       }}
     >
-      <div className="commercial">
-        <div className="site-container">
-          <div className="row">
-            <div className="col-6">Commercial UFS!</div>
-            <div className="col-6">Hello world!</div>
-          </div>
-        </div>
-      </div>
+      <PageHeader title="What We Offer" img={hero_image} />
+      <DomesticServices
+        heading="Commercial"
+        subtitle="Glance At"
+        services_data={data?.allWpCommercial?.nodes}
+      />
+      <SectionContact />
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    allWpCommercial {
+      nodes {
+        acfCommercial {
+          desc
+          title
+          serviceIcon {
+            altText
+            sourceUrl
+          }
+        }
+        id
+        slug
+      }
+    }
+  }
+`
 
 export default Commercial
