@@ -1,0 +1,110 @@
+@import "styles/variables";
+
+.checkbox {
+  &__label {
+    color: $text-color;
+    display: inline-flex;
+
+    sup {
+      font-weight: 700;
+    }
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + span {
+    display: block;
+    position: relative;
+    padding-left: 34px;
+    font-size: 12px;
+    line-height: 16px;
+    cursor: pointer;
+  }
+
+  input[type="radio"] + span {
+    display: block;
+    position: relative;
+    padding-left: 34px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] + span:before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $text-color;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    transition: all 150ms linear;
+  }
+
+  input[type="radio"] + span:before {
+    content: "";
+    display: block;
+    width: 21px;
+    height: 21px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    transition: all 150ms linear;
+  }
+
+  input[type="checkbox"] + span:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background-color: $theme-color;
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+    transition: all 150ms linear;
+  }
+
+  input[type="radio"] + span:after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    background-color: $theme-color;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+    transition: all 150ms linear;
+  }
+
+  input[type="checkbox"]:checked + span:after,
+  input[type="radio"]:checked + span:after {
+    opacity: 1;
+  }
+
+  &--progress {
+    input[type="checkbox"]:checked + span:after {
+      background-color: #006432 !important;
+    }
+  }
+
+  &--done {
+    input[type="checkbox"]:checked + span:after {
+      background-color: $theme-color !important;
+    }
+  }
+
+  &--plan {
+    color: red;
+    input[type="checkbox"] + span:after {
+      background-color: #7e7e7e !important;
+    }
+  }
+}

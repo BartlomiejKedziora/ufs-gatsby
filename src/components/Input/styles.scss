@@ -1,0 +1,45 @@
+@import "styles/variables";
+
+.input {
+  position: relative;
+  margin: 0 0 30px 0;
+
+  @media (max-width: 1440px) {
+    margin: 0 0 15px 0;
+  }
+
+  &__label {
+    position: absolute;
+    top: 17px;
+    left: 0;
+    transition: all 150ms linear;
+  }
+
+  &__input {
+    font-size: 16px;
+    color: $text-color;
+    background-color: #2f2f2f;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 15px;
+    &::placeholder {
+      color: $text-color;
+      font-size: 14px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.fill {
+    .input {
+      &__label {
+        font-size: 10px;
+        top: -12px;
+      }
+    }
+  }
+}

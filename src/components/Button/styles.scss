@@ -12,6 +12,18 @@
   border-radius: 60px;
   padding: 11px 21px;
   transition: 0.3s ease-out;
+  &.disabled {
+    opacity: 0.2;
+    &:hover {
+      color: #2f2f2f;
+      background: $theme-color;
+      svg {
+        path {
+          fill: #2f2f2f;
+        }
+      }
+    }
+  }
   &:hover {
     color: $theme-color;
     background: transparent;

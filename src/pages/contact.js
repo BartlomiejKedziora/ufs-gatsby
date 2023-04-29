@@ -1,8 +1,12 @@
-// import "styles/pages/contact.scss"
-
 import React from "react"
 
 import Layout from "components/Layout"
+import PageHeader from "components/PageHeader"
+import SectionContact from "components/SectionContact"
+import SectionTestimonials from "components/SectionTestimonials"
+import ContactContent from "page_components/contact/ContactContent"
+
+import hero_image from "assets/images/hero4.jpg"
 
 const Contact = () => {
   return (
@@ -12,14 +16,10 @@ const Contact = () => {
         description: "",
       }}
     >
-      <div className="contact">
-        <div className="container">
-          <div className="row">
-            <div className="col-6">Contact UFS!</div>
-            <div className="col-6">Hello world!</div>
-          </div>
-        </div>
-      </div>
+      <PageHeader title="Contact" img={hero_image} />
+      <ContactContent />
+      <SectionContact />
+      <SectionTestimonials />
     </Layout>
   )
 }

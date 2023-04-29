@@ -1,0 +1,18 @@
+@import "styles/variables";
+
+.contact-content {
+  &__wrapper {
+    padding: 100px 0;
+    background: $bckg-color;
+    width: 900px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .section {
+    &-heading,
+    &__subtitle {
+      text-align: center;
+    }
+  }
+}

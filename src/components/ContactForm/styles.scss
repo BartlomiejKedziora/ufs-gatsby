@@ -1,0 +1,15 @@
+.contact-form {
+  margin-top: 50px;
+  p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .checkbox {
+    margin-top: 30px;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
