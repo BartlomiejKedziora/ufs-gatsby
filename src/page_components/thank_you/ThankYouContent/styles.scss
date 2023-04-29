@@ -1,6 +1,6 @@
 @import "styles/variables";
 
-.not-found {
+.thank-you {
   height: 60vh;
   border-bottom: 1px solid #000;
   & > .container {
@@ -13,37 +13,13 @@
     align-items: center;
     justify-content: center;
   }
-  &__title {
-    color: $theme-color;
-    font-size: 160px;
-    font-weight: bold;
-    @include xlScreen {
-      font-size: 120px;
-    }
-    @include smScreen {
-      font-size: 64px;
-    }
-  }
-  &__text {
-    font-size: 28px;
-    font-weight: 500;
-    margin: 48px 0 32px;
-    @include xlScreen {
-      font-size: 24px;
-      margin: 48px 0;
-    }
-    @include smScreen {
-      font-size: 16px;
-      margin: 32px 0;
-    }
-  }
   &__link {
     display: flex;
     align-items: center;
+    margin-top: 50px;
     &:hover {
       span {
         color: $theme-color;
-        text-decoration: underline;
         margin-right: 24px;
       }
     }

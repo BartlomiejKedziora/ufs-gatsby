@@ -91,7 +91,12 @@ const HeroSlider = ({ data, setIsModalQuoteOpen }) => {
                       <p className="hero-slider__text">{slide?.slidetext}</p>
                       <div className="hero-slider__buttons">
                         <Button>FIND OUT MORE</Button>
-                        <Button className="button-dark">GET A QUOTE</Button>
+                        <Button
+                          className="button-dark"
+                          onClick={() => setIsModalQuoteOpen(true)}
+                        >
+                          GET A QUOTE
+                        </Button>
                       </div>
                     </div>
                   </div>
