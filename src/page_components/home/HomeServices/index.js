@@ -4,7 +4,7 @@ import React from "react"
 
 import Button from "components/Button"
 
-const HomeServices = () => {
+const HomeServices = ({ setIsModalQuoteOpen }) => {
   return (
     <section className="home-services">
       <div className="home-services__wrapper">
@@ -33,7 +33,12 @@ const HomeServices = () => {
                   </div>
                   <div className="home-services__buttons">
                     <Button>FIND OUT MORE</Button>
-                    <Button className="button-dark">GET A QUOTE</Button>
+                    <Button
+                      className="button-dark"
+                      onClick={() => setIsModalQuoteOpen(true)}
+                    >
+                      GET A QUOTE
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -48,7 +53,12 @@ const HomeServices = () => {
                   </div>
                   <div className="home-services__buttons">
                     <Button>FIND OUT MORE</Button>
-                    <Button className="button-dark">GET A QUOTE</Button>
+                    <Button
+                      className="button-dark"
+                      onClick={() => setIsModalQuoteOpen(true)}
+                    >
+                      GET A QUOTE
+                    </Button>
                   </div>
                 </div>
               </div>

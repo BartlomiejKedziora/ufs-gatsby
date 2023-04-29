@@ -4,7 +4,7 @@ import React from "react"
 
 import Button from "components/Button"
 
-const HomeMission = () => {
+const HomeMission = ({ setIsModalQuoteOpen }) => {
   return (
     <section className="home-mission">
       <div className="home-mission__wrapper">
@@ -26,7 +26,12 @@ const HomeMission = () => {
                 </p>
                 <div className="home-mission__buttons">
                   <Button>FIND OUT MORE</Button>
-                  <Button className="button-dark">GET A QUOTE</Button>
+                  <Button
+                    className="button-dark"
+                    onClick={() => setIsModalQuoteOpen(true)}
+                  >
+                    GET A QUOTE
+                  </Button>
                 </div>
               </div>
             </div>

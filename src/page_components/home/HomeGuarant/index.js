@@ -5,7 +5,7 @@ import React from "react"
 import Button from "components/Button"
 import IconFive from "components/Icons/IconFive"
 
-const HomeGuarant = () => {
+const HomeGuarant = ({ setIsModalQuoteOpen }) => {
   return (
     <section className="home-guarant">
       <div className="home-guarant__wrapper">
@@ -45,7 +45,12 @@ const HomeGuarant = () => {
                   </p>
                   <div className="home-guarant__buttons">
                     <Button>FIND OUT MORE</Button>
-                    <Button className="button-dark">GET A QUOTE</Button>
+                    <Button
+                      className="button-dark"
+                      onClick={() => setIsModalQuoteOpen(true)}
+                    >
+                      GET A QUOTE
+                    </Button>
                   </div>
                 </div>
                 <div className="home-guarant__five">

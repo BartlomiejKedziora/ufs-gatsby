@@ -11,7 +11,7 @@ import SwiperCore, {
 
 import Button from "components/Button"
 
-const HeroSlider = ({ data }) => {
+const HeroSlider = ({ data, setIsModalQuoteOpen }) => {
   SwiperCore.use([Autoplay, Navigation, Pagination, EffectFade])
 
   const heroSliderSettings = {
@@ -58,7 +58,12 @@ const HeroSlider = ({ data }) => {
                   <p className="hero-slider__text">{data?.text}</p>
                   <div className="hero-slider__buttons">
                     <Button>FIND OUT MORE</Button>
-                    <Button className="button-dark">GET A QUOTE</Button>
+                    <Button
+                      className="button-dark"
+                      onClick={() => setIsModalQuoteOpen(true)}
+                    >
+                      GET A QUOTE
+                    </Button>
                   </div>
                 </div>
               </div>

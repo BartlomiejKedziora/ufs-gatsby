@@ -19,10 +19,10 @@ const SliderArrow = () => {
           transform="translate(0)"
           fill="none"
           stroke="#f9a828"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-miterlimit="10"
-          stroke-width="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="10"
+          strokeWidth="4"
         />
       </g>
     </svg>

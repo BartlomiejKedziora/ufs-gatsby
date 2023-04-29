@@ -35,8 +35,6 @@ const SectionTestimonials = () => {
     }
   `)
 
-  console.log(data)
-
   const testimonialsSliderSettings = {
     loop: false,
     // autoplay: {

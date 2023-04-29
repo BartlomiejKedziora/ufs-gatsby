@@ -7,7 +7,6 @@ import Button from "components/Button"
 import IconStar from "components/Icons/IconStar"
 
 const TestimonialsContent = ({ data }) => {
-  console.log(data)
   const [fullList, setFullList] = useState(false)
 
   const short_list = data?.slice(0, 6)

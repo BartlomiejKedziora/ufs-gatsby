@@ -4,7 +4,7 @@ import "swiper/css/navigation"
 import "swiper/css/effect-fade"
 import "swiper/css/pagination"
 
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
@@ -19,8 +19,10 @@ import {
   HomeGuarant,
   HomeMap,
 } from "../page_components/home"
+import ModalQuote from "components/ModalQuote"
 
 const Home = ({ data }) => {
+  const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
   return (
     <Layout
       seo={{
@@ -28,15 +30,21 @@ const Home = ({ data }) => {
         description: "",
       }}
     >
-      <HeroSlider data={data?.heroSlider?.nodes?.[0]?.pageHome} />
-      <HomeMission />
-      <SectionContact />
-      <HomeServices />
-      <HomeWork />
-      <HomeGuarant />
-      <HomeMap />
+      <HeroSlider
+        data={data?.heroSlider?.nodes?.[0]?.pageHome}
+        setIsModalQuoteOpen={setIsModalQuoteOpen}
+      />
+      <HomeMission setIsModalQuoteOpen={setIsModalQuoteOpen} />
+      <SectionContact setIsModalQuoteOpen={setIsModalQuoteOpen} />
+      <HomeServices setIsModalQuoteOpen={setIsModalQuoteOpen} />
+      <HomeWork setIsModalQuoteOpen={setIsModalQuoteOpen} />
+      <HomeGuarant setIsModalQuoteOpen={setIsModalQuoteOpen} />
+      <HomeMap setIsModalQuoteOpen={setIsModalQuoteOpen} />
       <SectionTestimonials />
       <SectionForm />
+      {isModalQuoteOpen && (
+        <ModalQuote closeFn={() => setIsModalQuoteOpen(false)} />
+      )}
     </Layout>
   )
 }

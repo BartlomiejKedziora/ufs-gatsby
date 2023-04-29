@@ -4,7 +4,7 @@ import React from "react"
 
 import Button from "components/Button"
 
-const HomeMap = () => {
+const HomeMap = ({ setIsModalQuoteOpen }) => {
   return (
     <section className="home-map">
       <div className="home-map__wrapper">
@@ -26,7 +26,12 @@ const HomeMap = () => {
                 </p>
                 <div className="home-map__buttons">
                   <Button>FIND OUT MORE</Button>
-                  <Button className="button-dark">GET A QUOTE</Button>
+                  <Button
+                    className="button-dark"
+                    onClick={() => setIsModalQuoteOpen(true)}
+                  >
+                    GET A QUOTE
+                  </Button>
                 </div>
               </div>
             </div>
