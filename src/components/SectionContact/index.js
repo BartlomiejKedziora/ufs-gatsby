@@ -56,7 +56,9 @@ const SectionContact = () => {
                       <div className="contact__block">
                         <div className="contact__block-icon">
                           <img
-                            src={require("assets/icons/pencil.svg").default}
+                            src={
+                              require("assets/icons/pin-contact.svg").default
+                            }
                             alt=""
                           />
                         </div>

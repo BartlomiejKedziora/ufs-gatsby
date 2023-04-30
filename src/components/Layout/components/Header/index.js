@@ -164,7 +164,7 @@ const Header = () => {
                   </li>
                 </ul>
               </nav>
-              <Link to="/" className="header__find-expert">
+              <Link to="/local-experts" className="header__find-expert">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"

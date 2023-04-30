@@ -5,6 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const serviceTemplate = path.resolve(`src/templates/single-service.js`)
   const postTemplate = path.resolve(`src/templates/single-post.js`)
+  const expertTemplate = path.resolve(`src/templates/single-expert.js`)
 
   const result = await graphql(`
     query {
@@ -127,6 +128,54 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allWpExpert {
+        nodes {
+          title
+          slug
+          seo {
+            metaDesc
+            title
+          }
+          id
+          acfExperts {
+            address
+            desc
+            name
+            phone
+            website
+            quoteName
+            quoteRole
+            quoteText
+            quoteImg {
+              altText
+              sourceUrl
+            }
+            gallery {
+              altText
+              sourceUrl
+            }
+            heroimg {
+              altText
+              sourceUrl
+            }
+            mainimg {
+              altText
+              sourceUrl
+            }
+            row {
+              blockSubtitle
+              blockText
+              button
+              buttonLink
+              blockImage {
+                altText
+                sourceUrl
+              }
+              blockTitle
+            }
+          }
+        }
+      }
     }
   `)
 
@@ -169,6 +218,17 @@ exports.createPages = async ({ graphql, actions }) => {
     return createPage({
       path: page.uri,
       component: serviceTemplate,
+      context: {
+        title: page.title,
+        data: page,
+      },
+    })
+  })
+
+  result.data.allWpExpert.nodes.forEach((page, index) => {
+    return createPage({
+      path: `/local-experts/${page.slug}/`,
+      component: expertTemplate,
       context: {
         title: page.title,
         data: page,

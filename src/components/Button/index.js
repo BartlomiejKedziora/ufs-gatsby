@@ -6,7 +6,14 @@ import classNames from "classnames"
 
 import IconCircle from "../Icons/IconCircle"
 
-const Button = ({ className, type, onClick, disabled, to, children }) => {
+const Button = ({
+  className,
+  type = "button",
+  onClick,
+  disabled,
+  to,
+  children,
+}) => {
   return (
     <button
       type={type}

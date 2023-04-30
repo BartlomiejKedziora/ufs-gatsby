@@ -1,0 +1,89 @@
+@import "styles/variables";
+
+.experts-list {
+  &__item {
+    padding: 60px 0 0;
+    background: $grey-main;
+    &-wrapper {
+      padding: 60px 0 100px;
+      background: $bckg-color;
+    }
+  }
+  &__content {
+    &--wrapper {
+      margin-right: 30px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .section-heading {
+      font-size: 40px;
+    }
+  }
+  &__photo {
+    max-width: 150px;
+    max-height: 180px;
+    margin-right: 25px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__info {
+    margin-top: 40px;
+    border-top: 1px solid $text-color;
+    border-bottom: 1px solid $text-color;
+    padding: 40px 0;
+    display: flex;
+  }
+  &__details {
+    &-row {
+      display: flex;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      & > p:first-child {
+        width: 160px;
+        color: $theme-color;
+        text-transform: uppercase;
+        margin-right: 10px;
+      }
+      a {
+        &:hover {
+          color: $theme-color-hover;
+        }
+      }
+    }
+  }
+  &__gallery {
+    &--1 {
+      height: 400px;
+      margin-bottom: 25px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &--2 {
+      height: 260px;
+      padding: 0;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    .button {
+      margin: 0 10px;
+    }
+  }
+}
