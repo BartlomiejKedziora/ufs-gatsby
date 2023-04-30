@@ -5,9 +5,17 @@ import Button from "components/Button"
 import Divider from "components/Divider"
 
 const ServiceContent = ({ data }) => {
-  const rows_list = data?.acfServices
-    ? data?.acfServices?.row
-    : data?.acfCommercial?.row
+  const getRowsList = data => {
+    if (data?.acfServices) {
+      return data?.acfServices?.row
+    } else if (data?.acfCommercial) {
+      return data?.acfCommercial?.row
+    } else if (data?.acfPortfolio) {
+      return data?.acfPortfolio?.row
+    }
+  }
+
+  const rows_list = getRowsList(data)
   return (
     <section className="single-service">
       {rows_list?.map(

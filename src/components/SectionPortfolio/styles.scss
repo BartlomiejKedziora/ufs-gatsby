@@ -1,0 +1,103 @@
+@import "styles/variables.scss";
+
+.portfolio-slider {
+  padding: 0 0 100px;
+  background: $grey-main;
+  &__wrapper {
+    background: $bckg-color;
+    padding: 60px 0 60px;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  &__slide {
+    position: relative;
+
+    &-img {
+      width: 100%;
+      height: 400px;
+      padding-right: 20px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__slider {
+    & > .container {
+      position: relative;
+    }
+  }
+
+  &__nav {
+    &-arrow {
+      position: absolute;
+      top: 25%;
+      z-index: 10;
+      cursor: pointer;
+      &:hover {
+        svg {
+          path {
+            stroke: #f9a82880;
+          }
+        }
+      }
+      svg {
+        width: 24px;
+        path {
+          stroke: #f9a828;
+          transition: 0.3s ease-out;
+        }
+      }
+      &--prev {
+        left: 0;
+        @include xxlScreen {
+          left: 10px;
+        }
+      }
+      &--next {
+        right: 0;
+        transform: rotate(180deg);
+        @include xxlScreen {
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  .swiper {
+    position: relative;
+  }
+
+  .swiper-wrapper {
+    padding-bottom: 120px;
+  }
+
+  .swiper-pagination {
+    width: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .portfolio-slider__slider-bullets {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-right: 16px;
+    background: $text-color;
+    border-radius: 50px;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+    &.swiper-pagination-bullet-active {
+      background: $theme-color;
+    }
+  }
+}

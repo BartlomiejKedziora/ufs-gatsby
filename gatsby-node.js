@@ -97,6 +97,36 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allWpPortfolio {
+        nodes {
+          slug
+          uri
+          title
+          id
+          seo {
+            metaDesc
+            title
+          }
+          acfPortfolio {
+            title
+            row {
+              blockSubtitle
+              blockText
+              blockTitle
+              button
+              buttonLink
+              blockImage {
+                altText
+                sourceUrl
+              }
+            }
+            heroImage {
+              altText
+              sourceUrl
+            }
+          }
+        }
+      }
     }
   `)
 
@@ -125,6 +155,17 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   result.data.allWpService.nodes.forEach((page, index) => {
+    return createPage({
+      path: page.uri,
+      component: serviceTemplate,
+      context: {
+        title: page.title,
+        data: page,
+      },
+    })
+  })
+
+  result.data.allWpPortfolio.nodes.forEach((page, index) => {
     return createPage({
       path: page.uri,
       component: serviceTemplate,

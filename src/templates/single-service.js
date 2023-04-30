@@ -6,9 +6,19 @@ import ServiceContent from "page_components/single-service/ServiceContent"
 
 const SingleService = ({ pageContext }) => {
   const service_data = pageContext?.data
-  const img = service_data?.acfServices
-    ? service_data?.acfServices?.heroImage?.sourceUrl
-    : service_data?.acfCommercial?.heroImage?.sourceUrl
+
+  const getImage = service_data => {
+    if (service_data?.acfServices) {
+      return service_data?.acfServices?.heroImage?.sourceUrl
+    } else if (service_data?.acfCommercial) {
+      return service_data?.acfCommercial?.heroImage?.sourceUrl
+    } else if (service_data?.acfPortfolio) {
+      return service_data?.acfPortfolio?.heroImage?.sourceUrl
+    }
+  }
+
+  const img = getImage(service_data)
+
   return (
     <Layout
       seo={{

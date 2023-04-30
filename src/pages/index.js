@@ -11,6 +11,7 @@ import Layout from "components/Layout"
 import SectionTestimonials from "components/SectionTestimonials"
 import SectionContact from "components/SectionContact"
 import SectionForm from "components/SectionForm"
+import SectionBlog from "components/SectionBlog"
 import {
   HomeMission,
   HeroSlider,
@@ -42,6 +43,7 @@ const Home = ({ data }) => {
       <HomeMap setIsModalQuoteOpen={setIsModalQuoteOpen} />
       <SectionTestimonials />
       <SectionForm />
+      <SectionBlog />
       {isModalQuoteOpen && (
         <ModalQuote closeFn={() => setIsModalQuoteOpen(false)} />
       )}
