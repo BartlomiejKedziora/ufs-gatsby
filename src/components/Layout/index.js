@@ -10,7 +10,7 @@ import {
   Footer,
   SocialsBar,
   ScrollToTop,
-  // CookieBanner,
+  CookieBanner,
 } from "./components"
 
 const Layout = ({ children, seo = {} }) => {
@@ -57,7 +57,7 @@ const Layout = ({ children, seo = {} }) => {
       </main>
       {showArrowTop && <ScrollToTop />}
       <Footer />
-      {/* <CookieBanner /> */}
+      <CookieBanner />
     </CookiesProvider>
   )
 }
