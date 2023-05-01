@@ -29,7 +29,11 @@ const SinglePost = ({ pageContext }) => {
         img={post_data?.acfpost?.mainImg?.sourceUrl}
       />
       <Breadcrumbs dark breadcrumbs_data={breadcrumbs_data} />
-      <PostContent data={post_data} />
+      <PostContent
+        data={post_data}
+        previous={pageContext.previous}
+        next={pageContext.next}
+      />
       <BannerGetQuote
         setIsModalQuoteOpen={setIsModalQuoteOpen}
         padding="0 0 100px"

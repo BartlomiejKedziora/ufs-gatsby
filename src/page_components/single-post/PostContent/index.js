@@ -1,8 +1,9 @@
 import "./styles.scss"
 
 import React from "react"
+import { Link } from "gatsby"
 
-const PostContent = ({ data }) => {
+const PostContent = ({ data, previous, next }) => {
   return (
     <section className="single-post">
       <div className="container">
@@ -13,6 +14,36 @@ const PostContent = ({ data }) => {
             className="single-post__content"
             dangerouslySetInnerHTML={{ __html: data?.content }}
           />
+          <div className="single-post__nav">
+            <div>
+              {previous && (
+                <Link
+                  className="single-post__nav-btn single-post__prev"
+                  to={`/blog/${previous?.slug}/`}
+                >
+                  <img
+                    src={require("assets/icons/arrow-sm.svg").default}
+                    alt=""
+                  />
+                  {previous?.title}
+                </Link>
+              )}
+            </div>
+            <div>
+              {next && (
+                <Link
+                  className="single-post__nav-btn single-post__next"
+                  to={`/blog/${next?.slug}/`}
+                >
+                  {next?.title}{" "}
+                  <img
+                    src={require("assets/icons/arrow-sm.svg").default}
+                    alt=""
+                  />
+                </Link>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>

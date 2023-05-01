@@ -8,7 +8,6 @@ import ServiceContent from "page_components/single-service/ServiceContent"
 const SingleService = ({ pageContext }) => {
   const service_data = pageContext?.data
 
-  console.log(service_data)
   const getImage = service_data => {
     if (service_data?.acfServices) {
       return service_data?.acfServices?.heroImage?.sourceUrl

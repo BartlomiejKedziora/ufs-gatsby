@@ -1,10 +1,9 @@
 @import "styles/variables";
 
 .blog-page {
+  margin-bottom: 80px;
   &__wrapper {
-    -webkit-columns: 3;
-    column-count: 3;
-    margin: 64px -64px 0;
+    margin: 64px 0 0;
   }
   &__article {
     width: 100%;
@@ -25,7 +24,7 @@
     }
     &-img {
       width: 100%;
-      height: auto;
+      height: 220px;
       max-height: 300px;
       img {
         width: 100%;
@@ -69,6 +68,13 @@
     }
     img {
       width: 12px;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    .button__icon {
+      display: none;
     }
   }
 }

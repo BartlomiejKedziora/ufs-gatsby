@@ -186,8 +186,8 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         title: page.title,
         data: page,
-        // previous: result.data.allWpService.edges[index].previous,
-        // next: result.data.allWpService.edges[index].next,
+        previous: result.data.allWpPost.edges[index].previous,
+        next: result.data.allWpPost.edges[index].next,
       },
     })
   })
