@@ -13,10 +13,9 @@ const DomesticServices = ({ heading, subtitle, services_data }) => {
           <p className="domestic-services__subtitle">{subtitle}</p>
           <div className="row">
             {services_data?.map(item => {
-              const item_services = item?.acfServices
+              const item_services = !!item?.acfServices
                 ? item?.acfServices
                 : item?.acfCommercial
-
               return (
                 <div key={item?.id} className="col-4 col-padding">
                   <div className="domestic-services__tail">
@@ -33,7 +32,9 @@ const DomesticServices = ({ heading, subtitle, services_data }) => {
                       {item_services?.desc}
                     </p>
                     <Button
-                      to={`/services/${item?.slug}/`}
+                      to={`/${
+                        !!item?.acfServices ? "services" : "commercial"
+                      }/${item?.slug}/`}
                       className="button-dark"
                     >
                       Find out more

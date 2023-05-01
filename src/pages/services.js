@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
+import Breadcrumbs from "components/Breadcrumbs"
 import Divider from "components/Divider"
 import PageHeader from "components/PageHeader"
 import SectionPortfolio from "components/SectionPortfolio"
@@ -16,6 +17,8 @@ import hero_image from "assets/images/hero4.jpg"
 const Services = ({ data }) => {
   const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
 
+  const breadcrumbs_data = [{ name: "Services", href: "/services/" }]
+
   return (
     <Layout
       seo={{
@@ -24,6 +27,7 @@ const Services = ({ data }) => {
       }}
     >
       <PageHeader title="What We Offer" img={hero_image} />
+      <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
       <DomesticServices
         heading="Domestic Services"
         subtitle="Glance At"

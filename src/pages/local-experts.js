@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
 import PageHeader from "components/PageHeader"
+import Breadcrumbs from "components/Breadcrumbs"
 import ExpertsLocations from "page_components/local_experts/ExpertsLocations"
 import ExpertsList from "page_components/local_experts/ExpertsList"
 import SectionContact from "components/SectionContact"
@@ -20,6 +21,8 @@ const LocalExpertsPage = ({ data }) => {
     expert.locations.nodes.some(e => e.name === currentLocation)
   )
 
+  const breadcrumbs_data = [{ name: "Local Experts", href: "/local-experts/" }]
+
   return (
     <Layout
       seo={{
@@ -28,6 +31,7 @@ const LocalExpertsPage = ({ data }) => {
       }}
     >
       <PageHeader title="Local Experts" img={hero_image} />
+      <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
       <ExpertsLocations
         locations={data?.allWpLocation?.nodes}
         setCurrentLocation={setCurrentLocation}

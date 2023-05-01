@@ -1,4 +1,26 @@
-@import "styles/variables.scss";
+@import "styles/variables";
 
 .breadcrumbs {
+  background: $grey-main;
+  padding-top: 25px;
+  &.dark {
+    background: $bckg-color;
+  }
+  @include smScreen {
+    padding-top: 16px;
+  }
+  a,
+  span {
+    color: $theme-color;
+    font-size: 16px;
+    font-weight: 400;
+    @include lgScreen {
+      font-size: 14px;
+    }
+  }
+  a::after {
+    content: "/";
+    display: inline;
+    padding: 0 16px;
+  }
 }

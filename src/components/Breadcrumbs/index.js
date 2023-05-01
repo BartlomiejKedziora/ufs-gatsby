@@ -3,17 +3,21 @@ import "./styles.scss"
 import React from "react"
 import { Link } from "gatsby"
 
-const Breadcrumbs = ({ breadcrumbs_data }) => {
+const Breadcrumbs = ({ breadcrumbs_data, dark }) => {
   return (
-    <section className="breadcrumbs">
+    <section className={`breadcrumbs${dark ? " dark" : ""}`}>
       <div className="container">
         <div className="breadcrumbs__wrapper">
-          <Link href="/">Strona główna</Link>
+          <Link to="/">Home</Link>
           {breadcrumbs_data?.map((item, index) => {
             if (breadcrumbs_data.length === index + 1) {
-              return <span>{item.name}</span>
+              return <span key={index}>{item.name}</span>
             } else {
-              return <Link href={item.href}>{item.name}</Link>
+              return (
+                <Link key={index} to={item.href}>
+                  {item.name}
+                </Link>
+              )
             }
           })}
         </div>
