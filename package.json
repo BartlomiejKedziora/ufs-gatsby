@@ -18,6 +18,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.18.9",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
+    "fslightbox-react": "^1.7.4",
     "gatsby": "^4.24.3",
     "gatsby-alias-imports": "^1.0.6",
     "gatsby-plugin-babel-optional-chaining": "^1.0.0",

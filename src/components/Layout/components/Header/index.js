@@ -114,7 +114,7 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="main-menu__item">
-                    <Link to="/about" activeClassName="current">
+                    <Link to="/about/" activeClassName="current">
                       About
                     </Link>
                     <ul className="main-menu__submenu-list">
@@ -127,7 +127,7 @@ const Header = () => {
                     </ul>
                   </li>
                   <li className="main-menu__item">
-                    <Link to="/services" activeClassName="current">
+                    <Link to="/services/" activeClassName="current">
                       Services
                     </Link>
                     <ul className="main-menu__submenu-list">
@@ -139,7 +139,7 @@ const Header = () => {
                     </ul>
                   </li>
                   <li className="main-menu__item">
-                    <Link to="/commercial" activeClassName="current">
+                    <Link to="/commercial/" activeClassName="current">
                       Commercial
                     </Link>
                     <ul className="main-menu__submenu-list">
@@ -153,18 +153,18 @@ const Header = () => {
                     </ul>
                   </li>
                   <li className="main-menu__item">
-                    <Link to="/blog" activeClassName="current">
+                    <Link to="/blog/" activeClassName="current">
                       Blog
                     </Link>
                   </li>
                   <li className="main-menu__item">
-                    <Link to="/contact" activeClassName="current">
+                    <Link to="/contact/" activeClassName="current">
                       Contact
                     </Link>
                   </li>
                 </ul>
               </nav>
-              <Link to="/local-experts" className="header__find-expert">
+              <Link to="/contact/" className="header__find-expert">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"

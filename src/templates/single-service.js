@@ -13,8 +13,6 @@ const SingleService = ({ pageContext }) => {
       return service_data?.acfServices?.heroImage?.sourceUrl
     } else if (service_data?.acfCommercial) {
       return service_data?.acfCommercial?.heroImage?.sourceUrl
-    } else if (service_data?.acfPortfolio) {
-      return service_data?.acfPortfolio?.heroImage?.sourceUrl
     }
   }
 
@@ -33,13 +31,6 @@ const SingleService = ({ pageContext }) => {
         {
           name: `${service_data?.acfCommercial?.title}`,
           href: `/commercial/${service_data?.acfCommercial?.slug}/`,
-        },
-      ]
-    } else if (service_data?.acfPortfolio) {
-      return [
-        {
-          name: `${service_data?.acfPortfolio?.title}`,
-          href: `/${service_data?.acfPortfolio?.slug}/`,
         },
       ]
     }

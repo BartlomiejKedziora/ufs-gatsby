@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const serviceTemplate = path.resolve(`src/templates/single-service.js`)
   const postTemplate = path.resolve(`src/templates/single-post.js`)
   const expertTemplate = path.resolve(`src/templates/single-expert.js`)
+  const portfolioTemplate = path.resolve(`src/templates/single-portfolio.js`)
 
   const result = await graphql(`
     query {
@@ -116,10 +117,14 @@ exports.createPages = async ({ graphql, actions }) => {
               blockTitle
               button
               buttonLink
-              blockImage {
+              blockImages {
                 altText
                 sourceUrl
               }
+            }
+            gallery {
+              altText
+              sourceUrl
             }
             heroImage {
               altText
@@ -217,7 +222,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allWpPortfolio.nodes.forEach((page, index) => {
     return createPage({
       path: page.uri,
-      component: serviceTemplate,
+      component: portfolioTemplate,
       context: {
         title: page.title,
         data: page,

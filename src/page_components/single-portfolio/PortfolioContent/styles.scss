@@ -1,0 +1,164 @@
+@import "styles/variables";
+
+.single-portfolio {
+  &__row {
+    background: $bckg-color;
+    display: flex;
+    flex-direction: row;
+    &.odd {
+      flex-direction: row-reverse;
+    }
+    &--padding {
+      padding: 100px 0 0;
+      background: $grey-main;
+      &:last-of-type {
+        padding-bottom: 100px;
+      }
+    }
+    &--wrapper {
+      background: $bckg-color;
+    }
+  }
+
+  &__img {
+    width: 50%;
+    height: 700px;
+    &.hide-bullets {
+      .swiper-pagination {
+        display: none;
+      }
+    }
+
+    .swiper {
+      height: 100%;
+      position: relative;
+    }
+
+    .swiper-wrapper {
+      padding-bottom: 120px;
+    }
+
+    .swiper-pagination {
+      width: auto !important;
+      left: 50% !important;
+      bottom: 30px !important;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .single-portfolio__slider-bullets {
+      position: relative;
+      width: 14px;
+      height: 14px;
+      margin-right: 16px;
+      background: transparent;
+      border: 1px solid $text-color;
+      border-radius: 50px;
+      opacity: 0.5;
+      transition: 0.3s ease-out;
+      cursor: pointer;
+      &.swiper-pagination-bullet-active {
+        background: $theme-color;
+        border: 1px solid $theme-color;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    width: 50%;
+    padding: 40px 80px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #212121;
+
+    .button {
+      width: fit-content;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 32px;
+    @include xlScreen {
+      font-size: 40px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 35px;
+    margin-bottom: 32px;
+    @include xlScreen {
+      font-size: 26px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    img {
+      margin: 0 0 24px 0;
+      @include xlScreen {
+        margin: 0 0 16px 0;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: $theme-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    a,
+    p,
+    ul,
+    ol,
+    li {
+      font-size: 18px;
+      font-weight: 400;
+      list-style: unset;
+      @include xlScreen {
+        font-size: 16px;
+      }
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    ul,
+    ol {
+      padding-left: 30px;
+      @include xlScreen {
+        padding-left: 20px;
+      }
+    }
+  }
+}

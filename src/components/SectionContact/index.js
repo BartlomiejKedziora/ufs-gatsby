@@ -52,7 +52,7 @@ const SectionContact = () => {
                     </a>
                   </div>
                   <div className="col-4">
-                    <Link to="/contact/">
+                    <Link to="/local-experts/">
                       <div className="contact__block">
                         <div className="contact__block-icon">
                           <img

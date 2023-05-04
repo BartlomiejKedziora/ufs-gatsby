@@ -7,7 +7,7 @@ import Button from "components/Button"
 const ExpertsList = ({
   experts_to_show,
   currentLocation,
-  setIsModalQuoteOpen,
+  // setIsModalQuoteOpen,
 }) => {
   return (
     <section className="experts-list">
@@ -78,12 +78,12 @@ const ExpertsList = ({
                             <Button to={`/local-experts/${slug}/`}>
                               Find out more
                             </Button>
-                            <Button
+                            {/* <Button
                               className="button-dark"
                               onClick={() => setIsModalQuoteOpen(true)}
                             >
                               Get a quote
-                            </Button>
+                            </Button> */}
                           </div>
                         </div>
                       </div>

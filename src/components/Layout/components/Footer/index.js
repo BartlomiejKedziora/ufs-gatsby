@@ -7,12 +7,12 @@ const Footer = () => {
   const current_year = new Date().getFullYear()
 
   const footer_menu = [
-    { label: "Home", href: "/home" },
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Commercial", href: "/commercial" },
-    { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/contact" },
+    { label: "Home", href: "/home/" },
+    { label: "About", href: "/about/" },
+    { label: "Services", href: "/services/" },
+    { label: "Commercial", href: "/commercial/" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Contact", href: "/contact/" },
   ]
   const regions = [
     { label: "Scotland", href: "/" },
@@ -76,7 +76,7 @@ const Footer = () => {
           <p className="footer__copyrights">
             © Ultimate Floor Sanding {current_year}. All rights reserved.
           </p>
-          <Link to="/privacy-policy" className="footer__privacy-policy">
+          <Link to="/privacy-policy/" className="footer__privacy-policy">
             Privacy policy
           </Link>
         </div>

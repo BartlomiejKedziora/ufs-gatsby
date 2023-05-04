@@ -10,8 +10,6 @@ const ServiceContent = ({ data }) => {
       return data?.acfServices?.row
     } else if (data?.acfCommercial) {
       return data?.acfCommercial?.row
-    } else if (data?.acfPortfolio) {
-      return data?.acfPortfolio?.row
     }
   }
 
