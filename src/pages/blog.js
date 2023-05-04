@@ -3,23 +3,39 @@ import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
 import Breadcrumbs from "components/Breadcrumbs"
-import BlogPageContent from "page_components/blog/BlogPageContent"
 import PageHeader from "components/PageHeader"
 import BannerGetQuote from "components/BannerGetQuote"
 import ModalQuote from "components/ModalQuote"
+import { BlogPageContent, CategorySelect } from "page_components/blog"
 
 import hero_image from "assets/images/hero4.jpg"
 
+let filtered_articles = []
+
 const Blog = ({ data }) => {
   const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
+  const [currentCategory, setCurrentCategory] = useState(null)
 
   const breadcrumbs_data = [{ name: "Blog", href: "/blog/" }]
+
+  if (currentCategory === null) {
+    filtered_articles = data?.allWpPost?.nodes
+  } else {
+    filtered_articles = data?.allWpPost?.nodes.filter(article =>
+      article?.categories?.nodes.some(e => e.name === currentCategory)
+    )
+  }
 
   return (
     <Layout>
       <PageHeader title="Blog" img={hero_image} />
       <Breadcrumbs dark breadcrumbs_data={breadcrumbs_data} />
-      <BlogPageContent data={data?.allWpPost?.nodes} />
+      <CategorySelect
+        currentCategory={currentCategory}
+        setCurrentCategory={setCurrentCategory}
+        categories={data.allWpCategory.nodes}
+      />
+      <BlogPageContent data={filtered_articles} />
       <BannerGetQuote setIsModalQuoteOpen={setIsModalQuoteOpen} padding="0" />
       {isModalQuoteOpen && (
         <ModalQuote closeFn={() => setIsModalQuoteOpen(false)} />
@@ -32,6 +48,11 @@ export const query = graphql`
   query {
     allWpPost {
       nodes {
+        categories {
+          nodes {
+            name
+          }
+        }
         acfpost {
           excerpt
           miniImg {
@@ -43,6 +64,12 @@ export const query = graphql`
         title
         slug
         date(locale: "en", formatString: "DD MMM YYYY")
+      }
+    }
+    allWpCategory {
+      nodes {
+        id
+        name
       }
     }
   }

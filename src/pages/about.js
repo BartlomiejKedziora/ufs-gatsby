@@ -9,7 +9,7 @@ import SectionForm from "components/SectionForm"
 import SectionTestimonials from "components/SectionTestimonials"
 import AboutContent from "page_components/about/AboutContent"
 
-import hero_image from "assets/images/hero4.jpg"
+import hero_image from "assets/images/hero/floor_sanding_hero25.jpg"
 
 const About = () => {
   const breadcrumbs_data = [{ name: "About", href: "/about/" }]
