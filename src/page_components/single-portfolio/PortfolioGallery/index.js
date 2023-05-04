@@ -38,7 +38,9 @@ const PortfolioGallery = ({ data }) => {
       )
     }
   }
-  getLightboxImages()
+  if (portfolio_gallery) {
+    getLightboxImages()
+  }
 
   return (
     <section className="portfolio-gallery">
@@ -46,7 +48,7 @@ const PortfolioGallery = ({ data }) => {
         <div className="container">
           <div className="portfolio-gallery__content">
             <div className="row">
-              {portfolio_gallery.map((image, index) => {
+              {portfolio_gallery?.map((image, index) => {
                 return (
                   <div key={index} className="col-lg-3 col-md-6 col-12">
                     <button

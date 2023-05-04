@@ -30,7 +30,9 @@ const SinglePortfolio = ({ pageContext }) => {
       <PageHeader title={pageContext?.data?.title} img={img} />
       <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
       <PortfolioContent data={portfolio_data} />
-      <PortfolioGallery data={portfolio_data} />
+      {portfolio_data?.acfPortfolio?.gallery && (
+        <PortfolioGallery data={portfolio_data} />
+      )}
     </Layout>
   )
 }
