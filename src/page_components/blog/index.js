@@ -1,4 +1,3 @@
-import BlogPageContent from "./BlogPageContent";
-import CategorySelect from "./CategorySelect";
+import BlogPageContent from "./BlogPageContent"
 
-export { BlogPageContent, CategorySelect}
+export { BlogPageContent }

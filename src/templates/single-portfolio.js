@@ -12,9 +12,10 @@ const SinglePortfolio = ({ pageContext }) => {
   const portfolio_data = pageContext?.data
 
   const breadcrumbs_data = [
+    { name: "Portfolio", href: "/portfolio/" },
     {
       name: `${portfolio_data?.acfPortfolio?.title}`,
-      href: `/${portfolio_data?.acfPortfolio?.slug}/`,
+      href: `/portfolio/${portfolio_data?.acfPortfolio?.slug}/`,
     },
   ]
 

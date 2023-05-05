@@ -57,6 +57,7 @@ const CategorySelect = ({
       ...provided,
       backgroundColor: "#fff",
       right: 0,
+      zIndex: 999,
     }),
     option: (provided, state) => ({
       ...provided,
@@ -66,6 +67,7 @@ const CategorySelect = ({
         color: "#212121",
         backgroundColor: "#f9a828",
       },
+      zIndex: 999,
     }),
     indicatorSeparator: () => ({
       display: "none",

@@ -1,0 +1,92 @@
+@import "styles/variables";
+
+.portfolio-page {
+  margin-bottom: 80px;
+  &__wrapper {
+    margin: 64px 0 0;
+  }
+  &__article {
+    position: relative;
+    width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      background: transparent;
+      transition: 0.3s ease-out;
+    }
+    &:hover {
+      &::before {
+        background: rgba(0, 0, 0, 0.3);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:hover {
+      .portfolio-page__cta {
+        opacity: 1;
+        visibility: visible;
+      }
+      .portfolio-page__title {
+        background: transparent;
+      }
+    }
+    &__wrapper {
+      position: relative;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    &-img {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      max-height: 300px;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 7;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    padding: 32px 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-out;
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 6;
+    font-size: 20px;
+    transform: translateY(-50%);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-out;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    .button__icon {
+      display: none;
+    }
+  }
+}

@@ -21,6 +21,7 @@ const SectionPortfolio = () => {
         nodes {
           slug
           id
+          title
           acfPortfolio {
             heroImage {
               altText
@@ -80,7 +81,7 @@ const SectionPortfolio = () => {
           <div className="container">
             <Swiper {...portfolioSliderSettings}>
               {data.allWpPortfolio.nodes.map(
-                ({ id, slug, acfPortfolio: { heroImage } }) => {
+                ({ id, slug, title, acfPortfolio: { heroImage } }) => {
                   return (
                     <SwiperSlide key={id}>
                       <Link to={`/portfolio/${slug}/`}>
@@ -91,6 +92,12 @@ const SectionPortfolio = () => {
                               alt={heroImage.altText}
                             />
                           </div>
+                          <span className="portfolio-slider__slide-cta">
+                            see more
+                          </span>
+                          <p className="portfolio-slider__slide-title">
+                            {title}
+                          </p>
                         </div>
                       </Link>
                     </SwiperSlide>

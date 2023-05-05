@@ -221,7 +221,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allWpPortfolio.nodes.forEach((page, index) => {
     return createPage({
-      path: page.uri,
+      path: `/portfolio/${page.slug}/`,
       component: portfolioTemplate,
       context: {
         title: page.title,

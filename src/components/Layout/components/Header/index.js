@@ -3,10 +3,12 @@ import "./styles.scss"
 import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
+import ModalQuote from "components/ModalQuote"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -124,6 +126,9 @@ const Header = () => {
                       <li className="main-menu__submenu-list-item">
                         <Link to="/guarantee/">Guarantee</Link>
                       </li>
+                      <li className="main-menu__submenu-list-item">
+                        <Link to="/portfolio/">Portfolio</Link>
+                      </li>
                     </ul>
                   </li>
                   <li className="main-menu__item">
@@ -164,7 +169,10 @@ const Header = () => {
                   </li>
                 </ul>
               </nav>
-              <Link to="/contact/" className="header__find-expert">
+              <button
+                className="header__find-expert"
+                onClick={() => setIsModalQuoteOpen(true)}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -182,11 +190,14 @@ const Header = () => {
                 <span className="header__find-expert--text">
                   FIND LOCAL EXPERT
                 </span>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
       </div>
+      {isModalQuoteOpen && (
+        <ModalQuote closeFn={() => setIsModalQuoteOpen(false)} />
+      )}
     </header>
   )
 }
