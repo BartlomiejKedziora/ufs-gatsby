@@ -57,7 +57,7 @@ const HeroSlider = ({ data, setIsModalQuoteOpen }) => {
                   <p className="section__subtitle">{data?.title3}</p>
                   <p className="hero-slider__text">{data?.text}</p>
                   <div className="hero-slider__buttons">
-                    <Button>FIND OUT MORE</Button>
+                    <Button to="/about/">FIND OUT MORE</Button>
                     <Button
                       className="button-dark"
                       onClick={() => setIsModalQuoteOpen(true)}
@@ -90,7 +90,7 @@ const HeroSlider = ({ data, setIsModalQuoteOpen }) => {
                       <p className="section__subtitle">{slide?.slidetitle3}</p>
                       <p className="hero-slider__text">{slide?.slidetext}</p>
                       <div className="hero-slider__buttons">
-                        <Button>FIND OUT MORE</Button>
+                        <Button to={slide?.slidelink}>FIND OUT MORE</Button>
                         <Button
                           className="button-dark"
                           onClick={() => setIsModalQuoteOpen(true)}

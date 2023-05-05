@@ -5,9 +5,16 @@
   right: 70px;
   bottom: 120px;
   z-index: 100;
+  &:hover {
+    img {
+      transform: translateY(-6px);
+    }
+  }
 
   img {
     width: 32px;
     height: 32px;
+    transform: translateY(0);
+    transition: 0.3s ease-out;
   }
 }

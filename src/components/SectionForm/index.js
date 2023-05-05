@@ -21,7 +21,7 @@ const SectionForm = () => {
                 <h3 className="section-heading">
                   Get In <span>Touch</span>
                 </h3>
-                <div className="home-contact__info">
+                {/* <div className="home-contact__info">
                   <img
                     src={require("assets/icons/pin-contact.svg").default}
                     alt=""
@@ -30,7 +30,7 @@ const SectionForm = () => {
                     The Ultimate Floor Sanding Company, Unit UF, Second Floor
                     The Cube, Coe Street, Bolton, BL3 6BU, United Kingdom
                   </span>
-                </div>
+                </div> */}
                 <div className="home-contact__info">
                   <img src={require("assets/icons/phone.svg").default} alt="" />
                   <a href="tel:03300272324">03300 272324</a>
