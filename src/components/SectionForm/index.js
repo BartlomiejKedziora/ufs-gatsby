@@ -3,6 +3,7 @@ import "./styles.scss"
 import React from "react"
 
 import Button from "components/Button"
+import MapUk from "../MapUk"
 
 const SectionForm = () => {
   return (
@@ -12,10 +13,7 @@ const SectionForm = () => {
           <div className="row">
             <div className="col-6">
               <div className="home-contact__img">
-                <img
-                  src={require("assets/images/home/mapa.jpg").default}
-                  alt=""
-                />
+                <MapUk />
               </div>
             </div>
             <div className="col-6">

@@ -19,7 +19,7 @@
     margin: 0 auto;
     background: #212121;
     border-radius: 5px;
-
+    animation: grow 0.5s;
     &::-webkit-scrollbar {
       width: 5px;
       background-color: $grey-main;
@@ -49,5 +49,14 @@
   }
   &__body {
     padding: 30px;
+  }
+}
+
+@keyframes grow {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 90vh;
   }
 }

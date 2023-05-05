@@ -3,6 +3,7 @@ import "./styles.scss"
 import React from "react"
 
 import Button from "components/Button"
+import MapUk from "components/MapUk"
 
 const HomeMap = ({ setIsModalQuoteOpen }) => {
   return (
@@ -38,13 +39,8 @@ const HomeMap = ({ setIsModalQuoteOpen }) => {
             <div className="col-6">
               <div className="home-map__right">
                 <div className="row">
-                  <div className="col-12">
-                    <div className="home-map__img">
-                      <img
-                        src={require("assets/images/home/mapa.jpg").default}
-                        alt=""
-                      />
-                    </div>
+                  <div className="col-12 home-map__right--wrapper">
+                    <MapUk />
                   </div>
                 </div>
               </div>

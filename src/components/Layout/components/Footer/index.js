@@ -49,7 +49,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer__column">
-            <h3 className="footer__column-title">Find a floor sender</h3>
+            <h3 className="footer__column-title">Find a floor sander</h3>
             <ul className="footer__list">
               {regions.map(({ label, href }, index) => (
                 <li key={index} className="footer__list-item">

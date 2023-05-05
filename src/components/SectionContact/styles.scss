@@ -28,6 +28,11 @@
     flex-direction: column;
     justify-content: flex-end;
     background: $grey-main;
+    &:hover {
+      .contact__block-title {
+        font-size: 36px;
+      }
+    }
     &-icon {
       position: absolute;
       top: 0;
@@ -51,6 +56,7 @@
       text-transform: uppercase;
       margin-bottom: 16px;
       text-align: center;
+      transition: 0.3s ease-out;
     }
     &-cta {
       font-size: 24px;

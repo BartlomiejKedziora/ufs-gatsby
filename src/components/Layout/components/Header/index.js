@@ -58,7 +58,7 @@ const Header = () => {
           </div>
           <div className="header__content">
             <div className="header__contact">
-              <a className="header__contact-item" href="tel:3300272324">
+              <a className="header__contact-item" href="tel:03300272324">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -72,9 +72,12 @@ const Header = () => {
                     fill="#fffee6"
                   />
                 </svg>
-                <span className="header__contact-item--text">3300272324</span>
+                <span className="header__contact-item--text">03300 272324</span>
               </a>
-              <a className="header__contact-item" href="mailto:3300272324">
+              <a
+                className="header__contact-item"
+                href="mailto:info@ultimatefloorsanding.co.uk"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

@@ -13,16 +13,9 @@
     justify-content: center;
     padding-right: 100px;
   }
-  &__img {
-    height: 100%;
-    width: 100%;
-    @include xlScreen {
-      height: 460px;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  &__right {
+    &--wrapper {
+      height: 600px;
     }
   }
   &__buttons {

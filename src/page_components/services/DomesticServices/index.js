@@ -1,6 +1,7 @@
 import "./styles.scss"
 
 import React from "react"
+import Link from "gatsby-link"
 
 import Button from "components/Button"
 
@@ -18,7 +19,12 @@ const DomesticServices = ({ heading, subtitle, services_data }) => {
                 : item?.acfCommercial
               return (
                 <div key={item?.id} className="col-4 col-padding">
-                  <div className="domestic-services__tail">
+                  <Link
+                    to={`/${!!item?.acfServices ? "services" : "commercial"}/${
+                      item?.slug
+                    }/`}
+                    className="domestic-services__tail"
+                  >
                     <div className="domestic-services__img">
                       <img
                         src={item_services?.serviceIcon?.sourceUrl}
@@ -31,15 +37,10 @@ const DomesticServices = ({ heading, subtitle, services_data }) => {
                     <p className="domestic-services__desc">
                       {item_services?.desc}
                     </p>
-                    <Button
-                      to={`/${
-                        !!item?.acfServices ? "services" : "commercial"
-                      }/${item?.slug}/`}
-                      className="button-dark"
-                    >
+                    <Button className="button button-dark">
                       Find out more
                     </Button>
-                  </div>
+                  </Link>
                 </div>
               )
             })}
