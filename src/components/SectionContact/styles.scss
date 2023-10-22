@@ -18,6 +18,10 @@
   }
   &__blocks {
     padding-bottom: 64px;
+
+    .col-4 > button {
+      width: 100%;
+    }
   }
   &__block {
     position: relative;

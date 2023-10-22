@@ -2,6 +2,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-image",
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,

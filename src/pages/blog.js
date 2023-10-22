@@ -4,8 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "components/Layout"
 import Breadcrumbs from "components/Breadcrumbs"
 import PageHeader from "components/PageHeader"
-import BannerGetQuote from "components/BannerGetQuote"
-import ModalQuote from "components/ModalQuote"
+import SectionGallery from "components/SectionGallery"
 import CategorySelect from "components/CategorySelect"
 import { BlogPageContent } from "page_components/blog"
 
@@ -14,7 +13,6 @@ import hero_image from "assets/images/hero4.jpg"
 let filtered_articles = []
 
 const Blog = ({ data }) => {
-  const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
   const [currentCategory, setCurrentCategory] = useState(null)
 
   const breadcrumbs_data = [{ name: "Blog", href: "/blog/" }]
@@ -37,10 +35,7 @@ const Blog = ({ data }) => {
         categories={data.allWpCategory.nodes}
       />
       <BlogPageContent data={filtered_articles} />
-      <BannerGetQuote setIsModalQuoteOpen={setIsModalQuoteOpen} padding="0" />
-      {isModalQuoteOpen && (
-        <ModalQuote closeFn={() => setIsModalQuoteOpen(false)} />
-      )}
+      <SectionGallery />
     </Layout>
   )
 }

@@ -1,9 +1,13 @@
 import "./styles.scss"
 
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
+import ModalQuote from "components/ModalQuote"
+
 const SectionContact = () => {
+  const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
+
   return (
     <section className="contact">
       <div className="container-fluid">
@@ -24,7 +28,7 @@ const SectionContact = () => {
               <div className="contact__blocks">
                 <div className="row">
                   <div className="col-4">
-                    <Link to="/contact/">
+                    <button onClick={() => setIsModalQuoteOpen(true)}>
                       <div className="contact__block">
                         <div className="contact__block-icon">
                           <img
@@ -35,7 +39,7 @@ const SectionContact = () => {
                         <p className="contact__block-title">Say Hello</p>
                         <p className="contact__block-cta">Fill our form</p>
                       </div>
-                    </Link>
+                    </button>
                   </div>
                   <div className="col-4">
                     <a href="tel:03300272324">
@@ -73,6 +77,10 @@ const SectionContact = () => {
           </div>
         </div>
       </div>
+
+      {isModalQuoteOpen && (
+        <ModalQuote closeFn={() => setIsModalQuoteOpen(false)} />
+      )}
     </section>
   )
 }
