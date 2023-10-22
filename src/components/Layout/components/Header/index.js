@@ -190,9 +190,7 @@ const Header = () => {
                     fill="#fffee6"
                   />
                 </svg>
-                <span className="header__find-expert--text">
-                  FIND LOCAL EXPERT
-                </span>
+                <span className="header__find-expert--text">GET A QUOTE</span>
               </button>
             </div>
           </div>

@@ -5,22 +5,26 @@ import axios from "axios"
 import { navigate } from "gatsby"
 
 import Input from "components/Input"
-import Checkbox from "components/Checkbox"
+// import Checkbox from "components/Checkbox"
 import CustomSelect from "components/Select/CustomSelect"
 import Button from "components/Button"
 
 const options = [
   {
-    value: "option-1",
-    label: "Option 1",
+    value: "Google Search",
+    label: "Google Search",
   },
   {
-    value: "option-2",
-    label: "Option 2",
+    value: "Recommendations",
+    label: "Recommendations",
   },
   {
-    value: "option-3",
-    label: "Option 3",
+    value: "Local paper",
+    label: "Local paper",
+  },
+  {
+    value: "Other",
+    label: "Other",
   },
 ]
 
@@ -132,21 +136,24 @@ const ContactForm = () => {
           value={postcode}
           onChange={e => setPostcode(e.target.value)}
         />
-        <p>Where did you hear about us?</p>
+        <p>
+          Where did you hear about us: google search, recommendations, local
+          paper, other ?
+        </p>
         <CustomSelect
           options={options}
           name="source"
           id="source"
           placeholder="Choose option"
         />
-        <Checkbox
+        {/* <Checkbox
           name="legalFirst"
           checked={legalFirst}
           onChange={() => setLegalFirst(!legalFirst)}
           required
         >
           Wyrażam dobrowolną zgodę na przetwarzanie moich danych osobowych
-        </Checkbox>
+        </Checkbox> */}
         <div className="contact-form__btn">
           <Button type="submit" disabled={!legalFirst}>
             {send === true ? "Sending..." : "Send"}

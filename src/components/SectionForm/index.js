@@ -21,16 +21,6 @@ const SectionForm = () => {
                 <h3 className="section-heading">
                   Get In <span>Touch</span>
                 </h3>
-                {/* <div className="home-contact__info">
-                  <img
-                    src={require("assets/icons/pin-contact.svg").default}
-                    alt=""
-                  />
-                  <span>
-                    The Ultimate Floor Sanding Company, Unit UF, Second Floor
-                    The Cube, Coe Street, Bolton, BL3 6BU, United Kingdom
-                  </span>
-                </div> */}
                 <div className="home-contact__info">
                   <img src={require("assets/icons/phone.svg").default} alt="" />
                   <a href="tel:03300272324">03300 272324</a>
@@ -44,7 +34,11 @@ const SectionForm = () => {
                 <form action="submit" className="home-contact__form">
                   <div className="home-contact__form--row">
                     <input type="text" placeholder="Name" />
-                    <input type="text" placeholder="Email" />
+                    <input type="email" placeholder="Email" />
+                  </div>
+                  <div className="home-contact__form--row">
+                    <input type="text" placeholder="Post code" />
+                    <input type="text" placeholder="Phone" />
                   </div>
                   <textarea
                     className="home-contact__textarea"

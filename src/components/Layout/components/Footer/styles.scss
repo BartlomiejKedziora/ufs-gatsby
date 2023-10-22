@@ -53,7 +53,8 @@
         text-align: center;
       }
     }
-    &-address {
+    &-address,
+    &-opening {
       font-size: 22px;
       line-height: 1.8;
       @include xxlScreen {
@@ -69,7 +70,7 @@
     &-contact {
       display: block;
       font-size: 22px;
-      margin-top: 40px;
+      margin-top: 20px;
       transition: 0.3s ease-out;
       @include xxlScreen {
         font-size: 18px;
@@ -80,6 +81,9 @@
       @include mdScreen {
         margin-top: 20px;
         text-align: center;
+      }
+      &:first-of-type {
+        margin-top: 40px;
       }
       &:hover {
         color: $theme-color;

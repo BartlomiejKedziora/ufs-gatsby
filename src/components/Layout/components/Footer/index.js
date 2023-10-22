@@ -14,15 +14,15 @@ const Footer = () => {
     { label: "Blog", href: "/blog/" },
     { label: "Contact", href: "/contact/" },
   ]
-  const regions = [
-    { label: "Scotland", href: "/" },
-    { label: "Midlands", href: "/" },
-    { label: "East Anglia", href: "/" },
-    { label: "London", href: "/" },
-    { label: "South East England", href: "/" },
-    { label: "South West England", href: "/" },
-    { label: "South Central England", href: "/" },
-  ]
+  // const regions = [
+  //   { label: "Scotland", href: "/" },
+  //   { label: "Midlands", href: "/" },
+  //   { label: "East Anglia", href: "/" },
+  //   { label: "London", href: "/" },
+  //   { label: "South East England", href: "/" },
+  //   { label: "South West England", href: "/" },
+  //   { label: "South Central England", href: "/" },
+  // ]
 
   return (
     <footer className="footer">
@@ -49,26 +49,29 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer__column">
-            <h3 className="footer__column-title">Find a floor sander</h3>
-            <ul className="footer__list">
-              {regions.map(({ label, href }, index) => (
-                <li key={index} className="footer__list-item">
-                  <Link to={href}>{label}</Link>
-                </li>
-              ))}
-            </ul>
+            <h3 className="footer__column-title">Opening hours</h3>
+            <p className="footer__column-opening">Monday: 8.00 - 16.00</p>
+            <p className="footer__column-opening">Tuesday: 8.00 - 16.00</p>
+            <p className="footer__column-opening">Wednesday: 8.00 - 16.00</p>
+            <p className="footer__column-opening">Thursday: 8.00 - 16.00</p>
+            <p className="footer__column-opening">Friday: 8.00 - 16.00</p>
           </div>
           <div className="footer__column">
             <h3 className="footer__column-title">Contact Us</h3>
             <p className="footer__column-address">
-              United Kingdom <br />
-              The Ultimate Floor Sanding Company <br />
-              Unit UF, Second Floor <br />
-              The Cube, Coe Street <br />
-              Bolton, BL3 6BU <br />
+              Downsview House, <br />
+              141 - 143 Station Road East, <br />
+              Oxted, Surrey, <br />
+              United Kingdom, RH8 0QE
             </p>
             <a className="footer__column-contact" href="tel:03300272324">
               Tel: 03300 272324
+            </a>
+            <a
+              className="footer__column-contact"
+              href="mailto:info@ultimatefloorsanding.co.uk"
+            >
+              Email: info@ultimatefloorsanding.co.uk
             </a>
           </div>
         </div>

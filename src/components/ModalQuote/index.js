@@ -14,7 +14,7 @@ const ModalQuote = ({ closeFn }) => {
         </h2>
         <p className="section__subtitle">
           Contact us now for a no obligation quote we are happy to assist you
-          with any qiestion that you may have
+          with any questions that you may have
         </p>
         <ContactForm />
       </div>

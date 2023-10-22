@@ -106,7 +106,7 @@ const SectionBlog = () => {
                           </div>
                           <div className="blog-articles__slide-content"></div>
                           <div className="blog-articles__slide-info">
-                            <p>{categories.nodes[0].name}</p>
+                            <p>{categories.nodes[0]?.name}</p>
                             <span>|</span>
                             <p>{date}</p>
                           </div>
