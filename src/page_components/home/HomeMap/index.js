@@ -26,7 +26,7 @@ const HomeMap = ({ setIsModalQuoteOpen }) => {
                   est laborum.
                 </p>
                 <div className="home-map__buttons">
-                  <Button>FIND OUT MORE</Button>
+                  <Button to="/local-experts/">FIND OUT MORE</Button>
                   <Button
                     className="button-dark"
                     onClick={() => setIsModalQuoteOpen(true)}

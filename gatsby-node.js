@@ -17,6 +17,10 @@ exports.createPages = async ({ graphql, actions }) => {
               altText
               sourceUrl
             }
+            gallery {
+              altText
+              sourceUrl
+            }
           }
           id
           seo {
@@ -58,6 +62,10 @@ exports.createPages = async ({ graphql, actions }) => {
                 sourceUrl
               }
             }
+            gallery {
+              altText
+              sourceUrl
+            }
           }
           slug
           uri
@@ -87,6 +95,10 @@ exports.createPages = async ({ graphql, actions }) => {
                 altText
                 sourceUrl
               }
+            }
+            gallery {
+              altText
+              sourceUrl
             }
           }
           id

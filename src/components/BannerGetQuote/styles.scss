@@ -9,6 +9,12 @@
     & > .container {
       height: 100%;
     }
+    &:hover {
+      .banner-quote__btn {
+        color: #2f2f2f;
+        opacity: 0.8;
+      }
+    }
   }
   &__btn {
     &--wrapper {
@@ -23,9 +29,5 @@
     margin: 0;
     border: none;
     transition: 0.3s ease-out;
-    &:hover {
-      color: #2f2f2f;
-      opacity: 0.8;
-    }
   }
 }

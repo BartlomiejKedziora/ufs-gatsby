@@ -80,4 +80,16 @@
       }
     }
   }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    .button__icon {
+      display: none;
+    }
+  }
+
+  .fslightbox-container .fslightbox-opacity-1 {
+    object-fit: contain;
+  }
 }

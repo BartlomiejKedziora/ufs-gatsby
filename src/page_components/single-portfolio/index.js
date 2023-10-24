@@ -1,4 +1,3 @@
-import PortfolioContent from "./PortfolioContent";
-import PortfolioGallery from "./PortfolioGallery";
+import PortfolioContent from "./PortfolioContent"
 
-export { PortfolioContent, PortfolioGallery };
+export { PortfolioContent }

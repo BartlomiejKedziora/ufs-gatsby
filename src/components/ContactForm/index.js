@@ -29,7 +29,7 @@ const options = [
 ]
 
 const ContactForm = () => {
-  const formID = "111"
+  const formID = "f994f6d"
   const [send, setSend] = useState(false)
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -69,20 +69,20 @@ const ContactForm = () => {
     formData.set("legalFirst", legalFirst)
     formData.set("pageurl", location)
 
-    // axios({
-    //   method: "post",
-    //   url: `https://trust-investment.zenx.pl/wp-json/contact-form-7/v1/contact-forms/${formID}/feedback/`,
-    //   data: formData,
-    //   headers: { "Content-Type": "multipart/form-data" },
-    // })
-    //   .then(() => {
-    //     console.log("Submit success")
-    //     resetForm()
-    //     navigate("/thank-you/")
-    //   })
-    //   .catch(err => {
-    //     console.log(err)
-    //   })
+    axios({
+      method: "post",
+      url: `https://ufs.kteproductions.pl//wp-json/contact-form-7/v1/contact-forms/${formID}/feedback/`,
+      data: formData,
+      headers: { "Content-Type": "multipart/form-data" },
+    })
+      .then(() => {
+        console.log("Submit success")
+        resetForm()
+        navigate("/thank-you/")
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 
   return (

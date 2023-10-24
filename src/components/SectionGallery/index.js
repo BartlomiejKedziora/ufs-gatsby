@@ -2,35 +2,23 @@ import "./styles.scss"
 
 import React, { useState } from "react"
 import FsLightbox from "fslightbox-react"
-import { useStaticQuery, graphql } from "gatsby"
 
-const SectionGallery = () => {
+import Button from "components/Button"
+
+const SectionGallery = ({ images }) => {
+  const [limit, setLimit] = useState(6)
   const [lightboxController, setLightboxController] = useState({
     toggler: false,
     slide: 1,
   })
 
-  const data = useStaticQuery(graphql`
-    query MainGalleryQuery {
-      allWpGalleryItem {
-        nodes {
-          acfGallery {
-            gallery {
-              altText
-              sourceUrl
-              localFile {
-                childImageSharp {
-                  gatsbyImageData
-                }
-              }
-            }
-          }
-        }
-      }
+  const showMore = () => {
+    if (limit < images.length) {
+      setLimit(limit + 8)
     }
-  `)
+  }
 
-  const main_gallery = data?.allWpGalleryItem?.nodes[0]?.acfGallery?.gallery
+  const images_to_show = images.slice(0, limit)
 
   const openLightboxOnSlide = number => {
     setLightboxController({
@@ -46,20 +34,22 @@ const SectionGallery = () => {
   }
 
   let gallery_images = []
-  const getLightboxImages = () => {
-    for (let i = 0; i < main_gallery.length; i++) {
-      gallery_images[i] = (
-        <img
-          src={`${main_gallery[i].sourceUrl}`}
-          alt={`${main_gallery[i].altText}`}
-          width="1000px"
-          height="600px"
-          allowFullScreen
-        />
-      )
+
+  if (images) {
+    const getLightboxImages = () => {
+      for (let i = 0; i < images.length; i++) {
+        gallery_images[i] = (
+          <img
+            src={`${images[i].sourceUrl}`}
+            alt={`${images[i].altText}`}
+            width="1000px"
+            height="600px"
+            allowFullScreen
+          />
+        )
+      }
     }
-  }
-  if (main_gallery) {
+
     getLightboxImages()
   }
 
@@ -78,7 +68,7 @@ const SectionGallery = () => {
         <div className="gallery__grid">
           <div className="container">
             <div className="gallery__grid-wrapper">
-              {main_gallery?.slice(0, 6)?.map((image, index) => {
+              {images_to_show?.map((image, index) => {
                 return (
                   <div
                     key={index}
@@ -106,6 +96,11 @@ const SectionGallery = () => {
             </div>
           </div>
         </div>
+        {limit < images.length && (
+          <div className="gallery__btn">
+            <Button onClick={() => showMore()}>Show more</Button>
+          </div>
+        )}
       </div>
       <FsLightbox
         toggler={lightboxController.toggler}

@@ -3,7 +3,6 @@ import "./styles.scss"
 import React from "react"
 
 const ExpertQuote = ({ data }) => {
-  console.log(data)
   const { quoteName, quoteRole, quoteImg, quoteText } = data?.acfExperts
   return (
     <div className="expert-quote">

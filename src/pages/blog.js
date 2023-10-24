@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import Layout from "components/Layout"
 import Breadcrumbs from "components/Breadcrumbs"
 import PageHeader from "components/PageHeader"
-import SectionGallery from "components/SectionGallery"
 import CategorySelect from "components/CategorySelect"
 import { BlogPageContent } from "page_components/blog"
 
@@ -35,7 +34,6 @@ const Blog = ({ data }) => {
         categories={data.allWpCategory.nodes}
       />
       <BlogPageContent data={filtered_articles} />
-      <SectionGallery />
     </Layout>
   )
 }

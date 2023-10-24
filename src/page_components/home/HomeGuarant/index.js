@@ -44,7 +44,7 @@ const HomeGuarant = ({ setIsModalQuoteOpen }) => {
                     Point Ultimate Guarantee.
                   </p>
                   <div className="home-guarant__buttons">
-                    <Button>FIND OUT MORE</Button>
+                    <Button to="/guarantee/">FIND OUT MORE</Button>
                     <Button
                       className="button-dark"
                       onClick={() => setIsModalQuoteOpen(true)}
