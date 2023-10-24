@@ -2,7 +2,6 @@ import "./styles.scss"
 
 import React from "react"
 import Button from "components/Button"
-import Divider from "components/Divider"
 
 const ServiceContent = ({ data }) => {
   const getRowsList = data => {
@@ -41,22 +40,20 @@ const ServiceContent = ({ data }) => {
                       />
                     </div>
                     <div className="single-service__content">
-                      <p className="single-service__title">{blockTitle}</p>
+                      <h2 className="single-service__title">{blockTitle}</h2>
                       {blockSubtitle && (
-                        <p className="single-service__subtitle">
+                        <h3 className="single-service__subtitle">
                           {blockSubtitle}
-                        </p>
+                        </h3>
                       )}
                       <div
                         className="single-service__text"
                         dangerouslySetInnerHTML={{ __html: blockText }}
                       />
-                      {button ? (
+                      {button && (
                         <Button to={buttonLink} className="button-dark">
                           {button}
                         </Button>
-                      ) : (
-                        <Divider mt={20} />
                       )}
                     </div>
                   </div>

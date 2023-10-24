@@ -16,16 +16,17 @@ const HomeMission = ({ setIsModalQuoteOpen }) => {
                 <h2 className="section-heading">
                   Our <span>Mission</span>
                 </h2>
-                <p className="section__subtitle">The Ultimate Floor Sanding</p>
                 <p className="section__text">
-                  Neque porro quisquam est, qui dolorem ipsum quia anumquam eius
-                  modi tempora incidunt ut labore et dolore magnam aliquam
-                  quaerat voluptatem. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id
-                  est laborum.
+                  At The Ultimate Floor Sanding Company, our mission revolves
+                  around the belief in the synergistic harmony of local
+                  contractors, bolstered by a national brand, and in partnership
+                  with an international manufacturer. This synergy provides our
+                  customers with unwavering confidence and peace of mind. Our
+                  journey since 2011 is a testament to the broad consensus that
+                  this approach is a resounding success.
                 </p>
                 <div className="home-mission__buttons">
-                  <Button>FIND OUT MORE</Button>
+                  <Button to="/about/">FIND OUT MORE</Button>
                   <Button
                     className="button-dark"
                     onClick={() => setIsModalQuoteOpen(true)}

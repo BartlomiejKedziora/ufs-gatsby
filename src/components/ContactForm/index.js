@@ -124,10 +124,6 @@ const ContactForm = () => {
           onChange={e => setMessage(e.target.value)}
           rows="4"
         />
-        <p>
-          To recommend your local floor sending contractor we'll need to know
-          where you are located. What is the post code you require this service?
-        </p>
         <Input
           placeholder="Postcode"
           type="text"
@@ -136,10 +132,7 @@ const ContactForm = () => {
           value={postcode}
           onChange={e => setPostcode(e.target.value)}
         />
-        <p>
-          Where did you hear about us: google search, recommendations, local
-          paper, other ?
-        </p>
+        <p>Where did you hear about us?</p>
         <CustomSelect
           options={options}
           name="source"

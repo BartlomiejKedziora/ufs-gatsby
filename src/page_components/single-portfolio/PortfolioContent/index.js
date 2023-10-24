@@ -8,7 +8,6 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Autoplay, Pagination } from "swiper"
 
 import Button from "components/Button"
-import Divider from "components/Divider"
 
 const PortfolioContent = ({ data }) => {
   SwiperCore.use([Autoplay, Pagination])
@@ -72,22 +71,20 @@ const PortfolioContent = ({ data }) => {
                       </Swiper>
                     </div>
                     <div className="single-portfolio__content">
-                      <p className="single-portfolio__title">{blockTitle}</p>
+                      <h2 className="single-portfolio__title">{blockTitle}</h2>
                       {blockSubtitle && (
-                        <p className="single-portfolio__subtitle">
+                        <h3 className="single-portfolio__subtitle">
                           {blockSubtitle}
-                        </p>
+                        </h3>
                       )}
                       <div
                         className="single-portfolio__text"
                         dangerouslySetInnerHTML={{ __html: blockText }}
                       />
-                      {button ? (
+                      {button && (
                         <Button to={buttonLink} className="button-dark">
                           {button}
                         </Button>
-                      ) : (
-                        <Divider mt={20} />
                       )}
                     </div>
                   </div>

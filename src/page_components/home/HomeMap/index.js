@@ -19,11 +19,12 @@ const HomeMap = ({ setIsModalQuoteOpen }) => {
                 </h2>
                 <p className="section__subtitle">The Ultimate Floor Sanding</p>
                 <p className="section__text">
-                  Neque porro quisquam est, qui dolorem ipsum quia anumquam eius
-                  modi tempora incidunt ut labore et dolore magnam aliquam
-                  quaerat voluptatem. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id
-                  est laborum.
+                  Our commitment to excellence is amplified by our dedication to
+                  finding and nurturing highly skilled local contractors. These
+                  experts, armed with specialized training and certifications,
+                  form the backbone of our nationwide network. When you choose
+                  us, you're selecting the best in the business, right in your
+                  local area.
                 </p>
                 <div className="home-map__buttons">
                   <Button to="/local-experts/">FIND OUT MORE</Button>

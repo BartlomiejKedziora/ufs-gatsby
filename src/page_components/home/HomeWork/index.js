@@ -12,20 +12,20 @@ const HomeWork = ({ setIsModalQuoteOpen }) => {
           <div className="row">
             <div className="col-6">
               <div className="home-work__left">
-                <p className="section__title">COMPANY INSTRUCTIONAL VIDEO</p>
                 <h2 className="section-heading">
                   How <span>We Work</span>
                 </h2>
                 <p className="section__subtitle">The Ultimate Floor Sanding</p>
                 <p className="section__text">
-                  Neque porro quisquam est, qui dolorem ipsum quia anumquam eius
-                  modi tempora incidunt ut labore et dolore magnam aliquam
-                  quaerat voluptatem. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id
-                  est laborum.
+                  At The Ultimate Floor Sanding Company™, our approach is simple
+                  yet effective. We've established a nationwide affiliates
+                  program that collaborates with highly trained and certified
+                  local contractors. This harmonious partnership ensures that
+                  our customers benefit from unmatched expertise, quality, and
+                  peace of mind in every project we undertake.
                 </p>
                 <div className="home-work__buttons">
-                  <Button>FIND OUT MORE</Button>
+                  {/* <Button>FIND OUT MORE</Button> */}
                   <Button
                     className="button-dark"
                     onClick={() => setIsModalQuoteOpen(true)}

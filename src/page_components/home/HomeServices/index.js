@@ -3,6 +3,7 @@ import "./styles.scss"
 import React from "react"
 
 import Button from "components/Button"
+import { Link } from "gatsby"
 
 const HomeServices = ({ setIsModalQuoteOpen }) => {
   return (
@@ -24,15 +25,17 @@ const HomeServices = ({ setIsModalQuoteOpen }) => {
             <div className="row">
               <div className="col-6">
                 <div className="home-services__left">
-                  <div className="home-services__img">
-                    <img
-                      src={require("assets/images/home/image1.jpg").default}
-                      alt=""
-                    />
-                    <div className="home-services__choice">domestic</div>
-                  </div>
+                  <Link to="/services/">
+                    <div className="home-services__img">
+                      <img
+                        src={require("assets/images/home/image1.jpg").default}
+                        alt=""
+                      />
+                      <div className="home-services__choice">domestic</div>
+                    </div>
+                  </Link>
                   <div className="home-services__buttons">
-                    <Button>FIND OUT MORE</Button>
+                    <Button to="/services/">FIND OUT MORE</Button>
                     <Button
                       className="button-dark"
                       onClick={() => setIsModalQuoteOpen(true)}
@@ -44,15 +47,17 @@ const HomeServices = ({ setIsModalQuoteOpen }) => {
               </div>
               <div className="col-6">
                 <div className="home-services__right">
-                  <div className="home-services__img">
-                    <img
-                      src={require("assets/images/home/image2.jpg").default}
-                      alt=""
-                    />
-                    <div className="home-services__choice">commercial</div>
-                  </div>
+                  <Link to="/commercial/">
+                    <div className="home-services__img">
+                      <img
+                        src={require("assets/images/home/image2.jpg").default}
+                        alt=""
+                      />
+                      <div className="home-services__choice">commercial</div>
+                    </div>
+                  </Link>
                   <div className="home-services__buttons">
-                    <Button>FIND OUT MORE</Button>
+                    <Button to="/commercial/">FIND OUT MORE</Button>
                     <Button
                       className="button-dark"
                       onClick={() => setIsModalQuoteOpen(true)}
