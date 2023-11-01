@@ -10,7 +10,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     query {
-      allWpPost {
+      allWpPost(sort: { order: DESC, fields: date }) {
         nodes {
           acfpost {
             mainImg {
@@ -43,7 +43,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allWpService {
+      allWpService(sort: { order: ASC, fields: date }) {
         nodes {
           acfServices {
             title
@@ -77,7 +77,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allWpCommercial {
+      allWpCommercial(sort: { order: ASC, fields: date }) {
         nodes {
           acfCommercial {
             title
@@ -111,7 +111,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allWpPortfolio {
+      allWpPortfolio(sort: { order: DESC, fields: date }) {
         nodes {
           slug
           uri
@@ -145,7 +145,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allWpExpert {
+      allWpExpert(sort: { order: DESC, fields: date }) {
         nodes {
           title
           slug

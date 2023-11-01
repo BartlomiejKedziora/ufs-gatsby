@@ -26,14 +26,14 @@ const Header = () => {
   const data = useStaticQuery(
     graphql`
       query ServicesList {
-        allWpService {
+        allWpService(sort: { order: ASC, fields: date }) {
           nodes {
             id
             title
             uri
           }
         }
-        allWpCommercial {
+        allWpCommercial(sort: { order: ASC, fields: date }) {
           nodes {
             id
             title
