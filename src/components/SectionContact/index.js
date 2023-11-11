@@ -27,8 +27,11 @@ const SectionContact = () => {
               </div>
               <div className="contact__blocks">
                 <div className="row">
-                  <div className="col-4">
-                    <button onClick={() => setIsModalQuoteOpen(true)}>
+                  <div className="col-12 col-lg-4">
+                    <button
+                      className="d-block w-100"
+                      onClick={() => setIsModalQuoteOpen(true)}
+                    >
                       <div className="contact__block">
                         <div className="contact__block-icon">
                           <img
@@ -41,7 +44,7 @@ const SectionContact = () => {
                       </div>
                     </button>
                   </div>
-                  <div className="col-4">
+                  <div className="col-12 col-lg-4">
                     <a href="tel:03300272324">
                       <div className="contact__block">
                         <div className="contact__block-icon">
@@ -55,7 +58,7 @@ const SectionContact = () => {
                       </div>
                     </a>
                   </div>
-                  <div className="col-4">
+                  <div className="col-12 col-lg-4">
                     <Link to="/local-experts/">
                       <div className="contact__block">
                         <div className="contact__block-icon">

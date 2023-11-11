@@ -124,9 +124,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @include smScreen {
+        flex-direction: column-reverse;
+      }
       p,
       a {
         margin: 0 32px;
+        @include smScreen {
+          margin: 0 0 15px;
+        }
       }
     }
   }
@@ -136,6 +142,7 @@
     @include xlScreen {
       font-size: 14px;
     }
+
     &:hover {
       color: $theme-color;
       text-decoration: underline;

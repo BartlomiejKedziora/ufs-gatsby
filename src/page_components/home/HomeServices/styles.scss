@@ -6,16 +6,27 @@
   &__wrapper {
     background: $bckg-color;
     padding: 60px 0 120px;
+    @include lgScreen {
+      padding: 60px 0;
+    }
   }
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .section__text {
-      width: 970px;
-      max-width: 100%;
+    @include lgScreen {
       text-align: center;
+    }
+    .section__text {
+      width: 100%;
+      max-width: 970px;
+      text-align: center;
+    }
+  }
+  &__left {
+    @include lgScreen {
+      margin-bottom: 60px;
     }
   }
   &__img {
@@ -41,6 +52,9 @@
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+    @include mdScreen {
+      font-size: 32px;
+    }
   }
   &__buttons {
     display: flex;

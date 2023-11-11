@@ -23,7 +23,7 @@ const HomeServices = ({ setIsModalQuoteOpen }) => {
               </p>
             </div>
             <div className="row">
-              <div className="col-6">
+              <div className="col-12 col-lg-6">
                 <div className="home-services__left">
                   <Link to="/services/">
                     <div className="home-services__img">
@@ -45,7 +45,7 @@ const HomeServices = ({ setIsModalQuoteOpen }) => {
                   </div>
                 </div>
               </div>
-              <div className="col-6">
+              <div className="col-12 col-lg-6">
                 <div className="home-services__right">
                   <Link to="/commercial/">
                     <div className="home-services__img">

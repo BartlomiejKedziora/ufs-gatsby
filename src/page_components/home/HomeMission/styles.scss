@@ -13,6 +13,12 @@
     flex-direction: column;
     justify-content: center;
     padding-right: 100px;
+    @include lgScreen {
+      padding-right: 0;
+      padding-bottom: 60px;
+      align-items: center;
+      text-align: center;
+    }
   }
   &__right {
     .row:first-of-type {

@@ -1,7 +1,7 @@
 @import "styles/variables";
 
 .section-heading {
-  color: #fff;
+  color: $text-color;
   font-size: 64px;
   font-weight: bold;
   line-height: 1;
@@ -15,6 +15,7 @@
 }
 
 .section__title {
+  color: $text-color;
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -40,6 +41,10 @@
   margin-bottom: 64px;
   @include xlScreen {
     font-size: 16px;
+  }
+  @include lgScreen {
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 }
 

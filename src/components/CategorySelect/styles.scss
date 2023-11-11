@@ -5,6 +5,10 @@
   &__wrapper {
     position: relative;
     width: 400px;
+    @include smScreen {
+      width: 100%;
+      max-width: 100%;
+    }
   }
   &__choice {
     position: absolute;

@@ -11,7 +11,7 @@ const HomeMap = ({ setIsModalQuoteOpen }) => {
       <div className="home-map__wrapper">
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col-12 col-lg-6">
               <div className="home-map__left">
                 <p className="section__title">FIND LOCAL EXPERT</p>
                 <h2 className="section-heading">
@@ -37,7 +37,7 @@ const HomeMap = ({ setIsModalQuoteOpen }) => {
                 </div>
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-12 col-lg-6">
               <div className="home-map__right">
                 <div className="row">
                   <div className="col-12 home-map__right--wrapper">

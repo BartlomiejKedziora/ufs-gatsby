@@ -12,6 +12,7 @@ import SectionTestimonials from "components/SectionTestimonials"
 import SectionContact from "components/SectionContact"
 import SectionForm from "components/SectionForm"
 import SectionBlog from "components/SectionBlog"
+import SectionPortfolio from "components/SectionPortfolio"
 import {
   HomeMission,
   HeroSlider,
@@ -40,6 +41,7 @@ const Home = ({ data }) => {
       <HomeServices setIsModalQuoteOpen={setIsModalQuoteOpen} />
       <HomeWork setIsModalQuoteOpen={setIsModalQuoteOpen} />
       <HomeGuarant setIsModalQuoteOpen={setIsModalQuoteOpen} />
+      <SectionPortfolio />
       <HomeMap setIsModalQuoteOpen={setIsModalQuoteOpen} />
       <SectionTestimonials />
       <SectionForm />

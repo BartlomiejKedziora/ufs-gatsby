@@ -10,7 +10,7 @@ const HomeMission = ({ setIsModalQuoteOpen }) => {
       <div className="home-mission__wrapper">
         <div className="container">
           <div className="row">
-            <div className="col-5">
+            <div className="col-12 col-lg-6 col-xxl-5">
               <div className="home-mission__left">
                 <p className="section__title">COMPANY MISSION STATEMENT</p>
                 <h2 className="section-heading">
@@ -36,7 +36,7 @@ const HomeMission = ({ setIsModalQuoteOpen }) => {
                 </div>
               </div>
             </div>
-            <div className="col-7">
+            <div className="col-12 col-lg-6 col-7">
               <div className="home-mission__right">
                 <div className="row">
                   <div className="col-7">

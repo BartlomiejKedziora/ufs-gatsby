@@ -11,12 +11,12 @@ const SectionForm = () => {
       <div className="home-contact__wrapper">
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col-12 col-lg-6 order-2 order-lg-1">
               <div className="home-contact__img">
                 <MapUk />
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-12 col-lg-6 order-1 order-lg-2">
               <div className="home-contact__right">
                 <h3 className="section-heading">
                   Get In <span>Touch</span>

@@ -2,8 +2,20 @@
 
 .blog-page {
   margin-bottom: 80px;
+  @include mdScreen {
+    margin-bottom: 40px;
+  }
   &__wrapper {
     margin: 64px 0 0;
+    & > .row {
+      margin: 0 -76px;
+      @include xxlScreen {
+        margin: 0 -44px;
+      }
+      @include mdScreen {
+        margin: unset;
+      }
+    }
   }
   &__article {
     width: 100%;
@@ -21,6 +33,14 @@
       page-break-inside: avoid;
       -webkit-column-break-inside: avoid;
       margin-bottom: 64px;
+      @include xxlScreen {
+        padding: 0 32px;
+        margin-bottom: 32px;
+      }
+      @include mdScreen {
+        padding: unset;
+        margin-bottom: 50px;
+      }
     }
     &-img {
       width: 100%;

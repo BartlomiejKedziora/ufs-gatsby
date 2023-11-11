@@ -10,7 +10,7 @@ const HomeWork = ({ setIsModalQuoteOpen }) => {
       <div className="home-work__wrapper">
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col-12 col-lg-6">
               <div className="home-work__left">
                 <h2 className="section-heading">
                   How <span>We Work</span>
@@ -35,7 +35,7 @@ const HomeWork = ({ setIsModalQuoteOpen }) => {
                 </div>
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-12 col-lg-6">
               <div className="home-work__right">
                 <div className="row">
                   <div className="col-12">

@@ -13,12 +13,21 @@
     flex-direction: column;
     justify-content: center;
     padding-right: 100px;
+    @include lgScreen {
+      padding-right: 0;
+      padding-bottom: 60px;
+      align-items: center;
+      text-align: center;
+    }
   }
   &__img {
     height: 660px;
     width: 100%;
     @include xlScreen {
       height: 460px;
+    }
+    @include lgScreen {
+      height: 300px;
     }
     img {
       width: 100%;

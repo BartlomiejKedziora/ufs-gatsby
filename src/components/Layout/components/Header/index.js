@@ -56,7 +56,7 @@ const Header = () => {
               />
             </Link>
           </div>
-          <div className="header__content">
+          <div className={`header__content${isMenuOpen ? " menu-active" : ""}`}>
             <div className="header__contact">
               <a className="header__contact-item" href="tel:03300272324">
                 <svg
@@ -138,7 +138,7 @@ const Header = () => {
                     <Link to="/services/" activeClassName="current">
                       Services
                     </Link>
-                    <ul className="main-menu__submenu-list">
+                    <ul className="main-menu__submenu-list d-none d-xl-block">
                       {data?.allWpService?.nodes?.map(({ id, uri, title }) => (
                         <li key={id} className="main-menu__submenu-list-item">
                           <Link to={uri}>{title}</Link>
@@ -150,7 +150,7 @@ const Header = () => {
                     <Link to="/commercial/" activeClassName="current">
                       Commercial
                     </Link>
-                    <ul className="main-menu__submenu-list">
+                    <ul className="main-menu__submenu-list d-none d-xl-block">
                       {data?.allWpCommercial?.nodes?.map(
                         ({ id, uri, title }) => (
                           <li key={id} className="main-menu__submenu-list-item">
@@ -194,6 +194,19 @@ const Header = () => {
               </button>
             </div>
           </div>
+          <button
+            aria-label="Open Menu"
+            className={`d-block d-xl-none hamburger hamburger--squeeze${
+              isMenuOpen ? " is-active" : ""
+            }`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {Array(4)
+              .fill(null)
+              .map((item, index) => (
+                <span key={index} />
+              ))}
+          </button>
         </div>
       </div>
       {isModalQuoteOpen && (

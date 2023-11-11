@@ -11,7 +11,7 @@ const HomeGuarant = ({ setIsModalQuoteOpen }) => {
       <div className="home-guarant__wrapper">
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col-12 col-lg-6 order-2 order-lg-1">
               <div className="home-guarant__left">
                 <div className="row">
                   <div className="col-12">
@@ -27,7 +27,7 @@ const HomeGuarant = ({ setIsModalQuoteOpen }) => {
                 </div>
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-12 col-lg-6 order-1 order-lg-2">
               <div className="home-guarant__right--wrapper">
                 <div className="home-guarant__right">
                   <p className="section__title">OUR UNIQUE SELLING POINTS</p>

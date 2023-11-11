@@ -33,6 +33,16 @@
     bottom: 0;
     z-index: 2;
     padding-left: 170px;
+    @include lgScreen {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 0;
+      align-items: center;
+      margin-bottom: 120px;
+      text-align: center;
+    }
     &--wrapper {
       position: relative;
     }
@@ -43,6 +53,9 @@
     @include xlScreen {
       height: 460px;
     }
+    @include lgScreen {
+      height: 300px;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -52,8 +65,14 @@
   &__five {
     position: absolute;
     top: 0;
-    left: 12%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
+    svg {
+      @include lgScreen {
+        max-height: 300px;
+      }
+    }
   }
   &__buttons {
     display: flex;

@@ -12,10 +12,19 @@
     flex-direction: column;
     justify-content: center;
     padding-right: 100px;
+    @include lgScreen {
+      align-items: center;
+      padding: 60px 0;
+      align-items: center;
+      text-align: center;
+    }
   }
   &__right {
     &--wrapper {
       height: 600px;
+      @include lgScreen {
+        height: 300px;
+      }
     }
   }
   &__buttons {
