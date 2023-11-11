@@ -72,6 +72,9 @@
       @include lgScreen {
         max-height: 300px;
       }
+      @include smScreen {
+        max-width: 160px;
+      }
     }
   }
   &__buttons {
