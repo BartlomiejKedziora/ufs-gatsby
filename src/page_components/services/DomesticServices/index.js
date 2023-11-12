@@ -18,7 +18,10 @@ const DomesticServices = ({ heading, subtitle, services_data }) => {
                 ? item?.acfServices
                 : item?.acfCommercial
               return (
-                <div key={item?.id} className="col-4 col-padding">
+                <div
+                  key={item?.id}
+                  className="col-12 col-md-6 col-lg-4 col-padding"
+                >
                   <Link
                     to={`/${!!item?.acfServices ? "services" : "commercial"}/${
                       item?.slug

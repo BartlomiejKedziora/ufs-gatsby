@@ -5,6 +5,12 @@
     position: relative;
     height: calc(100vh - 300px);
     width: 100%;
+    @include xlScreen {
+      height: 400px;
+    }
+    @include smScreen {
+      height: 300px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -36,6 +42,10 @@
     z-index: 3;
     @include xlScreen {
       font-size: 48px;
+    }
+    @include smScreen {
+      font-size: 40px;
+      transform: translate(-50%, -50%);
     }
     span {
       color: $theme-color;

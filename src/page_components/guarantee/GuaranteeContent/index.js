@@ -55,9 +55,9 @@ const GuaranteeContent = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="guarantee-content__five-right">
-            <img src={require("assets/images/photo1.jpg").default} alt="" />
+            <div className="guarantee-content__five-right">
+              <img src={require("assets/images/photo1.jpg").default} alt="" />
+            </div>
           </div>
         </div>
         <div className="container">
@@ -81,18 +81,16 @@ const GuaranteeContent = () => {
                 <img src={require("assets/images/photo2.jpg").default} alt="" />
               </div>
               <div className="guarantee-content__row-text">
-                <div className="container">
-                  <div className="guarantee-content__row-content">
-                    <h2 className="section-heading">The Unmatched Pledge</h2>
-                    <p className="section__subtitle">
-                      Lorem Ipsum Dolor Sit Amet
-                    </p>
-                    <p className="section__text">
-                      What makes our guarantee truly "Ultimate"? The answer lies
-                      in the fact that all our endorsed floor sanding experts
-                      carry the prestigious Pallmann ParkettProfi certification.
-                    </p>
-                  </div>
+                <div className="guarantee-content__row-content">
+                  <h2 className="section-heading">The Unmatched Pledge</h2>
+                  <p className="section__subtitle">
+                    Lorem Ipsum Dolor Sit Amet
+                  </p>
+                  <p className="section__text">
+                    What makes our guarantee truly "Ultimate"? The answer lies
+                    in the fact that all our endorsed floor sanding experts
+                    carry the prestigious Pallmann ParkettProfi certification.
+                  </p>
                 </div>
               </div>
             </div>
@@ -102,24 +100,21 @@ const GuaranteeContent = () => {
           <div className="guarantee-content__row">
             <div className="container">
               <div className="guarantee-content__row-text">
-                <div className="container">
-                  <div className="guarantee-content__row-content">
-                    <h2 className="section-heading">
-                      Deciphering ParkettProfi Certification
-                    </h2>
-                    <p className="section__subtitle">
-                      Lorem Ipsum Dolor Sit Amet
-                    </p>
-                    <p className="section__text">
-                      ParkettProfi Certified means adherence to Pallmann, a
-                      renowned German manufacturer specializing in top-tier wood
-                      floor treatment and maintenance products. With a
-                      remarkable history spanning over 120 years, Pallmann
-                      excels in product development and innovation. They offer
-                      unparalleled support and training to their certified
-                      contractors.
-                    </p>
-                  </div>
+                <div className="guarantee-content__row-content">
+                  <h2 className="section-heading">
+                    Deciphering ParkettProfi Certification
+                  </h2>
+                  <p className="section__subtitle">
+                    Lorem Ipsum Dolor Sit Amet
+                  </p>
+                  <p className="section__text">
+                    ParkettProfi Certified means adherence to Pallmann, a
+                    renowned German manufacturer specializing in top-tier wood
+                    floor treatment and maintenance products. With a remarkable
+                    history spanning over 120 years, Pallmann excels in product
+                    development and innovation. They offer unparalleled support
+                    and training to their certified contractors.
+                  </p>
                 </div>
               </div>
               <div className="guarantee-content__row-img">
@@ -160,27 +155,25 @@ const GuaranteeContent = () => {
                 <img src={require("assets/images/photo2.jpg").default} alt="" />
               </div>
               <div className="guarantee-content__row-text">
-                <div className="container">
-                  <div className="guarantee-content__row-content">
-                    <h2 className="section-heading">The Advantage for You</h2>
-                    <p className="section__subtitle">
-                      Lorem Ipsum Dolor Sit Amet
-                    </p>
-                    <p className="section__text">
-                      Why does this matter to you? Because all our recommended
-                      floor sanding professionals are rigorously trained and
-                      closely supervised Pallmann Parkett Profi contractors,
-                      Pallmann confidently backs our work for 2 years. This
-                      means not only do we employ the finest quality products
-                      and the most skilled contractors, thanks to their Parkett
-                      Profi training, but we also offer The Ultimate Guarantee,
-                      providing you with the ultimate peace of mind. <br></br>{" "}
-                      The Ultimate Guarantee is applicable exclusively when
-                      Pallmann products are utilized. To learn more about the
-                      Pallmann Guarantee and Parkett Profi certified
-                      contractors, visit the Pallmann Website.
-                    </p>
-                  </div>
+                <div className="guarantee-content__row-content">
+                  <h2 className="section-heading">The Advantage for You</h2>
+                  <p className="section__subtitle">
+                    Lorem Ipsum Dolor Sit Amet
+                  </p>
+                  <p className="section__text">
+                    Why does this matter to you? Because all our recommended
+                    floor sanding professionals are rigorously trained and
+                    closely supervised Pallmann Parkett Profi contractors,
+                    Pallmann confidently backs our work for 2 years. This means
+                    not only do we employ the finest quality products and the
+                    most skilled contractors, thanks to their Parkett Profi
+                    training, but we also offer The Ultimate Guarantee,
+                    providing you with the ultimate peace of mind. <br></br> The
+                    Ultimate Guarantee is applicable exclusively when Pallmann
+                    products are utilized. To learn more about the Pallmann
+                    Guarantee and Parkett Profi certified contractors, visit the
+                    Pallmann Website.
+                  </p>
                 </div>
               </div>
             </div>

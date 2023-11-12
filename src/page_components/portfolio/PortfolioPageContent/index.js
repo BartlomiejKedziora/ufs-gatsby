@@ -24,7 +24,7 @@ const PortfolioPageContent = ({ data }) => {
             {tails_to_show?.map(
               ({ title, id, slug, acfPortfolio: { heroImage } }) => {
                 return (
-                  <div key={id} className="col-4 ">
+                  <div key={id} className="col-12 col-md-6 col-lg-4">
                     <div className="portfolio-page__article__wrapper">
                       <Link
                         to={`/portfolio/${slug}/`}

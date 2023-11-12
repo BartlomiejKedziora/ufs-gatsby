@@ -29,8 +29,11 @@
       height: 100%;
       padding-right: 20px;
       @include mdScreen {
-        width: 50%;
         margin-bottom: 30px;
+        padding-right: 0;
+      }
+      @include smScreen {
+        width: 50%;
       }
       img {
         width: 100%;

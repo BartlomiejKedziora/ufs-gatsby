@@ -2,6 +2,9 @@
 
 .portfolio-page {
   margin-bottom: 80px;
+  @include lgScreen {
+    margin-bottom: 0;
+  }
   &__wrapper {
     margin: 64px 0 0;
   }

@@ -3,18 +3,31 @@
 .about-content {
   padding: 100px 0 0;
   background: $grey-main;
+  @include lgScreen {
+    padding: 60px 0 0;
+  }
   &__wrapper {
     background: $bckg-color;
   }
   &__row {
     display: flex;
     flex-direction: row;
+    @include lgScreen {
+      flex-direction: column-reverse;
+    }
     &.odd {
       flex-direction: row-reverse;
+      @include lgScreen {
+        flex-direction: column-reverse;
+      }
     }
     &-img {
       width: 50%;
       height: 600px;
+      @include lgScreen {
+        width: 100%;
+        height: 300px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -27,6 +40,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @include lgScreen {
+        width: 100%;
+      }
+      @include smScreen {
+        padding: 40px 0 20px;
+      }
     }
   }
 }
