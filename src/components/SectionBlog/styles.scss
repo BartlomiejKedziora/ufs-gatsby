@@ -12,6 +12,9 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 48px;
+    @include lgScreen {
+      text-align: center;
+    }
   }
   &__slide {
     position: relative;

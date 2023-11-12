@@ -50,4 +50,7 @@
 
 .main-margin-top {
   margin-top: 130px;
+  @include xlScreen {
+    margin-top: 80px;
+  }
 }

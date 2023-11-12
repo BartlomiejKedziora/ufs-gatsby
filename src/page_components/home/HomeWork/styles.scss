@@ -35,15 +35,4 @@
       object-fit: cover;
     }
   }
-  &__buttons {
-    display: flex;
-    .button {
-      &:first-child {
-        margin-right: 60px;
-        @include xlScreen {
-          margin-right: 40px;
-        }
-      }
-    }
-  }
 }

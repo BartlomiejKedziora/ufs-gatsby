@@ -12,6 +12,9 @@
   border-radius: 60px;
   padding: 11px 21px;
   transition: 0.3s ease-out;
+  @include smScreen {
+    padding: 10px;
+  }
   &.disabled {
     opacity: 0.2;
     &:hover {
@@ -37,6 +40,9 @@
     width: 24px;
     height: 24px;
     margin-left: 25px;
+    @include smScreen {
+      margin-left: 15px;
+    }
     svg {
       path {
         fill: #2f2f2f;
