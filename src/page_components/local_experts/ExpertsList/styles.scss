@@ -28,6 +28,7 @@
     max-width: 150px;
     max-height: 180px;
     margin-right: 25px;
+    flex-shrink: 0;
     @include xlScreen {
       margin-bottom: 40px;
     }

@@ -3,6 +3,7 @@ import "./styles.scss"
 import React from "react"
 
 import Button from "components/Button"
+import { Link } from "gatsby"
 
 const ExpertsList = ({
   experts_to_show,
@@ -27,12 +28,14 @@ const ExpertsList = ({
                       <div className="col-md-6 col-12">
                         <div className="experts-list__content--wrapper">
                           <div className="experts-list__content">
-                            <p className="section-heading">
-                              Floor Sanders{" "}
-                              <span>
-                                {currentLocation || locations?.nodes[0]?.name}
-                              </span>
-                            </p>
+                            <Link to={`/local-experts/${slug}/`}>
+                              <h3 className="section-heading">
+                                Floor Sanders{" "}
+                                <span>
+                                  {currentLocation || locations?.nodes[0]?.name}
+                                </span>
+                              </h3>
+                            </Link>
                             <div className="experts-list__info">
                               <div className="experts-list__photo">
                                 <img
@@ -61,7 +64,7 @@ const ExpertsList = ({
                                 </div>
                                 <div className="experts-list__details-row">
                                   <p>Contact us:</p>
-                                  <p>{phone}</p>
+                                  <a href={`tel:${phone}`}>{phone}</a>
                                 </div>
                                 <div className="experts-list__details-row">
                                   <p>Address:</p>

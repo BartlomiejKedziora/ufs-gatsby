@@ -3,14 +3,25 @@
 .expert-quote {
   padding: 100px 0 0;
   background: $grey-main;
+  @include lgScreen {
+    padding: 60px 0 0;
+  }
   &__wrapper {
     background: $bckg-color;
     padding: 60px 0 80px;
+    @include lgScreen {
+      padding: 30px 0 40px;
+    }
   }
   &__tail {
     position: relative;
     display: flex;
     margin-top: 120px;
+    @include mdScreen {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+    }
     &:first-of-type {
       margin-top: 60px;
     }
@@ -22,6 +33,14 @@
     width: 250px;
     height: 300px;
     padding-right: 20px;
+    @include mdScreen {
+      margin-bottom: 30px;
+      padding-right: 0;
+    }
+    @include smScreen {
+      height: 200px;
+      width: 50%;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -32,6 +51,10 @@
     position: relative;
     width: 66%;
     padding: 72px 16px 0;
+    @include mdScreen {
+      width: 100%;
+      padding: 16px 16px 0;
+    }
   }
   &__details {
     display: flex;
@@ -44,6 +67,9 @@
     position: absolute;
     z-index: 0;
     width: 72px;
+    @include mdScreen {
+      width: 40px;
+    }
     &--1 {
       top: 0;
       left: 0;

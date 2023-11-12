@@ -3,9 +3,8 @@ import "./styles.scss"
 import React from "react"
 
 import Button from "components/Button"
-import Divider from "components/Divider"
-import ExpertQuote from "page_components/single-expert/ExpertQuote"
 import BannerGetQuote from "components/BannerGetQuote"
+import ExpertQuote from "page_components/single-expert/ExpertQuote"
 
 const ExpertContent = ({ data, setIsModalQuoteOpen }) => {
   return (
@@ -36,22 +35,20 @@ const ExpertContent = ({ data, setIsModalQuoteOpen }) => {
                       />
                     </div>
                     <div className="single-expert__content">
-                      <p className="single-expert__title">{blockTitle}</p>
+                      <h2 className="single-expert__title">{blockTitle}</h2>
                       {blockSubtitle && (
-                        <p className="single-expert__subtitle">
+                        <h3 className="single-expert__subtitle">
                           {blockSubtitle}
-                        </p>
+                        </h3>
                       )}
                       <div
                         className="single-expert__text"
                         dangerouslySetInnerHTML={{ __html: blockText }}
                       />
-                      {button ? (
+                      {button && (
                         <Button to={buttonLink} className="button-dark">
                           {button}
                         </Button>
-                      ) : (
-                        <Divider mt={20} />
                       )}
                     </div>
                   </div>
