@@ -54,6 +54,9 @@
     }
     &-content {
       padding: 16px;
+      @include mdScreen {
+        padding: 16px 0;
+      }
     }
   }
   &__date {
@@ -68,6 +71,10 @@
     font-weight: 600;
     line-height: 1.2;
     margin: 16px 0;
+    @include mdScreen {
+      height: auto;
+      overflow: visible;
+    }
   }
   &__excerpt {
     height: 92px;

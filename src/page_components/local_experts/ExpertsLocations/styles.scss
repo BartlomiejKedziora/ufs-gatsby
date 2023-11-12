@@ -3,6 +3,9 @@
 .experts-locations {
   padding: 100px 0 0;
   background: $grey-main;
+  @include lgScreen {
+    padding: 60px 0 0;
+  }
   &__wrapper {
     padding: 60px 0;
     background: $bckg-color;
@@ -15,12 +18,15 @@
   }
   &__list {
     margin-top: 50px;
-    -webkit-columns: 3;
-    column-count: 3;
+    // -webkit-columns: 3;
+    // column-count: 3;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__item {
     display: flex;
-    padding: 0;
+    padding: 0 10px;
     margin: 0;
     align-items: center;
     margin-bottom: 15px;

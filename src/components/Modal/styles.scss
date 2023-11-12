@@ -49,6 +49,9 @@
   }
   &__body {
     padding: 30px;
+    @include mdScreen {
+      padding: 30px 15px;
+    }
   }
 }
 

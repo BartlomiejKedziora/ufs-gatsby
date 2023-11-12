@@ -5,6 +5,10 @@
     width: 900px;
     max-width: 100%;
     margin: 100px auto 64px;
+    @include lgScreen {
+      width: 100%;
+      margin: 60px 0;
+    }
   }
   &__date {
     font-size: 24px;
@@ -32,6 +36,9 @@
     justify-content: space-between;
     padding-right: 160px;
     margin: 50px 0;
+    @include lgScreen {
+      padding-right: 0;
+    }
     &-btn {
       font-size: 14px;
       color: $theme-color;
@@ -54,6 +61,9 @@
   }
   &__content {
     padding-right: 160px;
+    @include lgScreen {
+      padding-right: 0;
+    }
     h1,
     h2,
     h3,
