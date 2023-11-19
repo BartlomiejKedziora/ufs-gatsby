@@ -13,7 +13,7 @@ import hero_image from "assets/images/hero4.jpg"
 
 const Commercial = ({ data }) => {
   const breadcrumbs_data = [{ name: "Commercial", href: "/commercial/" }]
-  console.log(data?.allWpCommercial?.nodes)
+
   return (
     <Layout
       seo={{

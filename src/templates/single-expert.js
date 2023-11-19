@@ -20,7 +20,7 @@ const SingleExpert = ({ pageContext }) => {
     { name: "Local Experts", href: "/local-experts/" },
     { name: `${post_data?.title}`, href: `/local-experts/${post_data?.slug}/` },
   ]
-  console.log(post_data)
+
   return (
     <Layout
       seo={{

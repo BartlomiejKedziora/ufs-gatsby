@@ -36,11 +36,15 @@ const ExpertContent = ({ data, setIsModalQuoteOpen }) => {
                       />
                     </div>
                     <div className="single-expert__content">
-                      <h2 className="single-expert__title">{blockTitle}</h2>
+                      <h2
+                        className="single-expert__title"
+                        dangerouslySetInnerHTML={{ __html: blockTitle }}
+                      />
                       {blockSubtitle && (
-                        <h3 className="single-expert__subtitle">
-                          {blockSubtitle}
-                        </h3>
+                        <h3
+                          className="single-expert__subtitle"
+                          dangerouslySetInnerHTML={{ __html: blockSubtitle }}
+                        />
                       )}
                       <div
                         className="single-expert__text"

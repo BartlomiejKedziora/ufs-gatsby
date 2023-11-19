@@ -156,7 +156,6 @@ exports.createPages = async ({ graphql, actions }) => {
           id
           acfExperts {
             address
-            desc
             name
             phone
             website

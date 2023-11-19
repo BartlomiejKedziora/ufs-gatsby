@@ -43,11 +43,15 @@ const ServiceContent = ({ data }) => {
                       />
                     </div>
                     <div className="single-service__content">
-                      <h2 className="single-service__title">{blockTitle}</h2>
+                      <h2
+                        className="single-service__title"
+                        dangerouslySetInnerHTML={{ __html: blockTitle }}
+                      />
                       {blockSubtitle && (
-                        <h3 className="single-service__subtitle">
-                          {blockSubtitle}
-                        </h3>
+                        <h3
+                          className="single-service__subtitle"
+                          dangerouslySetInnerHTML={{ __html: blockSubtitle }}
+                        />
                       )}
                       <div
                         className="single-service__text"

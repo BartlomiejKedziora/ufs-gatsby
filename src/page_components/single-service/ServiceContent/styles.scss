@@ -74,6 +74,9 @@
     @include xlScreen {
       font-size: 40px;
     }
+    span {
+      color: $theme-color;
+    }
   }
 
   &__subtitle {
@@ -83,6 +86,9 @@
     margin-bottom: 32px;
     @include xlScreen {
       font-size: 26px;
+    }
+    span {
+      color: $theme-color;
     }
   }
 

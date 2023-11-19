@@ -79,12 +79,6 @@ const ExpertsList = ({
                             <Button to={`/local-experts/${slug}/`}>
                               Find out more
                             </Button>
-                            {/* <Button
-                              className="button-dark"
-                              onClick={() => setIsModalQuoteOpen(true)}
-                            >
-                              Get a quote
-                            </Button> */}
                           </div>
                         </div>
                       </div>

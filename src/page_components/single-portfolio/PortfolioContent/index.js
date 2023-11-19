@@ -73,11 +73,15 @@ const PortfolioContent = ({ data }) => {
                       </Swiper>
                     </div>
                     <div className="single-portfolio__content">
-                      <h2 className="single-portfolio__title">{blockTitle}</h2>
+                      <h2
+                        className="single-portfolio__title"
+                        dangerouslySetInnerHTML={{ __html: blockTitle }}
+                      />
                       {blockSubtitle && (
-                        <h3 className="single-portfolio__subtitle">
-                          {blockSubtitle}
-                        </h3>
+                        <h3
+                          className="single-portfolio__subtitle"
+                          dangerouslySetInnerHTML={{ __html: blockSubtitle }}
+                        />
                       )}
                       <div
                         className="single-portfolio__text"
