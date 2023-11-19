@@ -31,9 +31,7 @@ const ExpertsList = ({
                             <Link to={`/local-experts/${slug}/`}>
                               <h3 className="section-heading">
                                 Floor Sanders{" "}
-                                <span>
-                                  {currentLocation || locations?.nodes[0]?.name}
-                                </span>
+                                <span>{locations?.nodes?.[0]?.name}</span>
                               </h3>
                             </Link>
                             <div className="experts-list__info">
@@ -50,7 +48,7 @@ const ExpertsList = ({
                                 </div>
                                 <div className="experts-list__details-row">
                                   <p>Region:</p>
-                                  <p>{name}</p>
+                                  <p>{locations?.nodes?.[0]?.name}</p>
                                 </div>
                                 <div className="experts-list__details-row">
                                   <p>Website:</p>

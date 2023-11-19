@@ -13,6 +13,7 @@ const ServiceContent = ({ data }) => {
   }
 
   const rows_list = getRowsList(data)
+
   return (
     <section className="single-service">
       {rows_list?.map(
@@ -28,6 +29,8 @@ const ServiceContent = ({ data }) => {
           index
         ) => {
           const odd = index % 2 === 1
+          const is_external_link = buttonLink?.includes("http")
+
           return (
             <div key={index} className="single-service__row--padding">
               <div key={index} className="single-service__row--wrapper">
@@ -51,7 +54,11 @@ const ServiceContent = ({ data }) => {
                         dangerouslySetInnerHTML={{ __html: blockText }}
                       />
                       {button && (
-                        <Button to={buttonLink} className="button-dark">
+                        <Button
+                          is_external_link={is_external_link}
+                          to={buttonLink}
+                          className="button-dark"
+                        >
                           {button}
                         </Button>
                       )}

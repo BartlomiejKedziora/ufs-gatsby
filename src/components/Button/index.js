@@ -13,8 +13,23 @@ const Button = ({
   disabled,
   to,
   children,
+  is_external_link,
 }) => {
-  return (
+  return is_external_link ? (
+    <a
+      href={to}
+      target="_blank"
+      rel="noreferrer"
+      className={classNames("button", {
+        [className]: !!className,
+      })}
+    >
+      <span>{children}</span>
+      <div className="button__icon">
+        <IconCircle />
+      </div>
+    </a>
+  ) : (
     <button
       type={type}
       className={classNames("button", {

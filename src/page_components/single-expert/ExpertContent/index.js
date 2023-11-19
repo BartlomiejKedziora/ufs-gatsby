@@ -22,6 +22,7 @@ const ExpertContent = ({ data, setIsModalQuoteOpen }) => {
           index
         ) => {
           const odd = index % 2 === 1
+          const is_external_link = buttonLink?.includes("http")
 
           return (
             <div key={index} className="single-expert__row--padding">
@@ -46,7 +47,11 @@ const ExpertContent = ({ data, setIsModalQuoteOpen }) => {
                         dangerouslySetInnerHTML={{ __html: blockText }}
                       />
                       {button && (
-                        <Button to={buttonLink} className="button-dark">
+                        <Button
+                          is_external_link={is_external_link}
+                          to={buttonLink}
+                          className="button-dark"
+                        >
                           {button}
                         </Button>
                       )}

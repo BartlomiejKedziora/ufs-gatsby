@@ -47,6 +47,8 @@ const PortfolioContent = ({ data }) => {
           index
         ) => {
           const odd = index % 2 === 1
+          const is_external_link = buttonLink?.includes("http")
+
           return (
             <div key={index} className="single-portfolio__row--padding">
               <div className="single-portfolio__row--wrapper">
@@ -82,7 +84,11 @@ const PortfolioContent = ({ data }) => {
                         dangerouslySetInnerHTML={{ __html: blockText }}
                       />
                       {button && (
-                        <Button to={buttonLink} className="button-dark">
+                        <Button
+                          is_external_link={is_external_link}
+                          to={buttonLink}
+                          className="button-dark"
+                        >
                           {button}
                         </Button>
                       )}

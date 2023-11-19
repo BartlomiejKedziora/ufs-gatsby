@@ -14,12 +14,15 @@ import ModalQuote from "components/ModalQuote"
 import hero_image from "assets/images/hero4.jpg"
 
 const LocalExpertsPage = ({ data }) => {
-  const [currentLocation, setCurrentLocation] = useState("London")
+  const [currentLocation, setCurrentLocation] = useState("all")
   const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
 
-  const filtered_experts = data?.allWpExpert?.nodes.filter(expert =>
-    expert.locations.nodes.some(e => e.name === currentLocation)
-  )
+  const filtered_experts =
+    currentLocation === "all"
+      ? data?.allWpExpert?.nodes
+      : data?.allWpExpert?.nodes.filter(expert =>
+          expert.locations.nodes.some(e => e.name === currentLocation)
+        )
 
   const breadcrumbs_data = [{ name: "Local Experts", href: "/local-experts/" }]
 
@@ -34,6 +37,7 @@ const LocalExpertsPage = ({ data }) => {
       <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
       <ExpertsLocations
         locations={data?.allWpLocation?.nodes}
+        currentLocation={currentLocation}
         setCurrentLocation={setCurrentLocation}
       />
       <ExpertsList

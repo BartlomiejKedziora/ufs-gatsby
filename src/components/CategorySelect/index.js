@@ -55,7 +55,7 @@ const CategorySelect = ({
     }),
     menu: provided => ({
       ...provided,
-      backgroundColor: "#fff",
+      backgroundColor: "#fffee6",
       right: 0,
       zIndex: 999,
     }),

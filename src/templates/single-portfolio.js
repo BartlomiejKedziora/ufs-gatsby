@@ -8,6 +8,7 @@ import { PortfolioContent } from "page_components/single-portfolio"
 
 const SinglePortfolio = ({ pageContext }) => {
   const portfolio_data = pageContext?.data
+  const seo = portfolio_data?.seo
 
   const breadcrumbs_data = [
     { name: "Portfolio", href: "/portfolio/" },
@@ -23,8 +24,8 @@ const SinglePortfolio = ({ pageContext }) => {
   return (
     <Layout
       seo={{
-        title: pageContext?.data?.title,
-        description: "",
+        title: seo?.title || portfolio_data?.title,
+        description: seo?.metaDesc,
       }}
     >
       <PageHeader title={pageContext?.data?.title} img={img} />

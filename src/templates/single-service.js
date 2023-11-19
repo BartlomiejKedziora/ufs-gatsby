@@ -8,6 +8,7 @@ import ServiceContent from "page_components/single-service/ServiceContent"
 
 const SingleService = ({ pageContext }) => {
   const service_data = pageContext?.data
+  const seo = service_data?.seo
 
   const getImage = service_data => {
     if (service_data?.acfServices) {
@@ -53,8 +54,8 @@ const SingleService = ({ pageContext }) => {
   return (
     <Layout
       seo={{
-        title: pageContext?.data?.title,
-        description: "",
+        title: seo?.title || service_data?.title,
+        description: seo?.metaDesc,
       }}
     >
       <PageHeader title={pageContext?.data?.title} img={img} />

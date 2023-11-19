@@ -56,15 +56,6 @@ const SectionGallery = ({ images }) => {
   return (
     <section className="gallery">
       <div className="gallery__wrapper">
-        <div className="container">
-          <div className="gallery__top">
-            <p className="section__title">OUR GALLERY</p>
-            <h2 className="section-heading">
-              Look at <span>Out work</span>
-            </h2>
-            <p className="section__subtitle">The Ultimate Floor Sanding</p>
-          </div>
-        </div>
         <div className="gallery__grid">
           <div className="container">
             <div className="gallery__grid-wrapper">

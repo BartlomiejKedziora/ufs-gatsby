@@ -13,6 +13,7 @@ const SinglePost = ({ pageContext }) => {
   const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
 
   const post_data = pageContext?.data
+  const seo = post_data?.seo
   const gallery = post_data?.acfpost?.gallery
 
   const breadcrumbs_data = [
@@ -23,8 +24,8 @@ const SinglePost = ({ pageContext }) => {
   return (
     <Layout
       seo={{
-        title: post_data?.title,
-        description: "",
+        title: seo?.title || post_data?.title,
+        description: seo?.metaDesc,
       }}
     >
       <PageHeader

@@ -3,6 +3,9 @@
 .contact {
   padding: 100px 0 0;
   background: $grey-main;
+  &.pb {
+    padding: 0 0 100px;
+  }
   &__content {
     display: flex;
     flex-direction: column;
