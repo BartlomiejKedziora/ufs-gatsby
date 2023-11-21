@@ -83,9 +83,6 @@ const GuaranteeContent = () => {
               <div className="guarantee-content__row-text">
                 <div className="guarantee-content__row-content">
                   <h2 className="section-heading">The Unmatched Pledge</h2>
-                  <p className="section__subtitle">
-                    Lorem Ipsum Dolor Sit Amet
-                  </p>
                   <p className="section__text">
                     What makes our guarantee truly "Ultimate"? The answer lies
                     in the fact that all our endorsed floor sanding experts
@@ -104,9 +101,6 @@ const GuaranteeContent = () => {
                   <h2 className="section-heading">
                     Deciphering ParkettProfi Certification
                   </h2>
-                  <p className="section__subtitle">
-                    Lorem Ipsum Dolor Sit Amet
-                  </p>
                   <p className="section__text">
                     ParkettProfi Certified means adherence to Pallmann, a
                     renowned German manufacturer specializing in top-tier wood
@@ -157,9 +151,6 @@ const GuaranteeContent = () => {
               <div className="guarantee-content__row-text">
                 <div className="guarantee-content__row-content">
                   <h2 className="section-heading">The Advantage for You</h2>
-                  <p className="section__subtitle">
-                    Lorem Ipsum Dolor Sit Amet
-                  </p>
                   <p className="section__text">
                     Why does this matter to you? Because all our recommended
                     floor sanding professionals are rigorously trained and

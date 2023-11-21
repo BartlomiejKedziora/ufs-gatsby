@@ -24,7 +24,7 @@
     "gatsby-plugin-babel-optional-chaining": "^1.0.0",
     "gatsby-plugin-image": "^2.25.0",
     "gatsby-plugin-manifest": "^4.25.0",
-    "gatsby-plugin-react-helmet": "^5.24.0",
+    "gatsby-plugin-react-helmet": "^5.25.0",
     "gatsby-plugin-sass": "^5.24.0",
     "gatsby-plugin-sharp": "^4.24.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",

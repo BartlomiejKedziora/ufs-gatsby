@@ -6,6 +6,9 @@
   &.pb {
     padding: 0 0 100px;
   }
+  &.pt {
+    padding: 100px 0 0;
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -23,9 +26,9 @@
     background-size: cover;
   }
   &__blocks {
-    padding-bottom: 64px;
+    padding: 64px 0;
     @include smScreen {
-      padding-bottom: 40px;
+      padding: 40px 0 0;
     }
     .col-12 > button {
       width: 100%;

@@ -25,7 +25,7 @@ const Seo = ({ description, lang, meta, title }) => {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={title || defaultTitle}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
@@ -58,7 +58,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
       ].concat(meta)}
     >
-      <meta property="og:image" content={withPrefix(`/og-image.jpg`)} />
+      {/* <meta property="og:image" content={withPrefix(`/og-image.jpg`)} /> */}
     </Helmet>
   )
 }

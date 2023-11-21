@@ -5,6 +5,9 @@
   right: 70px;
   bottom: 120px;
   z-index: 50;
+  @include mdScreen {
+    display: none;
+  }
   &:hover {
     img {
       transform: translateY(-6px);

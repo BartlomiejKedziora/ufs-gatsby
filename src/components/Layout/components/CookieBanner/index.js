@@ -30,15 +30,14 @@ const CookieBanner = ({ cookies }) => {
       <div className="container">
         <div className="cookie-banner__wrapper">
           <p>
-            Korzystamy z plików cookies w celu optymalizacji usług. Jeśli
-            korzystasz z naszej witryny bez zmiany ustawień dotyczących cookies
-            oznacza, że wyrażasz zgodę na zamieszczanie ich przez nas w Twoim
-            urządzeniu.
+            We are using cookies to give you the best experience on our website.
           </p>
-          <Button to="/privacy-policy/" target="_blank">
-            Czytaj więcej
-          </Button>
-          <Button onClick={e => acceptCookieBanner(e)}>zgadzam się</Button>
+          <div className="cookie-banner__buttons">
+            <Button to="/privacy-policy/" target="_blank">
+              Read more
+            </Button>
+            <Button onClick={e => acceptCookieBanner(e)}>Accept</Button>
+          </div>
         </div>
       </div>
     </div>

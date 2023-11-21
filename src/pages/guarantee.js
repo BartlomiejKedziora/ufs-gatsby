@@ -24,7 +24,7 @@ const Guarantee = () => {
       <PageHeader title="Guarantee" img={hero_image} />
       <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
       <GuaranteeContent />
-      <SectionContact />
+      <SectionContact pt />
       <Divider height={100} background="#363636" />
       <SectionForm />
       <SectionTestimonials />

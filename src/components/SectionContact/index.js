@@ -5,11 +5,11 @@ import { Link } from "gatsby"
 
 import ModalQuote from "components/ModalQuote"
 
-const SectionContact = ({ pb }) => {
+const SectionContact = ({ pb, pt }) => {
   const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
 
   return (
-    <section className={`contact${pb && " pb"}`}>
+    <section className={`contact${pt ? " pt" : ""}${pb ? " pb" : ""}`}>
       <div className="container-fluid">
         <div className="contact__bckg">
           <div className="container">
