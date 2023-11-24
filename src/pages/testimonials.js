@@ -33,7 +33,7 @@ const Testimonials = ({ data }) => {
 
 export const query = graphql`
   query {
-    allWpTestimonial(sort: { order: DESC, fields: date }) {
+    allWpTestimonial(sort: { date: DESC }) {
       nodes {
         id
         acfTestimonials {

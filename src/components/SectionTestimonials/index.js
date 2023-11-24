@@ -17,7 +17,7 @@ const SectionTestimonials = () => {
 
   const data = useStaticQuery(graphql`
     query TestimonialsQuery {
-      allWpTestimonial(limit: 10, sort: { fields: date, order: DESC }) {
+      allWpTestimonial(limit: 10, sort: { date: DESC }) {
         nodes {
           id
           acfTestimonials {

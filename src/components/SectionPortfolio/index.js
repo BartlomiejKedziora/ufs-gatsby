@@ -17,7 +17,7 @@ const SectionPortfolio = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      allWpPortfolio(limit: 10, sort: { fields: date, order: DESC }) {
+      allWpPortfolio(limit: 10, sort: { date: DESC }) {
         nodes {
           slug
           id

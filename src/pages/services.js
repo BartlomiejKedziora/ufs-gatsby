@@ -50,7 +50,7 @@ const Services = ({ data }) => {
 
 export const query = graphql`
   query {
-    allWpService(sort: { order: ASC, fields: date }) {
+    allWpService(sort: { date: ASC }) {
       nodes {
         acfServices {
           desc

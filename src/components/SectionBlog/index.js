@@ -16,7 +16,7 @@ const SectionBlog = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      allWpPost(limit: 10, sort: { fields: date, order: DESC }) {
+      allWpPost(limit: 10, sort: { date: DESC }) {
         nodes {
           id
           acfpost {

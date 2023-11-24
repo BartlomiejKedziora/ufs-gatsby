@@ -37,7 +37,7 @@ const Commercial = ({ data }) => {
 
 export const query = graphql`
   query {
-    allWpCommercial(sort: { order: ASC, fields: date }) {
+    allWpCommercial(sort: { date: ASC }) {
       nodes {
         acfCommercial {
           desc

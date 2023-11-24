@@ -9,8 +9,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const portfolioTemplate = path.resolve(`src/templates/single-portfolio.js`)
 
   const result = await graphql(`
-    query {
-      allWpPost(sort: { order: DESC, fields: date }) {
+    {
+      allWpPost(sort: { date: DESC }) {
         nodes {
           acfpost {
             mainImg {
@@ -43,7 +43,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allWpService(sort: { order: ASC, fields: date }) {
+      allWpService(sort: { date: ASC }) {
         nodes {
           acfServices {
             title
@@ -77,7 +77,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allWpCommercial(sort: { order: ASC, fields: date }) {
+      allWpCommercial(sort: { date: ASC }) {
         nodes {
           acfCommercial {
             title
@@ -111,7 +111,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allWpPortfolio(sort: { order: DESC, fields: date }) {
+      allWpPortfolio(sort: { date: DESC }) {
         nodes {
           slug
           uri
@@ -145,7 +145,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allWpExpert(sort: { order: DESC, fields: date }) {
+      allWpExpert(sort: { date: DESC }) {
         nodes {
           title
           slug
