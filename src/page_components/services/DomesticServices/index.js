@@ -1,7 +1,7 @@
 import "./styles.scss"
 
 import React from "react"
-import Link from "gatsby-link"
+import { Link } from "gatsby"
 
 import Button from "components/Button"
 
@@ -17,6 +17,7 @@ const DomesticServices = ({ heading, subtitle, services_data }) => {
               const item_services = !!item?.acfServices
                 ? item?.acfServices
                 : item?.acfCommercial
+
               return (
                 <div
                   key={item?.id}
