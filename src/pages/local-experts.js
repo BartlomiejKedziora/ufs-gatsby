@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
+import { Seo } from "components/Layout/components"
 import PageHeader from "components/PageHeader"
 import Breadcrumbs from "components/Breadcrumbs"
 import ExpertsLocations from "page_components/local_experts/ExpertsLocations"
@@ -12,6 +13,8 @@ import SectionForm from "components/SectionForm"
 import ModalQuote from "components/ModalQuote"
 
 import hero_image from "assets/images/hero4.jpg"
+
+export const Head = () => <Seo title="Local Experts" description="" />
 
 const LocalExpertsPage = ({ data }) => {
   const [currentLocation, setCurrentLocation] = useState("all")
@@ -27,12 +30,7 @@ const LocalExpertsPage = ({ data }) => {
   const breadcrumbs_data = [{ name: "Local Experts", href: "/local-experts/" }]
 
   return (
-    <Layout
-      seo={{
-        title: "Local Experts",
-        description: "",
-      }}
-    >
+    <Layout>
       <PageHeader title="Local Experts" img={hero_image} />
       <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
       <ExpertsLocations

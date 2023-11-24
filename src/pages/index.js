@@ -8,6 +8,7 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
+import { Seo } from "components/Layout/components"
 import SectionTestimonials from "components/SectionTestimonials"
 import SectionContact from "components/SectionContact"
 import SectionForm from "components/SectionForm"
@@ -23,15 +24,14 @@ import {
 } from "../page_components/home"
 import ModalQuote from "components/ModalQuote"
 
+export const Head = () => (
+  <Seo title="Home" description="Homesite waiting for description" />
+)
+
 const Home = ({ data }) => {
   const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
   return (
-    <Layout
-      seo={{
-        title: "Home",
-        description: "",
-      }}
-    >
+    <Layout>
       <HeroSlider
         data={data?.heroSlider?.nodes?.[0]?.pageHome}
         setIsModalQuoteOpen={setIsModalQuoteOpen}

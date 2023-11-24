@@ -1,9 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql, withPrefix } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Seo = ({ description, lang, meta, title }) => {
+const Seo = ({ description, lang, meta, title, children }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -11,6 +10,7 @@ const Seo = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
+            siteUrl
           }
         }
       }
@@ -21,45 +21,11 @@ const Seo = ({ description, lang, meta, title }) => {
   const defaultTitle = site.siteMetadata?.title
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title || defaultTitle}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    >
-      {/* <meta property="og:image" content={withPrefix(`/og-image.jpg`)} /> */}
-    </Helmet>
+    <>
+      <title>{title || defaultTitle}</title>
+      <meta name="description" content={metaDescription} />
+      {children}
+    </>
   )
 }
 

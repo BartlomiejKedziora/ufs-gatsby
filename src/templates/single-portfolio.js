@@ -1,14 +1,25 @@
 import React from "react"
 
 import Layout from "components/Layout"
+import { Seo } from "components/Layout/components"
 import PageHeader from "components/PageHeader"
 import Breadcrumbs from "components/Breadcrumbs"
 import SectionGallery from "components/SectionGallery"
 import { PortfolioContent } from "page_components/single-portfolio"
 
+export const Head = ({ pageContext }) => {
+  const post_data = pageContext?.data
+
+  return (
+    <Seo
+      title={post_data?.seo?.title || post_data?.title}
+      description={post_data?.seo?.metaDesc}
+    />
+  )
+}
+
 const SinglePortfolio = ({ pageContext }) => {
   const portfolio_data = pageContext?.data
-  const seo = portfolio_data?.seo
 
   const breadcrumbs_data = [
     { name: "Portfolio", href: "/portfolio/" },
@@ -22,12 +33,7 @@ const SinglePortfolio = ({ pageContext }) => {
   const gallery = portfolio_data?.acfPortfolio?.gallery
 
   return (
-    <Layout
-      seo={{
-        title: seo?.title || portfolio_data?.title,
-        description: seo?.metaDesc,
-      }}
-    >
+    <Layout>
       <PageHeader title={pageContext?.data?.title} img={img} />
       <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
       <PortfolioContent data={portfolio_data} />

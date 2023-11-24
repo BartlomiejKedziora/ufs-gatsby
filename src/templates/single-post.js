@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 
 import Layout from "components/Layout"
+import { Seo } from "components/Layout/components"
 import PageHeader from "components/PageHeader"
 import Breadcrumbs from "components/Breadcrumbs"
 import BannerGetQuote from "components/BannerGetQuote"
@@ -9,11 +10,21 @@ import SectionBlog from "components/SectionBlog"
 import SectionGallery from "components/SectionGallery"
 import PostContent from "page_components/single-post/PostContent"
 
+export const Head = ({ pageContext }) => {
+  const post_data = pageContext?.data
+
+  return (
+    <Seo
+      title={post_data?.seo?.title || post_data?.title}
+      description={post_data?.seo?.metaDesc}
+    />
+  )
+}
+
 const SinglePost = ({ pageContext }) => {
   const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
 
   const post_data = pageContext?.data
-  const seo = post_data?.seo
   const gallery = post_data?.acfpost?.gallery
 
   const breadcrumbs_data = [
@@ -22,12 +33,7 @@ const SinglePost = ({ pageContext }) => {
   ]
 
   return (
-    <Layout
-      seo={{
-        title: seo?.title || post_data?.title,
-        description: seo?.metaDesc,
-      }}
-    >
+    <Layout>
       <PageHeader
         title={post_data?.title}
         img={post_data?.acfpost?.mainImg?.sourceUrl}

@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
+import { Seo } from "components/Layout/components"
 import Breadcrumbs from "components/Breadcrumbs"
 import PageHeader from "components/PageHeader"
 import BannerGetQuote from "components/BannerGetQuote"
@@ -10,6 +11,8 @@ import CategorySelect from "components/CategorySelect"
 import { PortfolioPageContent } from "page_components/portfolio"
 
 import hero_image from "assets/images/hero4.jpg"
+
+export const Head = () => <Seo title="Portfolio" description="" />
 
 let filtered_tails = []
 

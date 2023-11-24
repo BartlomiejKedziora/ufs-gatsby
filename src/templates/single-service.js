@@ -1,14 +1,25 @@
 import React from "react"
 
 import Layout from "components/Layout"
+import { Seo } from "components/Layout/components"
 import PageHeader from "components/PageHeader"
 import Breadcrumbs from "components/Breadcrumbs"
 import SectionGallery from "components/SectionGallery"
 import ServiceContent from "page_components/single-service/ServiceContent"
 
+export const Head = ({ pageContext }) => {
+  const post_data = pageContext?.data
+
+  return (
+    <Seo
+      title={post_data?.seo?.title || post_data?.title}
+      description={post_data?.seo?.metaDesc}
+    />
+  )
+}
+
 const SingleService = ({ pageContext }) => {
   const service_data = pageContext?.data
-  const seo = service_data?.seo
 
   const getImage = service_data => {
     if (service_data?.acfServices) {
@@ -52,12 +63,7 @@ const SingleService = ({ pageContext }) => {
   const gallery = getGallery(service_data)
 
   return (
-    <Layout
-      seo={{
-        title: seo?.title || service_data?.title,
-        description: seo?.metaDesc,
-      }}
-    >
+    <Layout>
       <PageHeader title={pageContext?.data?.title} img={img} />
       <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
       <ServiceContent data={service_data} />

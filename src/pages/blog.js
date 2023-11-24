@@ -2,12 +2,15 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
+import { Seo } from "components/Layout/components"
 import Breadcrumbs from "components/Breadcrumbs"
 import PageHeader from "components/PageHeader"
 import CategorySelect from "components/CategorySelect"
 import { BlogPageContent } from "page_components/blog"
 
 import hero_image from "assets/images/hero4.jpg"
+
+export const Head = () => <Seo title="Blog" description="" />
 
 let filtered_articles = []
 

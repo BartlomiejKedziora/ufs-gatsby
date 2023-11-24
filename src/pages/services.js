@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
+import { Seo } from "components/Layout/components"
 import Breadcrumbs from "components/Breadcrumbs"
 import Divider from "components/Divider"
 import PageHeader from "components/PageHeader"
@@ -14,18 +15,15 @@ import ModalQuote from "components/ModalQuote"
 
 import hero_image from "assets/images/hero4.jpg"
 
+export const Head = () => <Seo title="Services" description="" />
+
 const Services = ({ data }) => {
   const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
 
   const breadcrumbs_data = [{ name: "Services", href: "/services/" }]
 
   return (
-    <Layout
-      seo={{
-        title: "Services",
-        description: "",
-      }}
-    >
+    <Layout>
       <PageHeader title="What We Offer" img={hero_image} />
       <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
       <DomesticServices

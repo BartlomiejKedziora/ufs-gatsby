@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
+import { Seo } from "components/Layout/components"
 import Divider from "components/Divider"
 import PageHeader from "components/PageHeader"
 import Breadcrumbs from "components/Breadcrumbs"
@@ -11,16 +12,13 @@ import { DomesticServices } from "page_components/services"
 
 import hero_image from "assets/images/hero4.jpg"
 
+export const Head = () => <Seo title="Commercial" description="" />
+
 const Commercial = ({ data }) => {
   const breadcrumbs_data = [{ name: "Commercial", href: "/commercial/" }]
 
   return (
-    <Layout
-      seo={{
-        title: "Commercial",
-        description: "",
-      }}
-    >
+    <Layout>
       <PageHeader title="What We Offer" img={hero_image} />
       <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
       <DomesticServices

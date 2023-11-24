@@ -5,7 +5,6 @@ import { CookiesProvider } from "react-cookie"
 import { useStaticQuery, graphql } from "gatsby"
 
 import {
-  Seo,
   Header,
   Footer,
   SocialsBar,
@@ -49,7 +48,6 @@ const Layout = ({ children, seo = {} }) => {
 
   return (
     <CookiesProvider>
-      <Seo {...seo} />
       <Header />
       <SocialsBar data={data?.allWpPage?.nodes?.[0]?.pageHome} />
       <main id="top" className="main-margin-top">
