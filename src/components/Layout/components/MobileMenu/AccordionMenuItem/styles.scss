@@ -1,0 +1,25 @@
+@import "styles/variables.scss";
+
+.main-menu-accordion {
+  &__head {
+    a {
+      padding-right: 10px;
+    }
+  }
+  &__arrow {
+    // border-left: 1px solid $text-color;
+    // padding-left: 10px;
+    transition: 0.3s ease-out;
+
+    svg {
+      fill: $text-color;
+      transform: translateY(-1px);
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s ease-out;
+  }
+}

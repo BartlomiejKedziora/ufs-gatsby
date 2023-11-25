@@ -3,7 +3,9 @@ import "./styles.scss"
 import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
+
 import ModalQuote from "components/ModalQuote"
+import MobileMenu from "../MobileMenu"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -111,7 +113,7 @@ const Header = () => {
               </a>
             </div>
             <div className="header__navigation">
-              <nav className="header__navigation-menu">
+              <nav className="header__navigation-menu d-none d-lg-block">
                 <ul className="main-menu">
                   <li className="main-menu__item">
                     <Link to="/" activeClassName="current">
@@ -172,6 +174,10 @@ const Header = () => {
                   </li>
                 </ul>
               </nav>
+              <MobileMenu
+                services={data?.allWpService?.nodes}
+                commercial={data?.allWpCommercial?.nodes}
+              />
               <button
                 className="header__find-expert"
                 onClick={() => setIsModalQuoteOpen(true)}
