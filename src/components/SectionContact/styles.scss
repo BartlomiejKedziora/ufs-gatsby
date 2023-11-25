@@ -33,6 +33,15 @@
     .col-12 > button {
       width: 100%;
     }
+    a,
+    button {
+      &:focus,
+      &:visited,
+      &:active {
+        color: $theme-color;
+        outline: none;
+      }
+    }
   }
   &__block {
     position: relative;
@@ -43,6 +52,11 @@
     flex-direction: column;
     justify-content: flex-end;
     background: $grey-main;
+    &:focus,
+    &:visited,
+    &:active {
+      border: 4px solid $theme-color;
+    }
     @include lgScreen {
       margin: 60px 0;
     }
