@@ -100,8 +100,8 @@ const SectionBlog = () => {
                         <div className="blog-articles__slide">
                           <div className="blog-articles__slide-img">
                             <img
-                              src={miniImg.sourceUrl}
-                              alt={miniImg.altText}
+                              src={miniImg?.sourceUrl}
+                              alt={miniImg?.altText}
                             />
                           </div>
                           <div className="blog-articles__slide-content"></div>
