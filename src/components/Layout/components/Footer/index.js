@@ -14,15 +14,6 @@ const Footer = () => {
     { label: "Blog", href: "/blog/" },
     { label: "Contact", href: "/contact/" },
   ]
-  // const regions = [
-  //   { label: "Scotland", href: "/" },
-  //   { label: "Midlands", href: "/" },
-  //   { label: "East Anglia", href: "/" },
-  //   { label: "London", href: "/" },
-  //   { label: "South East England", href: "/" },
-  //   { label: "South West England", href: "/" },
-  //   { label: "South Central England", href: "/" },
-  // ]
 
   return (
     <footer className="footer">
@@ -32,7 +23,7 @@ const Footer = () => {
             <div className="footer__logo">
               <Link to="/">
                 <img
-                  src={require("assets/icons/logo/logo_main.svg").default}
+                  src={require("assets/icons/logo/logo_ufs.svg").default}
                   alt=""
                 />
               </Link>

@@ -53,7 +53,7 @@ const Header = () => {
           <div className="header__logo">
             <Link to="/">
               <img
-                src={require("assets/icons/logo/logo_main.svg").default}
+                src={require("assets/icons/logo/logo_ufs.svg").default}
                 alt=""
               />
             </Link>
