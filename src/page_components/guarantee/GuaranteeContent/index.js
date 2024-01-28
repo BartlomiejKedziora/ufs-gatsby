@@ -78,7 +78,13 @@ const GuaranteeContent = () => {
           <div className="guarantee-content__row odd">
             <div className="container">
               <div className="guarantee-content__row-img">
-                <img src={require("assets/images/photo2.jpg").default} alt="" />
+                <img
+                  src={
+                    require("assets/images/guarantee/unmatched-pledge.webp")
+                      .default
+                  }
+                  alt=""
+                />
               </div>
               <div className="guarantee-content__row-text">
                 <div className="guarantee-content__row-content">
@@ -112,7 +118,14 @@ const GuaranteeContent = () => {
                 </div>
               </div>
               <div className="guarantee-content__row-img">
-                <div className="guarantee-content__row-images">
+                <img
+                  src={
+                    require("assets/images/guarantee/decipher-parketprofi.webp")
+                      .default
+                  }
+                  alt=""
+                />
+                {/* <div className="guarantee-content__row-images">
                   <div className="guarantee-content__row-img-sm">
                     <img
                       src={require("assets/images/photo2.jpg").default}
@@ -137,7 +150,7 @@ const GuaranteeContent = () => {
                       alt=""
                     />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -146,7 +159,13 @@ const GuaranteeContent = () => {
           <div className="guarantee-content__row odd">
             <div className="container">
               <div className="guarantee-content__row-img">
-                <img src={require("assets/images/photo2.jpg").default} alt="" />
+                <img
+                  src={
+                    require("assets/images/guarantee/advatenge-for-you.webp")
+                      .default
+                  }
+                  alt=""
+                />
               </div>
               <div className="guarantee-content__row-text">
                 <div className="guarantee-content__row-content">

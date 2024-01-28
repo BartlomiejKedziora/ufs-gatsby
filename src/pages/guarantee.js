@@ -10,7 +10,7 @@ import SectionTestimonials from "components/SectionTestimonials"
 import Divider from "components/Divider"
 import GuaranteeContent from "page_components/guarantee/GuaranteeContent"
 
-import hero_image from "assets/images/hero4.jpg"
+import hero_image from "assets/images/hero/gurantee-Ultimate-Floor-Sanding-Company.webp"
 
 export const Head = () => <Seo title="Guarantee" description="" />
 

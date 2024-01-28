@@ -9,7 +9,13 @@ const AboutContent = () => {
         <div className="container">
           <div className="about-content__row odd">
             <div className="about-content__row-img">
-              <img src={require("assets/images/Image.jpg").default} alt="" />
+              <img
+                src={
+                  require("assets/images/about/Our-story-Ultimate-floor sanding-company.webp")
+                    .default
+                }
+                alt=""
+              />
             </div>
             <div className="about-content__row-text">
               <h2 className="section-heading">Our story</h2>
@@ -28,7 +34,13 @@ const AboutContent = () => {
         <div className="container">
           <div className="about-content__row">
             <div className="about-content__row-img">
-              <img src={require("assets/images/Image.jpg").default} alt="" />
+              <img
+                src={
+                  require("assets/images/about/mission-Ultimate-Floor-Sanding-Company.webp")
+                    .default
+                }
+                alt=""
+              />
             </div>
             <div className="about-content__row-text">
               <h2 className="section-heading">Our Mission</h2>
@@ -47,7 +59,12 @@ const AboutContent = () => {
         <div className="container">
           <div className="about-content__row odd">
             <div className="about-content__row-img">
-              <img src={require("assets/images/Image.jpg").default} alt="" />
+              <img
+                src={
+                  require("assets/images/about/decade-of-trumth.webp").default
+                }
+                alt=""
+              />
             </div>
             <div className="about-content__row-text">
               <h2 className="section-heading">A Decade of Triumph</h2>
@@ -68,7 +85,13 @@ const AboutContent = () => {
         <div className="container">
           <div className="about-content__row">
             <div className="about-content__row-img">
-              <img src={require("assets/images/Image.jpg").default} alt="" />
+              <img
+                src={
+                  require("assets/images/about/legacy-of-exelence-about-Ultimate-floor-sanding-company.webp")
+                    .default
+                }
+                alt=""
+              />
             </div>
             <div className="about-content__row-text">
               <h2 className="section-heading">A Legacy of Excellence</h2>
@@ -87,7 +110,13 @@ const AboutContent = () => {
         <div className="container">
           <div className="about-content__row odd">
             <div className="about-content__row-img">
-              <img src={require("assets/images/Image.jpg").default} alt="" />
+              <img
+                src={
+                  require("assets/images/about/mission-in-motion-Ultimate-Floor-Sanding-Company.webp")
+                    .default
+                }
+                alt=""
+              />
             </div>
             <div className="about-content__row-text">
               <h2 className="section-heading">Our Mission in Motion</h2>

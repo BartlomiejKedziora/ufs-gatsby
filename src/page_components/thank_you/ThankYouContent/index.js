@@ -11,9 +11,7 @@ const ThankYouContent = () => {
           <h1 className="section-heading">
             Thank You for <span>Contacting Us</span>
           </h1>
-          <p className="section__subtitle">
-            Lorem ipsum dolor sit amet consectetur.
-          </p>
+          <p className="section__subtitle">We will be in touch within 24h.</p>
           <Link to="/" className="thank-you__link">
             <span>Go to home page</span>
             <img src={require("assets/icons/arrow-sm.svg").default} alt="" />

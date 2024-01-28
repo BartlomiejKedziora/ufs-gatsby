@@ -38,9 +38,9 @@ const DomesticServices = ({ heading, subtitle, services_data }) => {
                     <p className="domestic-services__title">
                       {item_services?.title}
                     </p>
-                    <p className="domestic-services__desc">
+                    {/* <p className="domestic-services__desc">
                       {item_services?.desc}
-                    </p>
+                    </p> */}
                     <Button className="button button-dark">
                       Find out more
                     </Button>

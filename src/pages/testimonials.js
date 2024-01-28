@@ -10,7 +10,7 @@ import SectionContact from "components/SectionContact"
 import SectionForm from "components/SectionForm"
 import Divider from "components/Divider"
 
-import hero_image from "assets/images/hero4.jpg"
+import hero_image from "assets/images/hero/testimonials-Ultimate-Floor-Sanding-Company.webp"
 
 export const Head = () => <Seo title="Testimonials" description="" />
 

@@ -8,7 +8,7 @@ import PageHeader from "components/PageHeader"
 import CategorySelect from "components/CategorySelect"
 import { BlogPageContent } from "page_components/blog"
 
-import hero_image from "assets/images/hero4.jpg"
+import hero_image from "assets/images/hero/blog-Ultimate-Floor-Sanding-Company.webp"
 
 export const Head = () => <Seo title="Blog" description="" />
 

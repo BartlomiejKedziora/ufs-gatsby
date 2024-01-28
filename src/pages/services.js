@@ -13,7 +13,7 @@ import { DomesticServices } from "page_components/services"
 import BannerGetQuote from "components/BannerGetQuote"
 import ModalQuote from "components/ModalQuote"
 
-import hero_image from "assets/images/hero4.jpg"
+import hero_image from "assets/images/hero/domestic-services-Ultimate-Floor-Sanding-Company.webp"
 
 export const Head = () => <Seo title="Services" description="" />
 
@@ -27,7 +27,7 @@ const Services = ({ data }) => {
       <PageHeader title="What We Offer" img={hero_image} />
       <Breadcrumbs breadcrumbs_data={breadcrumbs_data} />
       <DomesticServices
-        heading="Domestic Services"
+        heading="Our Services"
         subtitle="Glance At"
         services_data={data?.allWpService?.nodes}
       />
