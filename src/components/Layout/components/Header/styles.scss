@@ -62,12 +62,11 @@
     @include xlScreen {
       height: 60px;
       max-width: 60%;
-      width: auto;
+      width: unset;
     }
     @include mdScreen {
-      height: 40px;
-      max-width: 60%;
-      width: auto;
+      height: auto;
+      max-height: 100%;
     }
     img {
       width: 100%;
