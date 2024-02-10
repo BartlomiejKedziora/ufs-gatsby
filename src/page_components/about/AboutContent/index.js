@@ -10,10 +10,7 @@ const AboutContent = () => {
           <div className="about-content__row odd">
             <div className="about-content__row-img">
               <img
-                src={
-                  require("assets/images/about/Our-story-Ultimate-floor sanding-company.webp")
-                    .default
-                }
+                src={require("assets/images/about/our-story.webp").default}
                 alt=""
               />
             </div>
@@ -35,10 +32,7 @@ const AboutContent = () => {
           <div className="about-content__row">
             <div className="about-content__row-img">
               <img
-                src={
-                  require("assets/images/about/mission-Ultimate-Floor-Sanding-Company.webp")
-                    .default
-                }
+                src={require("assets/images/about/mission.webp").default}
                 alt=""
               />
             </div>
@@ -61,7 +55,7 @@ const AboutContent = () => {
             <div className="about-content__row-img">
               <img
                 src={
-                  require("assets/images/about/decade-of-trumth.webp").default
+                  require("assets/images/about/decade-of-trumph.webp").default
                 }
                 alt=""
               />
@@ -86,10 +80,7 @@ const AboutContent = () => {
           <div className="about-content__row">
             <div className="about-content__row-img">
               <img
-                src={
-                  require("assets/images/about/legacy-of-exelence-about-Ultimate-floor-sanding-company.webp")
-                    .default
-                }
+                src={require("assets/images/about/legacy.webp").default}
                 alt=""
               />
             </div>
@@ -112,8 +103,7 @@ const AboutContent = () => {
             <div className="about-content__row-img">
               <img
                 src={
-                  require("assets/images/about/mission-in-motion-Ultimate-Floor-Sanding-Company.webp")
-                    .default
+                  require("assets/images/about/mission-in-motion.webp").default
                 }
                 alt=""
               />

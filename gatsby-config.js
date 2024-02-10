@@ -38,7 +38,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/ufs_favicon_01.png`,
+        icon: `src/assets/images/fav_512.png`,
       },
     },
     {

@@ -29,7 +29,7 @@ const options = [
 ]
 
 const ContactForm = () => {
-  const formID = "f994f6d"
+  const formID = "6cf33c4"
   const [send, setSend] = useState(false)
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -70,7 +70,7 @@ const ContactForm = () => {
 
       await axios({
         method: "post",
-        url: `https://ufs.kteproductions.pl/wp-json/contact-form-7/v1/contact-forms/f994f6d/feedback/`,
+        url: `https://ufs.kteproductions.pl/wp-json/contact-form-7/v1/contact-forms/6cf33c4/feedback/`,
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       })
