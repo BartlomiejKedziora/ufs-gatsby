@@ -120,8 +120,7 @@ const GuaranteeContent = () => {
               <div className="guarantee-content__row-img">
                 <img
                   src={
-                    require("assets/images/guarantee/decipher-parketprofi.webp")
-                      .default
+                    require("assets/images/guarantee/ParketProfii.webp").default
                   }
                   alt=""
                 />
