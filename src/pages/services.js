@@ -13,7 +13,7 @@ import { DomesticServices } from "page_components/services"
 import BannerGetQuote from "components/BannerGetQuote"
 import ModalQuote from "components/ModalQuote"
 
-import hero_image from "assets/images/hero/domestic-services-Ultimate-Floor-Sanding-Company.webp"
+import hero_image from "assets/images/hero/services.webp"
 
 export const Head = () => <Seo title="Services" description="" />
 

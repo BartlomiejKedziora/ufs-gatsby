@@ -10,7 +10,7 @@ import SectionForm from "components/SectionForm"
 import SectionTestimonials from "components/SectionTestimonials"
 import AboutContent from "page_components/about/AboutContent"
 
-import hero_image from "assets/images/hero/about-us-Ultimate-Floor-Sanding-Company.webp"
+import hero_image from "assets/images/hero/about-us.webp"
 
 export const Head = () => <Seo title="About us" description="" />
 

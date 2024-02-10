@@ -12,7 +12,7 @@ import SectionTestimonials from "components/SectionTestimonials"
 import SectionForm from "components/SectionForm"
 import ModalQuote from "components/ModalQuote"
 
-import hero_image from "assets/images/hero/experts-Ultimate-Floo-rSanding-Company.webp"
+import hero_image from "assets/images/hero/experts.webp"
 
 export const Head = () => <Seo title="Local Experts" description="" />
 

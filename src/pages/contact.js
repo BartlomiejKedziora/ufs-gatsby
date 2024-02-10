@@ -8,7 +8,7 @@ import SectionContact from "components/SectionContact"
 import SectionTestimonials from "components/SectionTestimonials"
 import ContactContent from "page_components/contact/ContactContent"
 
-import hero_image from "assets/images/hero/contact-us-Ultimate-Floor-Sanding-Company.webp"
+import hero_image from "assets/images/hero/contact-us.webp"
 
 export const Head = () => <Seo title="Contact" description="" />
 

@@ -10,7 +10,7 @@ import ModalQuote from "components/ModalQuote"
 import CategorySelect from "components/CategorySelect"
 import { PortfolioPageContent } from "page_components/portfolio"
 
-import hero_image from "assets/images/hero/portfolios-Ultimate-Floor-Sanding-Company.webp"
+import hero_image from "assets/images/hero/portfolio.webp"
 
 export const Head = () => <Seo title="Portfolio" description="" />
 

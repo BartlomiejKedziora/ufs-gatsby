@@ -10,7 +10,7 @@ import SectionContact from "components/SectionContact"
 import SectionForm from "components/SectionForm"
 import { DomesticServices } from "page_components/services"
 
-import hero_image from "assets/images/hero/commercial-Ultimate-Floor-Sanding-Company.webp"
+import hero_image from "assets/images/hero/commercial-sanding.webp"
 
 export const Head = () => <Seo title="Commercial" description="" />
 
