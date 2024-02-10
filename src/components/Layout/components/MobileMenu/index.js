@@ -1,6 +1,6 @@
 import "./styles.scss"
 
-import React from "react"
+import React, { Fragment } from "react"
 import { Link } from "gatsby"
 
 import AccordionMenuItem from "./AccordionMenuItem"
@@ -32,11 +32,13 @@ const MobileMenu = ({ services, commercial }) => {
   ]
 
   return (
-    <nav className="mobile-menu d-lg-none">
+    <nav className="mobile-menu d-xl-none">
       <ul className="main-manu">
         {mob_menu.map((item, index) => {
           return !!item.submenu ? (
-            <AccordionMenuItem index={index} item={item} />
+            <Fragment key={index}>
+              <AccordionMenuItem item={item} />
+            </Fragment>
           ) : (
             <li key={index} className="main-menu__item">
               <Link to={item.href} activeClassName="current">

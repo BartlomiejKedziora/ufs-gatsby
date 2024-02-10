@@ -113,7 +113,7 @@ const Header = () => {
               </a>
             </div>
             <div className="header__navigation">
-              <nav className="header__navigation-menu d-none d-lg-block">
+              <nav className="header__navigation-menu d-none d-xl-block">
                 <ul className="main-menu">
                   <li className="main-menu__item">
                     <Link to="/" activeClassName="current">

@@ -31,6 +31,7 @@ const SectionContact = ({ pb, pt }) => {
                     <button
                       className="d-block w-100"
                       onClick={() => setIsModalQuoteOpen(true)}
+                      aria-label="Open contact form"
                     >
                       <div className="contact__block">
                         <div className="contact__block-icon">
@@ -45,7 +46,7 @@ const SectionContact = ({ pb, pt }) => {
                     </button>
                   </div>
                   <div className="col-12 col-lg-4">
-                    <a href="tel:03300272324">
+                    <a href="tel:03300272324" aria-label="Call us">
                       <div className="contact__block">
                         <div className="contact__block-icon">
                           <img

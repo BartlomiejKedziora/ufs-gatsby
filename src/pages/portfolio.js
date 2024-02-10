@@ -5,8 +5,6 @@ import Layout from "components/Layout"
 import { Seo } from "components/Layout/components"
 import Breadcrumbs from "components/Breadcrumbs"
 import PageHeader from "components/PageHeader"
-import BannerGetQuote from "components/BannerGetQuote"
-import ModalQuote from "components/ModalQuote"
 import CategorySelect from "components/CategorySelect"
 import { PortfolioPageContent } from "page_components/portfolio"
 
@@ -17,7 +15,6 @@ export const Head = () => <Seo title="Portfolio" description="" />
 let filtered_tails = []
 
 const Portfolio = ({ data }) => {
-  const [isModalQuoteOpen, setIsModalQuoteOpen] = useState(false)
   const [currentCategory, setCurrentCategory] = useState(null)
 
   const breadcrumbs_data = [{ name: "Portfolio", href: "/portfolio/" }]
@@ -42,10 +39,6 @@ const Portfolio = ({ data }) => {
         categories={data.allWpPortfolioCategory.nodes}
       />
       <PortfolioPageContent data={filtered_tails} />
-      {/* <BannerGetQuote setIsModalQuoteOpen={setIsModalQuoteOpen} padding="0" />
-      {isModalQuoteOpen && (
-        <ModalQuote closeFn={() => setIsModalQuoteOpen(false)} />
-      )} */}
     </Layout>
   )
 }

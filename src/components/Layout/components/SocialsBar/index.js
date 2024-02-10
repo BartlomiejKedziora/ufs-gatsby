@@ -13,6 +13,7 @@ const SocialsBar = ({ data }) => {
           target="_blank"
           rel="noreferrer"
           className="socials-bar__item"
+          aria-label="Check our Twitter account"
         >
           <img
             src={require("assets/icons/social/twitter.svg").default}
@@ -26,6 +27,7 @@ const SocialsBar = ({ data }) => {
           target="_blank"
           rel="noreferrer"
           className="socials-bar__item"
+          aria-label="Check our LinkedIn account"
         >
           <img
             src={require("assets/icons/social/linkedin.svg").default}
@@ -39,6 +41,7 @@ const SocialsBar = ({ data }) => {
           target="_blank"
           rel="noreferrer"
           className="socials-bar__item"
+          aria-label="Check our Instagram account"
         >
           <img src={require("assets/icons/social/insta.svg").default} alt="" />
         </a>
@@ -49,6 +52,7 @@ const SocialsBar = ({ data }) => {
           target="_blank"
           rel="noreferrer"
           className="socials-bar__item"
+          aria-label="Check our Facebook account"
         >
           <img src={require("assets/icons/social/fb.svg").default} alt="" />
         </a>
@@ -59,6 +63,7 @@ const SocialsBar = ({ data }) => {
           target="_blank"
           rel="noreferrer"
           className="socials-bar__item"
+          aria-label="Check our Youtube account"
         >
           <img
             src={require("assets/icons/social/youtube.svg").default}
@@ -67,7 +72,7 @@ const SocialsBar = ({ data }) => {
         </a>
       )}
       {phone && (
-        <a href={phone} className="socials-bar__item">
+        <a href={phone} className="socials-bar__item" aria-label="Call us">
           <img
             src={require("assets/icons/social/phone-aside.svg").default}
             alt=""

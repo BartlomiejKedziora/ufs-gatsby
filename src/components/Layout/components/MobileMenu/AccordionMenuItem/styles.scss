@@ -9,7 +9,7 @@
   &__arrow {
     // border-left: 1px solid $text-color;
     // padding-left: 10px;
-    transition: 0.3s ease-out;
+    transition: height 0.3s ease-out, visibility 0.1s ease-out;
 
     svg {
       fill: $text-color;

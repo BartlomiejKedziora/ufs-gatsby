@@ -3,13 +3,13 @@ import "./styles.scss"
 import React, { useState, useRef } from "react"
 import { Link } from "gatsby"
 
-const AccordionMenuItem = ({ item, index }) => {
+const AccordionMenuItem = ({ item }) => {
   const [submenuOpen, setSubmenuOpen] = useState(false)
 
   const submenu_list = useRef()
 
   return (
-    <li key={index} className="main-menu__item main-menu-accordion">
+    <li className="main-menu__item main-menu-accordion">
       <div className="main-menu-accordion__head">
         <Link to={`${item.href}`}>{item.label}</Link>
         <button
@@ -17,6 +17,7 @@ const AccordionMenuItem = ({ item, index }) => {
           className="main-menu-accordion__arrow"
           style={submenuOpen ? { transform: "rotate(180deg)" } : {}}
           onClick={() => setSubmenuOpen(!submenuOpen)}
+          aria-label="Open submenu"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,8 +39,12 @@ const AccordionMenuItem = ({ item, index }) => {
         ref={submenu_list}
         style={
           submenuOpen
-            ? { height: submenu_list.current.scrollHeight, opacity: "1" }
-            : { height: "0px", opacity: "0" }
+            ? {
+                height: submenu_list.current.scrollHeight,
+                opacity: "1",
+                visibility: "visible",
+              }
+            : { height: "0px", opacity: "0", visibility: "hidden" }
         }
       >
         {item.submenu.map((el, index) => {

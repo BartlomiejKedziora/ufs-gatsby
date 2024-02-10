@@ -107,7 +107,11 @@ const CategorySelect = ({
           {currentCategory && (
             <div className="categories-select__choice">
               <span>{currentCategory}</span>
-              <button type="button" onClick={() => setCurrentCategory(null)}>
+              <button
+                type="button"
+                onClick={() => setCurrentCategory(null)}
+                aria-label="Clear categories"
+              >
                 <img
                   src={require("assets/icons/close-round.svg").default}
                   alt=""

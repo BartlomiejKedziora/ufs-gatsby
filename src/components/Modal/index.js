@@ -8,7 +8,7 @@ const Modal = ({ title, children, closeFn }) => {
       <div className="modal__box">
         <div className="modal__head">
           <p>{title}</p>
-          <button onClick={closeFn}>
+          <button onClick={closeFn} aria-label="Close modal">
             <img src={require("assets/icons/close-round.svg").default} alt="" />
           </button>
         </div>

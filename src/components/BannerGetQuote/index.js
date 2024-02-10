@@ -9,6 +9,7 @@ const BannerGetQuote = ({ padding, setIsModalQuoteOpen }) => {
         type="button"
         onClick={() => setIsModalQuoteOpen(true)}
         className="banner-quote__wrapper"
+        aria-label="Open contact form"
       >
         <div className="container">
           <div className="banner-quote__btn--wrapper">

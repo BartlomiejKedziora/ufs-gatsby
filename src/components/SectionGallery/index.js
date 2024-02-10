@@ -68,6 +68,7 @@ const SectionGallery = ({ images }) => {
                     <button
                       className="gallery__img-wrapper"
                       onClick={() => openLightboxOnSlide(index + 1)}
+                      aria-label="Open gallery"
                     >
                       <div
                         className="gallery__img-bckg"

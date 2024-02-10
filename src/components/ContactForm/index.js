@@ -37,7 +37,7 @@ const ContactForm = () => {
   const [message, setMessage] = useState("")
   const [postcode, setPostcode] = useState("")
   const [source, setSource] = useState("")
-  const [legalFirst, setLegalFirst] = useState(false)
+  // const [legalFirst, setLegalFirst] = useState(false)
 
   const isBrowser = typeof window !== "undefined"
   const location = isBrowser ? window.location.href : null
@@ -50,39 +50,44 @@ const ContactForm = () => {
     setMessage("")
     setPostcode("")
     setSource("")
-    setLegalFirst(false)
+    // setLegalFirst(false)
   }
 
-  const formSubmit = e => {
+  const formSubmit = async e => {
     e.preventDefault()
     setSend(true)
+    try {
+      let formData = new FormData()
 
-    let formData = new FormData()
+      formData.set("your-name", name)
+      formData.set("your-email", email)
+      // formData.set("phone", phone)
+      formData.set("your-message", message)
+      // formData.set("postcode", postcode)
+      // formData.set("source", source)
+      // formData.set("legalFirst", legalFirst)
+      // formData.set("pageurl", location)
 
-    formData.set("investment", "")
-    formData.set("firstName", name)
-    formData.set("email", email)
-    formData.set("phone", phone)
-    formData.set("message", message)
-    formData.set("postcode", postcode)
-    formData.set("source", source)
-    formData.set("legalFirst", legalFirst)
-    formData.set("pageurl", location)
-
-    axios({
-      method: "post",
-      url: `https://ufs.kteproductions.pl//wp-json/contact-form-7/v1/contact-forms/${formID}/feedback/`,
-      data: formData,
-      headers: { "Content-Type": "multipart/form-data" },
-    })
-      .then(() => {
-        console.log("Submit success")
-        resetForm()
-        navigate("/thank-you/")
+      await axios({
+        method: "post",
+        url: `https://ufs.kteproductions.pl/wp-json/contact-form-7/v1/contact-forms/f994f6d/feedback/`,
+        data: formData,
+        headers: { "Content-Type": "multipart/form-data" },
       })
-      .catch(err => {
-        console.log(err)
-      })
+      // .then(() => {
+      //   console.log("Submit success")
+      //   resetForm()
+      //   navigate("/thank-you/")
+      // })
+      // .catch(err => {
+      //   console.log(err)
+      // })
+      console.log("Submit success")
+      resetForm()
+      navigate("/thank-you/")
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (
@@ -148,9 +153,8 @@ const ContactForm = () => {
           Wyrażam dobrowolną zgodę na przetwarzanie moich danych osobowych
         </Checkbox> */}
         <div className="contact-form__btn">
-          <Button type="submit" disabled={!legalFirst}>
-            {send === true ? "Sending..." : "Send"}
-          </Button>
+          {/* <Button type="submit" disabled={!legalFirst}> */}
+          <Button type="submit">{send === true ? "Sending..." : "Send"}</Button>
         </div>
       </form>
     </section>
