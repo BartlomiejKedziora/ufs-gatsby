@@ -9,7 +9,6 @@ import ServiceContent from "page_components/single-service/ServiceContent"
 
 export const Head = ({ pageContext }) => {
   const post_data = pageContext?.data
-
   return (
     <Seo
       title={post_data?.seo?.title || post_data?.title}
@@ -20,12 +19,15 @@ export const Head = ({ pageContext }) => {
 
 const SingleService = ({ pageContext }) => {
   const service_data = pageContext?.data
+  console.log(service_data)
 
   const getImage = service_data => {
     if (service_data?.acfServices) {
       return service_data?.acfServices?.heroImage?.sourceUrl
     } else if (service_data?.acfCommercial) {
       return service_data?.acfCommercial?.heroImage?.sourceUrl
+    } else if (service_data?.acfLandings) {
+      return service_data?.acfLandings?.heroImage?.sourceUrl
     }
   }
 
@@ -34,6 +36,8 @@ const SingleService = ({ pageContext }) => {
       return service_data?.acfServices?.gallery
     } else if (service_data?.acfCommercial) {
       return service_data?.acfCommercial?.gallery
+    } else if (service_data?.acfLandings) {
+      return service_data?.acfLandings?.gallery
     }
   }
 
@@ -52,6 +56,13 @@ const SingleService = ({ pageContext }) => {
         {
           name: `${service_data?.acfCommercial?.title}`,
           href: `/commercial/${service_data?.acfCommercial?.slug}/`,
+        },
+      ]
+    } else if (service_data?.acfLandings) {
+      return [
+        {
+          name: `${service_data?.acfLandings?.title}`,
+          href: `/${service_data?.acfLandings?.slug}/`,
         },
       ]
     }

@@ -43,6 +43,40 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allWpLanding(sort: { date: ASC }) {
+        nodes {
+          acfLandings {
+            title
+            heroImage {
+              altText
+              sourceUrl
+            }
+            row {
+              blockSubtitle
+              blockText
+              blockTitle
+              button
+              buttonLink
+              blockImage {
+                altText
+                sourceUrl
+              }
+            }
+            gallery {
+              altText
+              sourceUrl
+            }
+          }
+          slug
+          uri
+          title
+          id
+          seo {
+            title
+            metaDesc
+          }
+        }
+      }
       allWpService(sort: { date: ASC }) {
         nodes {
           acfServices {
@@ -222,6 +256,17 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allWpService.nodes.forEach((page, index) => {
     return createPage({
       path: page.uri,
+      component: serviceTemplate,
+      context: {
+        title: page.title,
+        data: page,
+      },
+    })
+  })
+
+  result.data.allWpLanding.nodes.forEach((page, index) => {
+    return createPage({
+      path: `/${page.slug}/`,
       component: serviceTemplate,
       context: {
         title: page.title,

@@ -9,9 +9,10 @@ const ServiceContent = ({ data }) => {
       return data?.acfServices?.row
     } else if (data?.acfCommercial) {
       return data?.acfCommercial?.row
+    } else if (data?.acfLandings) {
+      return data?.acfLandings?.row
     }
   }
-
   const rows_list = getRowsList(data)
 
   return (
