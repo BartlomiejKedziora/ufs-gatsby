@@ -20,6 +20,23 @@ const ExpertsList = ({
             locations,
             acfExperts: { address, gallery, mainimg, name, phone, website },
           }) => {
+            const getShortWebsiteAddress = () => {
+              const checkHttps = () => {
+                if (website.includes("https://")) {
+                  return website.substring("https://".length)
+                } else if (website.includes("http://")) {
+                  return website.substring("http://".length)
+                }
+                return
+              }
+              const clearedAddress = checkHttps()
+              return clearedAddress?.includes("www.")
+                ? clearedAddress.substring("www.".length)
+                : clearedAddress
+            }
+
+            const shortWebAddess = getShortWebsiteAddress()
+
             return (
               <li key={id} className="experts-list__item">
                 <div className="experts-list__item-wrapper">
@@ -57,7 +74,7 @@ const ExpertsList = ({
                                     target="_blank"
                                     rel="noreferrer"
                                   >
-                                    {website}
+                                    {shortWebAddess}
                                   </a>
                                 </div>
                                 <div className="experts-list__details-row">

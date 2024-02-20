@@ -7,6 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const postTemplate = path.resolve(`src/templates/single-post.js`)
   const expertTemplate = path.resolve(`src/templates/single-expert.js`)
   const portfolioTemplate = path.resolve(`src/templates/single-portfolio.js`)
+  const landingTemplate = path.resolve(`src/templates/single-landing.js`)
 
   const result = await graphql(`
     {
@@ -46,22 +47,13 @@ exports.createPages = async ({ graphql, actions }) => {
       allWpLanding(sort: { date: ASC }) {
         nodes {
           acfLandings {
+            excerpt
             title
             heroImage {
               altText
               sourceUrl
             }
-            row {
-              blockSubtitle
-              blockText
-              blockTitle
-              button
-              buttonLink
-              blockImage {
-                altText
-                sourceUrl
-              }
-            }
+            textEditor
             gallery {
               altText
               sourceUrl
@@ -267,7 +259,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allWpLanding.nodes.forEach((page, index) => {
     return createPage({
       path: `/${page.slug}/`,
-      component: serviceTemplate,
+      component: landingTemplate,
       context: {
         title: page.title,
         data: page,

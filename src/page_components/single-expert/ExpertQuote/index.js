@@ -10,7 +10,9 @@ const ExpertQuote = ({ data }) => {
         <div className="container">
           <div className="expert-quote__tail">
             <div className="expert-quote__img">
-              <img src={quoteImg?.sourceUrl} alt={quoteImg?.altText} />
+              {quoteImg?.sourceUrl && (
+                <img src={quoteImg?.sourceUrl} alt={quoteImg?.altText} />
+              )}
             </div>
             <div className="expert-quote__content">
               <img

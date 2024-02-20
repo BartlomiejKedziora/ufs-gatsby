@@ -1,9 +1,10 @@
 import "./styles.scss"
 
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 const Footer = () => {
+  const [landingsOn, setLandingsOn] = useState(false)
   const current_year = new Date().getFullYear()
 
   const footer_menu = [
@@ -15,6 +16,20 @@ const Footer = () => {
     { label: "Contact", href: "/contact/" },
   ]
 
+  const data = useStaticQuery(graphql`
+    query {
+      allWpLanding {
+        nodes {
+          acfLandings {
+            title
+            excerpt
+          }
+          slug
+        }
+      }
+    }
+  `)
+  console.log(data)
   return (
     <footer className="footer">
       <div className="container-fluid">
@@ -66,6 +81,40 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        {data.allWpLanding.nodes && (
+          <div className="footer__landings">
+            <button
+              type="button"
+              className="footer__landings-btn"
+              onClick={() => setLandingsOn(!landingsOn)}
+              aria-label="Open landing pages list"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div
+              className={`footer__landings-container${
+                landingsOn ? " show-landings" : ""
+              }`}
+            >
+              <div className="row">
+                {data.allWpLanding.nodes.map(({ acfLandings, slug }, index) => {
+                  return (
+                    <Link
+                      key={index}
+                      to={`/${slug}/`}
+                      className="footer__landing col-lg-4 col-sm-6 col-12"
+                    >
+                      <h4>{acfLandings.title}</h4>
+                      <p>{acfLandings.excerpt}</p>
+                    </Link>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        )}
         <div className="footer__copyrights-row">
           <p className="footer__copyrights">
             © Ultimate Floor Sanding {current_year}. All rights reserved.

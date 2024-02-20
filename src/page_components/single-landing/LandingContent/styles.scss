@@ -1,0 +1,120 @@
+@import "styles/variables";
+
+.single-post {
+  &__inner {
+    width: 900px;
+    max-width: 100%;
+    margin: 100px auto 64px;
+    @include lgScreen {
+      width: 100%;
+      margin: 60px 0;
+    }
+  }
+  &__date {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    @include xlScreen {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 48px;
+    @include xlScreen {
+      font-size: 40px;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 160px;
+    margin: 50px 0;
+    @include lgScreen {
+      padding-right: 0;
+    }
+    &-btn {
+      font-size: 14px;
+      color: $theme-color;
+      img {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+  &__prev {
+    img {
+      transform: rotate(180deg);
+      margin-right: 10px;
+    }
+  }
+  &__next {
+    img {
+      margin-left: 10px;
+    }
+  }
+  &__content {
+    padding-right: 160px;
+    @include lgScreen {
+      padding-right: 0;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    img {
+      margin: 0 0 24px 0;
+      @include xlScreen {
+        margin: 0 0 16px 0;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: $theme-color;
+    }
+
+    a,
+    p,
+    ul,
+    ol,
+    li {
+      font-size: 18px;
+      font-weight: 400;
+      list-style: unset;
+      @include xlScreen {
+        font-size: 16px;
+      }
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    ul,
+    ol {
+      padding-left: 30px;
+      @include xlScreen {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  & ~ .gallery {
+    padding: 100px 0;
+  }
+}

@@ -119,6 +119,47 @@
       }
     }
   }
+  &__landings {
+    margin-bottom: 60px;
+    @include xlScreen {
+      margin-bottom: 30px;
+    }
+    &-btn {
+      display: flex;
+      margin-bottom: 20px;
+      @include mdScreen {
+        margin: 0 auto 20px;
+      }
+      span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        border: 2px solid $theme-color;
+        margin-right: 6px;
+      }
+    }
+    &-container {
+      display: none;
+      opacity: 0;
+      transition: 0.3s ease;
+      &.show-landings {
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+  &__landing {
+    margin-bottom: 30px;
+    h4 {
+      margin-bottom: 10px;
+    }
+    h4,
+    p {
+      @include mdScreen {
+        text-align: center;
+      }
+    }
+  }
   &__copyrights {
     color: $theme-color;
     text-align: center;
