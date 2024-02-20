@@ -38,63 +38,80 @@
       color: $theme-color;
     }
   }
-  &__form {
+
+  form {
     margin: 64px 0 0;
-    &--row {
-      display: flex;
-      @include mdScreen {
-        flex-direction: column;
-      }
-    }
-    input,
-    textarea {
-      width: 100%;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #363636;
-      background: transparent;
-      color: #eeeeee;
-      font-size: 16px;
-      font-weight: 500;
-      outline: none;
-      transition: 0.3s ease-out;
-      &:focus {
-        border: 1px solid $theme-color;
-      }
-      &::placeholder {
-        color: #f2f3f7;
-      }
-      &:first-child {
-        margin-right: 15px;
+    .input {
+      &:nth-child(2) {
+        display: inline-block;
+        width: 50%;
+        padding-right: 15px;
         @include mdScreen {
-          margin-right: 0;
+          width: 100%;
+          padding-right: 0;
         }
       }
-      &:last-child {
-        margin-left: 15px;
+      &:nth-child(3) {
+        display: inline-block;
+        width: 50%;
+        padding-left: 15px;
         @include mdScreen {
-          margin-left: 0;
+          width: 100%;
+          padding-left: 0;
         }
       }
+      &:nth-child(6) {
+        display: none;
+      }
     }
-    input {
+
+    .select {
+      display: none;
+    }
+
+    p:last-of-type {
+      display: none;
+    }
+
+    .input {
       height: 70px;
       margin-bottom: 24px;
-    }
-    .button {
-      width: 60%;
-      margin: 48px auto 0;
-      justify-content: center;
-      span {
-        font-size: 19px;
-        letter-spacing: 0.43px;
-        text-transform: uppercase;
-        @include xlScreen {
-          font-size: 16px;
+      &__input {
+        width: 100%;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #363636;
+        background: transparent;
+        color: #eeeeee;
+        font-size: 16px;
+        font-weight: 500;
+        outline: none;
+        transition: 0.3s ease-out;
+        &:focus {
+          border: 1px solid $theme-color;
+        }
+        &::placeholder {
+          color: #f2f3f7;
         }
       }
-      &__icon {
-        display: none;
+    }
+
+    .contact-form__btn {
+      .button {
+        width: 60%;
+        margin: 48px auto 0;
+        justify-content: center;
+        span {
+          font-size: 19px;
+          letter-spacing: 0.43px;
+          text-transform: uppercase;
+          @include xlScreen {
+            font-size: 16px;
+          }
+        }
+        &__icon {
+          display: none;
+        }
       }
     }
   }

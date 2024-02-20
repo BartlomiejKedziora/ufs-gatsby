@@ -1,6 +1,6 @@
 import "./styles.scss"
 
-import React, { useState } from "react"
+import React from "react"
 import Select from "react-select"
 
 const CustomSelect = ({
@@ -10,9 +10,9 @@ const CustomSelect = ({
   options = [],
   value,
   disabled,
+  onChange,
+  defaultValue,
 }) => {
-  const [selectedOption, setSelectedOption] = useState(null)
-
   const selectStyles = {
     input: provided => ({
       ...provided,
@@ -81,8 +81,8 @@ const CustomSelect = ({
   return (
     <div className={`select${className ? ` ${className}` : ""}`}>
       <Select
-        defaultValue={selectedOption}
-        onChange={setSelectedOption}
+        defaultValue={defaultValue}
+        onChange={onChange}
         className={className}
         label={label}
         placeholder={placeholder}

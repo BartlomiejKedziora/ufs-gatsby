@@ -2,7 +2,7 @@ import "./styles.scss"
 
 import React from "react"
 
-import Button from "components/Button"
+import ContactForm from "components/ContactForm"
 import MapUk from "../MapUk"
 
 const SectionForm = () => {
@@ -31,22 +31,7 @@ const SectionForm = () => {
                     info@ultimatefloorsanding.co.uk
                   </a>
                 </div>
-                <form action="submit" className="home-contact__form">
-                  <div className="home-contact__form--row">
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" />
-                  </div>
-                  <div className="home-contact__form--row">
-                    <input type="text" placeholder="Post code" />
-                    <input type="text" placeholder="Phone" />
-                  </div>
-                  <textarea
-                    className="home-contact__textarea"
-                    rows="4"
-                    placeholder="Write your message here"
-                  />
-                  <Button>Send</Button>
-                </form>
+                <ContactForm />
               </div>
             </div>
           </div>

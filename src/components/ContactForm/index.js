@@ -29,14 +29,15 @@ const options = [
 ]
 
 const ContactForm = () => {
-  const formID = "6cf33c4"
+  const formID = "1076"
+  const [botField, setBotField] = useState(false)
   const [send, setSend] = useState(false)
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
   const [postcode, setPostcode] = useState("")
-  const [source, setSource] = useState("")
+  const [source, setSource] = useState(null)
   // const [legalFirst, setLegalFirst] = useState(false)
 
   const isBrowser = typeof window !== "undefined"
@@ -49,11 +50,12 @@ const ContactForm = () => {
     setPhone("")
     setMessage("")
     setPostcode("")
-    setSource("")
+    setSource(null)
     // setLegalFirst(false)
   }
 
   const formSubmit = async e => {
+    if (botField) return false
     e.preventDefault()
     setSend(true)
     try {
@@ -61,28 +63,28 @@ const ContactForm = () => {
 
       formData.set("your-name", name)
       formData.set("your-email", email)
-      // formData.set("phone", phone)
+      formData.set("your-phone", phone)
       formData.set("your-message", message)
-      // formData.set("postcode", postcode)
-      // formData.set("source", source)
+      formData.set("_wpcf7_unit_tag", "wpcf7-f1076-p1095-o1")
+      formData.set("your-postcode", postcode)
+      formData.set("source", source?.value)
+      formData.set("pageurl", location)
       // formData.set("legalFirst", legalFirst)
-      // formData.set("pageurl", location)
 
       await axios({
         method: "post",
-        url: `https://ufs.kteproductions.pl/wp-json/contact-form-7/v1/contact-forms/6cf33c4/feedback/`,
+        url: `https://ufs.kteproductions.pl/wp-json/contact-form-7/v1/contact-forms/${formID}/feedback/`,
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       })
-      // .then(() => {
-      //   console.log("Submit success")
-      //   resetForm()
-      //   navigate("/thank-you/")
-      // })
-      // .catch(err => {
-      //   console.log(err)
-      // })
-      console.log("Submit success")
+        .then(() => {
+          console.log("Submit success")
+          resetForm()
+          navigate("/thank-you/")
+        })
+        .catch(err => {
+          console.log(err)
+        })
       resetForm()
       navigate("/thank-you/")
     } catch (error) {
@@ -93,6 +95,12 @@ const ContactForm = () => {
   return (
     <section className="contact-form">
       <form onSubmit={formSubmit}>
+        <input
+          type="checkbox"
+          name="bot_field"
+          className="bot-field"
+          onChange={e => setBotField(e.target.value)}
+        />
         <Input
           placeholder="Name*"
           type="text"
@@ -139,6 +147,8 @@ const ContactForm = () => {
         />
         <p>Where did you hear about us?</p>
         <CustomSelect
+          defaultValue={source}
+          onChange={setSource}
           options={options}
           name="source"
           id="source"
